@@ -1,0 +1,11 @@
+#!name = 京东比价
+#!desc = 在京东应用内嵌入比价信息，点击商品标题即可查看。
+
+
+[Script]
+
+jd_price = type=http-response, pattern=^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item), script-path=https://raw.githubusercontent.com/zwf234/rules/master/js/jd_price.js, requires-body=true, max-size=3145728, timeout=30
+
+[MITM]
+
+hostname = %APPEND% api.m.jd.com
