@@ -1,7 +1,6 @@
 #!name=Webpage
 #!desc=网页去广告
 
-
 [URL Rewrite]
 # missav 播放页弹窗
 https?:\/\/[0-9a-zA-Z]{10,16}\.cloudfront\.net\/\?[a-z]{3,7}=\d{4,8} - reject
