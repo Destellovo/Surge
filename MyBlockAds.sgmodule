@@ -28,9 +28,6 @@
 ^https:\/\/web\.chelaile\.net\.cn\/api\/adpub - reject
 # CSDN //app-gw.csdn.net
 ^https:\/\/app-gw\.csdn\.net\/cms-app\/v\d\/home_page\/open_advertisement - reject
-# 滴滴车主 //g*.xiaojukeji.com
-^https:\/\/guard\.sec\.xiaojukeji\.com\/api\/driverGuard\/getShieldStatus\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/didi.js
-^https:\/\/gw\.am\.xiaojukeji\.com\/driverlife\/client\/driver\/homepage\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/didi.js
 # 豆瓣 //api.douban.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject
 ^https:\/\/api\.douban\.com\b.*\/common_ads\? - reject
@@ -75,6 +72,10 @@
 
 adrive_16 = type=http-response, pattern=^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, timeout=60, script-update-interval=0
 
+# 滴滴车主 //g*.xiaojukeji.com
+didi_50 = type=http-response, pattern=^https:\/\/guard\.sec\.xiaojukeji\.com\/api\/driverGuard\/getShieldStatus\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/didi.js, timeout=60, script-update-interval=0
+
+didi_51 = type=http-response, pattern=^https:\/\/gw\.am\.xiaojukeji\.com\/driverlife\/client\/driver\/homepage\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/didi.js, timeout=60, script-update-interval=0
 # JavDB //api.yijingluowangluo.xyz, jdforrepam.com
 myBlockAds_65 = type=http-response, pattern=^https:\/\/(api\.yijingluowangluo\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
 
