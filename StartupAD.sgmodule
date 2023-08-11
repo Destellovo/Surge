@@ -173,6 +173,10 @@ https://top-widgets-api.xiaozujian.com/api/ad/config - reject
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) - reject
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) - reject
 
+# > zhongguoyidong
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit - reject
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList - reject
+
 # > zhuanzhuan
 ^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo - reject
 # > ziru
