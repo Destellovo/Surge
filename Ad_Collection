@@ -1,4 +1,4 @@
-#!name=Ad_Collection 
+#!name=Ad_Collection.sgmodule
 #!desc=(R)针对部分APP开屏广告，应用内广告进行拦截，某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!date=2023-11-21 22:57:00
 #!support=约542款app
