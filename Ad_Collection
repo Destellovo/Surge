@@ -1,10 +1,5 @@
-#!name=广告拦截合集-重写
+#!name=Ad_Collection 
 #!desc=(R)针对部分APP开屏广告，应用内广告进行拦截，某些APP要清除缓存或者重新安装拦截广告才会生效！
-#!author=fmz200
-#!homepage=https://github.com/fmz200/wool_scripts
-#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
-#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
-#!tg-group=https://t.me/lanjieguanggao
 #!date=2023-11-21 22:57:00
 #!support=约542款app
 
