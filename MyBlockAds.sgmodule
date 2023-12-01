@@ -36,6 +36,8 @@
 ^https:\/\/res\.kfc\.com\.cn\/advertisement - reject
 # 拼多多 //api.pinduoduo.com, api.yangkeduo.com
 ^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
+#朴朴
+^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position - reject
 # 闲鱼 //gw.alicdn.com, acs.m.taobao.com
 ^https:\/\/gw\.alicdn\.com\/mt\/ - reject
 ^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} - reject
