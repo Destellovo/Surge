@@ -38,6 +38,7 @@ IP-CIDR,180.96.2.114/32,REJECT
 [URL Rewrite]
 
 # 番茄小说去章末广告
+# 去章末广告
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
 ^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
 ^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ - reject
@@ -51,7 +52,7 @@ IP-CIDR,180.96.2.114/32,REJECT
 ^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ - reject
 ^http:\/\/.+\.byteimg\.com\/ad-app-package - reject
 ^http:\/\/.+\.byteimg\.com\/web\.business\.image - reject
-# - reject
+
 # 下面两条来自他人,暂不知是哪个app
 ^https?:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject
 
