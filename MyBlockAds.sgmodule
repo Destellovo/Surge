@@ -1,3 +1,5 @@
+#!name=MyBlockAds
+#!desc=自用修改
 [URL Rewrite]
 
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
