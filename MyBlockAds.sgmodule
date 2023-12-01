@@ -85,12 +85,6 @@
 
 ^https:\/\/www\.washpayer\.com\/(ad\/getBannerAd|ad\/user-adword|user\/getBannerList) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
-#大众点评开屏广告
-^https:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-
-
 # 飞猪 //acs.m.taobao.com
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
@@ -106,6 +100,12 @@
 ^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 ^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+#大众点评开屏广告
+^https:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
 
 ## 移除公众号中的推广内容 //mp.weixin.qq.com
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
