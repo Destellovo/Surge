@@ -131,12 +131,7 @@
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 # 中国移动 //client.app.coc.10086.cn
-^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-
-^https:\/\/shopapi\.io\.mi\.com\/mtop\/mf\/resource\/homePage\/pageConfig data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt
 
 [Script]
 
