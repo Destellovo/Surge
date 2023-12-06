@@ -49,6 +49,9 @@
 ^https:\/\/api\.jr\.mi\.com\/v\d\/adv - reject
 # 云闪付 //wallet.95516.com
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 - reject
+#中国移动
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList - reject
+
 
 [Map Local]
 
@@ -130,6 +133,8 @@
 # 中国移动 //client.app.coc.10086.cn
 ^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
+
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
 ^https:\/\/shopapi\.io\.mi\.com\/mtop\/mf\/resource\/homePage\/pageConfig data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt
 
