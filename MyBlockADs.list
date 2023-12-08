@@ -3,6 +3,12 @@
 #已排除的规则数量:0
 
 #-----------------以下为解析后的规则-----------------#
+#美团
+DOMAIN,al-log.d.meituan.net
+DOMAIN,babel-statistics-android.d.meituan.net
+DOMAIN,maplocatesdksnapshot.d.meituan.net
+DOMAIN,metrics-picture.d.meituan.net
+DOMAIN,route-stats.d.meituan.net
 
 DOMAIN,ossgw.alicdn.com
 DOMAIN,ems.youku.com
