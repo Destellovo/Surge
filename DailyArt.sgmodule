@@ -1,0 +1,10 @@
+#!name=DailyArt
+#!desc=解锁会员
+
+[MITM]
+
+hostname = %APPEND% api.getdailyart.com
+
+[Script]
+
+DailyArt = type=http-response, pattern=^https?:\/\/api\.getdailyart\.com\/api\/(subscription\/verified|auth\/login|check-logged), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/DailyArt.js, requires-body=true, max-size=-1, timeout=60
