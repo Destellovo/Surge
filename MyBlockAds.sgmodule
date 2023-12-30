@@ -2,14 +2,6 @@
 #!desc=自用修改
 [URL Rewrite]
 
-# 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
-^https:\/\/app\.58\.com\/api\/home\/(advertising|appadv) - reject
-^https:\/\/app\.58\.com\/api\/home\/invite\/popupAdv - reject
-^https:\/\/app\.58\.com\/api\/log\/ - reject
-^https:\/\/pic\d\.ajkimg\.com\/mat\/\w+\?imageMogr\d\/format\/jpg\/thumbnail\/\d{3}x\d{4}$ - reject
-^https:\/\/.+\.58cdn\.com\.cn\/brandads - reject
-# 爱回收 //gw.aihuishou.com
-^https:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement - reject
 # 爱思助手 //list-app-m.i4.cn
 ^https:\/\/list-app-m\.i4\.cn\/(adclickcb|getHotSearchList|getopfstadinfo)\.xhtml - reject
 # 车来了 //api.chelaile.net.cn, web.chelaile.net.cn
@@ -27,9 +19,7 @@
 ^https:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} - reject
 ^https:\/\/fuss10.elemecdn.com\/.+\.mp4 - reject
 ^https:\/\/www1.elecfans.com\/www\/delivery - reject
-# 海尔智家 //zj.haier.net
-^https:\/\/zj\.haier\.net\/api-gw\/shpmResource\/waterfall\/recommend\/list\? - reject
-^https:\/\/zj\.haier\.net\/omsappapi\/ad\/v1\/rotation - reject
+
 # 建设银行
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png - reject
 # 交管12123 //gab.122.gov.cn
@@ -44,9 +34,7 @@
 ^https:\/\/gw\.alicdn\.com\/mt\/ - reject
 ^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} - reject
 ^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} - reject
-## 小米金融 //api.jr.mi.com
-^https:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen - reject
-^https:\/\/api\.jr\.mi\.com\/v\d\/adv - reject
+
 # 云闪付 //wallet.95516.com
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 - reject
 #中国移动
