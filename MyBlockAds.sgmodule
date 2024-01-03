@@ -19,7 +19,8 @@
 ^https:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} - reject
 ^https:\/\/fuss10.elemecdn.com\/.+\.mp4 - reject
 ^https:\/\/www1.elecfans.com\/www\/delivery - reject
-
+# > 虎牙直播
+^https?:\/\/business\.msstatic\.com\/advertiser\/material - reject
 # 建设银行
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png - reject
 # 交管12123 //gab.122.gov.cn
@@ -83,6 +84,10 @@
 
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
+#虎牙
+^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+
+^https?://live-ads\.huya\.com/live/getAllEntrance.*$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json
 # 美团 & 美团外卖//flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
