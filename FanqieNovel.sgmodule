@@ -2,59 +2,68 @@
 #!desc=番茄小说去广告
 
 [Rule]
-# 番茄小说 version = 3.1
-DOMAIN,p6-ad-sign.byteimg.com,REJECT
-DOMAIN,p9-ad-sign.byteimg.com,REJECT
-# DOMAIN-SUFFIX,byteimg.com,DIRECT
-DOMAIN,i.snssdk.com,REJECT
-DOMAIN,i-lq.snssdk.com,REJECT
-DOMAIN,dig.bdurl.net,REJECT
-DOMAIN-KEYWORD,zijieapi,REJECT
-# DOMAIN,ads3-normal-lq.zijieapi.com,REJECT
-# DOMAIN,ads5-normal-lq.zijieapi.com,REJECT
-# DOMAIN,polaris3-normal-lq.zijieapi.com,REJECT
-DOMAIN,activity-ag.awemeughun.com,REJECT
-
-DOMAIN,mcs.snssdk.com,REJECT
-DOMAIN,tnc3-alisc1.snssdk.com,REJECT
-DOMAIN,security-lq.snssdk.com,REJECT
-DOMAIN,tnc3-aliec2.snssdk.com,REJECT
-DOMAIN,is.snssdk.com,REJECT
-
-DOMAIN,msync-im1-vip6-std.easemob.com,REJECT
-
-DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net,REJECT
-DOMAIN,api.iegadp.qq.com,REJECT
-
-DOMAIN,sf3-ttcdn-tos.pstatp.com,REJECT
-DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
-# DOMAIN,p3-be-pack-sign.pglstatp-toutiao.com,REJECT
-# DOMAIN,sf3-be-pack.pglstatp-toutiao.com,REJECT
-
-DOMAIN,*default.ixigua.com,REJECT
-DOMAIN,v6-novelapp.ixigua.com,REJECT
-DOMAIN,*novelapp.ixigua.com,REJECT
-# DOMAIN,v3-default.ixigua.com,REJECT
-# DOMAIN,v9-default.ixigua.com,REJECT
-# DOMAIN,v6-default.ixigua.com,REJECT
-
-DOMAIN-SUFFIX,byteorge.com,REJECT
-DOMAIN-SUFFIX,bytegoofy.com,REJECT
-DOMAIN-SUFFIX,bytedance.com,REJECT
-
-IP-CIDR,49.71.37.101/32,REJECT,no-resolve
-IP-CIDR,117.71.105.23/32,REJECT,no-resolve
-IP-CIDR,218.94.207.205/32,REJECT,no-resolve
-IP-CIDR,117.92.229.188/32,REJECT,no-resolve
-IP-CIDR,101.36.166.16/32,REJECT,no-resolve
-IP-CIDR,180.96.2.114/32,REJECT,no-resolve
-
-URL-REGEX,*-default.ixigua.com,REJECT
-# URL-REGEX,.+web\.business\.image,REJECT
-URL-REGEX,^http:\/\/.+\.byteimg\.com\/ad-app-package,REJECT
-URL-REGEX,^http:\/\/.+\.byteimg\.com\/web\.business\.image,REJECT
-# 番茄视频广告页的sdk agent都是ttplayer
-# USER-AGENT,ttplayer*,REJECT
+DOMAIN-SUFFIX,ixigua.com,REJECT-DROP ,extended-matching
+DOMAIN-SUFFIX,pstatp.com,REJECT-DROP ,extended-matching
+DOMAIN-SUFFIX,ixiguavideo.com,REJECT-DROP ,extended-matching
+DOMAIN-KEYWORD,tt.byteimg.com,REJECT-DROP ,extended-matching
+DOMAIN-SUFFIX,ugsdk.cn,REJECT-DROP ,extended-matching
+DOMAIN-SUFFIX,p3-reading-sign.fqnovelpic.com,REJECT-DROP ,extended-matching
+DOMAIN-SUFFIX,p6-reading-sign.fqnovelpic.com,REJECT-DROP ,extended-matching
+DOMAIN-SUFFIX,ecombdimg.com,REJECT-DROP ,extended-matching
+DOMAIN-SUFFIX,lf3-reading.fqnovelpic.com,REJECT-DROP ,extended-matching
+DOMAIN-SUFFIX,mssdk.volces.com,REJECT-DROP ,extended-matching
+DOMAIN-SUFFIX,toutiaocloud.net,REJECT-DROP ,extended-matching
+DOMAIN-SUFFIX,p9-reading-sign.fqnovelpic.com,REJECT-DROP ,extended-matching
+DOMAIN-KEYWORD,lf-,REJECT-DROP,extended-matching
+DOMAIN-SUFFIX,snssdk.com,REJECT-DROP ,extended-matching
+DOMAIN-SUFFIX,toutiaocloud.com,REJECT-DROP,extended-matching 
+DOMAIN-SUFFIX,douyinpic.com,REJECT-DROP ,extended-matching
+DOMAIN-SUFFIX,content-open.douyin.com,REJECT-DROP,extended-matching
+DOMAIN-KEYWORD,-lf,REJECT-DROP,extended-matching
+DOMAIN-KEYWORD,applog-lf,REJECT-DROP,extended-matching
+DOMAIN-SUFFIX,byteimg.com,REJECT-DROP,extended-matching 
+DOMAIN-SUFFIX,log5-applog-lf.fqnovel.com,REJECT-DROP ,extended-matching
+DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com,REJECT-DROP,extended-matching
+DOMAIN,p6-ad-sign.byteimg.com,REJECT-DROP,extended-matching,extended-matching
+DOMAIN,p9-ad-sign.byteimg.com,REJECT-DROP,extended-matching
+DOMAIN-SUFFIX,byteimg.com,REJECT-DROP,extended-matching
+DOMAIN,i.snssdk.com,REJECT-DROP,extended-matching
+DOMAIN,i-lq.snssdk.com,REJECT-DROP,extended-matching
+DOMAIN,dig.bdurl.net,REJECT-DROP,extended-matching
+DOMAIN-KEYWORD,zijieapi,REJECT-DROP,extended-matching
+DOMAIN,ads3-normal-lq.zijieapi.com,REJECT-DROP,extended-matching
+DOMAIN,ads5-normal-lq.zijieapi.com,REJECT-DROP,extended-matching
+DOMAIN,polaris3-normal-lq.zijieapi.com,REJECT-DROP,extended-matching
+DOMAIN,activity-ag.awemeughun.com,REJECT-DROP,extended-matching
+DOMAIN,mcs.snssdk.com,REJECT-DROP,extended-matching
+DOMAIN,tnc3-alisc1.snssdk.com,REJECT-DROP,extended-matching
+DOMAIN,security-lq.snssdk.com,REJECT-DROP,extended-matching
+DOMAIN,tnc3-aliec2.snssdk.com,REJECT-DROP,extended-matching
+DOMAIN,is.snssdk.com,REJECT-DROP,extended-matching
+DOMAIN,msync-im1-vip6-std.easemob.com,REJECT-DROP,extended-matching
+DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net,REJECT-DROP,extended-matching
+DOMAIN,api.iegadp.qq.com,REJECT-DROP,extended-matching
+DOMAIN,sf3-ttcdn-tos.pstatp.com,REJECT-DROP,extended-matching
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT-DROP,extended-matching
+DOMAIN,p3-be-pack-sign.pglstatp-toutiao.com,REJECT-DROP,extended-matching
+DOMAIN,sf3-be-pack.pglstatp-toutiao.com,REJECT-DROP,extended-matching
+DOMAIN,*default.ixigua.com,REJECT-DROP,extended-matching
+DOMAIN,v6-novelapp.ixigua.com,REJECT-DROP,extended-matching
+DOMAIN,*novelapp.ixigua.com,REJECT-DROP,extended-matching
+DOMAIN,v3-default.ixigua.com,REJECT-DROP,extended-matching
+DOMAIN,v9-default.ixigua.com,REJECT-DROP,extended-matching
+DOMAIN,v6-default.ixigua.com,REJECT-DROP,extended-matching
+DOMAIN-SUFFIX,byteorge.com,REJECT-DROP,extended-matching
+DOMAIN-SUFFIX,bytegoofy.com,REJECT-DROP,extended-matching
+DOMAIN-SUFFIX,bytedance.com,REJECT-DROP,extended-matching
+IP-CIDR,49.71.37.101/32,REJECT-DROP,extended-matching,resolve
+IP-CIDR,117.71.105.23/32,REJECT-DROP,extended-matching,resolve
+IP-CIDR,218.94.207.205/32,REJECT-DROP,extended-matching,resolve
+IP-CIDR,117.92.229.188/32,REJECT-DROP,extended-matching,resolve
+IP-CIDR,101.36.166.16/32,REJECT-DROP,extended-matching,resolve
+IP-CIDR,180.96.2.114/32,REJECT-DROP,extended-matching,resolve
+URL-REGEX,*-default.ixigua.com,REJECT-DROP,extended-matching
+USER-AGENT,ttplayer*,REJECT-DROP,extended-matching
 
 [URL Rewrite]
 # 番茄小说去章末广告
