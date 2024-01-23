@@ -1,0 +1,14 @@
+#!name=网易云音乐人
+#!desc=当前版本仅支持网易云音乐人每日任务、推荐任务(发表主创说、发布动态、回复粉丝私信)，可自动完成以上任务后并领取云豆。
+#!author=leiyiyan
+
+
+[Script]
+# 音乐人任务（默认0点10分执行，如需更改请自行修改corn表达式）
+音乐人任务 = type=cron, cronexp="10 0 * * *", script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/task.js
+
+# 获取Cookie
+获取Cookie = type=http-request, pattern=^https:\/\/interface\.music\.163\.com\/weapi\/nmusician\/, script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js
+
+[MITM]
+hostname = %APPEND% interface.music.163.com
