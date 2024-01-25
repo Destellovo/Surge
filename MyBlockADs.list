@@ -52,6 +52,9 @@ DOMAIN-KEYWORD,pangolin-sdk-toutiao
 DOMAIN-KEYWORD,pangolin.snssdk.com
 DOMAIN-KEYWORD,pglstatp-toutiao
 DOMAIN-KEYWORD,video-cn.snssdk.com
+#虎牙
+DOMAIN-SUFFIX,v1d.szbdyd.com
+URL-REGEX,^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$
 #建设银行
 DOMAIN-KEYWORD,adv.ccb.com
 #京东
