@@ -1,6 +1,6 @@
-#!name=知乎
-#!desc=在知识的海洋里狗刨
-#!author=RuCu6 app2smile
+#!name=Zhihu
+#!desc=AD_Zhihu
+#!category=For Own Use
 
 [URL Rewrite]
 ^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card - reject
