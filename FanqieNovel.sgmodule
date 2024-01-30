@@ -1,5 +1,6 @@
 #!name=FanQie_Novel
-For Own Use
+#!desc=Ad_Fanqie
+#!category=For Own Use
 
 [Rule]
 DOMAIN-SUFFIX,ixigua.com,REJECT-DROP ,extended-matching
