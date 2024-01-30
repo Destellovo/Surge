@@ -1,5 +1,5 @@
-#!name=番茄小说
-#!desc=番茄小说去广告
+#!name=FanQie_Novel
+For Own Use
 
 [Rule]
 DOMAIN-SUFFIX,ixigua.com,REJECT-DROP ,extended-matching
