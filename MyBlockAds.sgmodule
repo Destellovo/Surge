@@ -1,5 +1,6 @@
 #!name=MyBlockAds
-#!desc=自用修改
+#!desc=For Own Use
+#!category=For Own Use
 [URL Rewrite]
 
 # 爱思助手 //list-app-m.i4.cn
