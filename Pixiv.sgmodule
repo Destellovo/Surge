@@ -1,0 +1,8 @@
+#!name=Pixiv
+#!desc=Pixiv_VIP
+#!category=For Own Use
+[Script]
+pixiv = type=http-response, pattern=https:\/\/(?:app-api\.pixiv\.net\/v2\/user\/detail|oauth\.secure\.pixiv\.net\/auth\/token), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/pixiv.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% oauth.secure.pixiv.net, app-api.pixiv.net
