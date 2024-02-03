@@ -31,8 +31,6 @@ DOMAIN-SUFFIX,pos.baidu.com
 IP-CIDR,180.76.76.200/32
 #彩云天气
 DOMAIN,ad.cyapi.cn
-#Dcard
-DOMAIN,dad-api.dcard.tw
 #高德地图
 DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,awaken.amap.com
