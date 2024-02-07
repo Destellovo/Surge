@@ -1,5 +1,6 @@
 #!name = BaiduNetDisk
 #!desc = AD_BaiduNetDisk
+#!category=For Own Use
 
 [URL Rewrite]
 ^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx - reject
