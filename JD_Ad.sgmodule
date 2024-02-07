@@ -1,6 +1,6 @@
 #!name = JD
 #!desc = AD_JD
-
+#!category=For Own Use
 
 [URL Rewrite]
 # 禁京东DNS解析 感谢@Eula分享
