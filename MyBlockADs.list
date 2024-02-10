@@ -74,9 +74,9 @@ DOMAIN,metrics-picture.d.meituan.net
 DOMAIN,open.kuaishouzt.com
 DOMAIN,route-stats.d.meituan.net
 #OPGG
-googleads.g.doubleclick.net
-tpc.googlesyndication.com
-pagead2.googlesyndication.com 
+DOMAIN,googleads.g.doubleclick.net
+DOMAIN,tpc.googlesyndication.com
+DOMAIN,pagead2.googlesyndication.com 
 #什么值得买
 DOMAIN,api.zuihuimai.com
 #SPEEDTEST,undefined
