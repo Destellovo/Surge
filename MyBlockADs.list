@@ -34,6 +34,7 @@ DOMAIN,ad.cyapi.cn
 #Dcard
 DOMAIN,dad-api.dcard.tw
 DOMAIN-SUFFIX,appsflyersdk.com
+DOMAIN-KEYWORD,zendesk
 #高德地图
 DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,awaken.amap.com
