@@ -33,6 +33,7 @@ IP-CIDR,180.76.76.200/32
 DOMAIN,ad.cyapi.cn
 #Dcard
 DOMAIN,dad-api.dcard.tw
+DOMAIN,vaconf-man.vm5apis.com
 DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-KEYWORD,zendesk
 #高德地图
