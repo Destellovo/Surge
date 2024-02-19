@@ -2,6 +2,7 @@
 #!desc=AD_Zhihu
 #!category=For Own Use
 
+
 [URL Rewrite]
 ^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card - reject
 # 其他,服务器推送配置
@@ -14,13 +15,16 @@
 ^https:\/\/zhuanlan\.zhihu\.com\/api\/articles\/\d+\/recommendation - reject
 
 [Map Local]
-^https:\/\/api\.zhihu\.com\/commercial_api\/(banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/api\.zhihu\.com\/commercial_api\/(answer\/\d+\/bottom-v2|banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 ^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 ^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 ^https:\/\/api\.zhihu\.com\/root\/window data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 会员页面 弹窗,悬浮动图
+^https:\/\/api\.zhihu\.com\/(bazaar\/float_window|market\/popovers_v2) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 # 我的页面 项目列表,会员卡片
 ^https:\/\/api\.zhihu\.com\/me\/guides data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
@@ -54,7 +58,7 @@ zhihu = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/(moments_v3|tops
 
 zhihu = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body=true, max-size=-1, timeout=60
 
-replaceBody = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument="recommend_queries":\{.+\}->"recommend_queries":{}
+replaceBody = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22recommend_queries%22%3A%5C%7B.%2B%5C%7D-%3E%22recommend_queries%22%3A%7B%7D
 
 zhihu = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/next-(bff|data|render)\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body=true, max-size=-1, timeout=60
 
