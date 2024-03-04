@@ -2,7 +2,6 @@
 #!desc=AD_Zhihu
 #!category=For Own Use
 
-
 [URL Rewrite]
 ^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card - reject
 # 其他,服务器推送配置
@@ -72,3 +71,4 @@ zhihu = type=http-response, pattern=^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/
 
 [MITM]
 hostname = %APPEND% *.zhihu.com
+
