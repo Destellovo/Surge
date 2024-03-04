@@ -45,4 +45,4 @@ xiaohongshu = type=http-response, pattern=https://edith.xiaohongshu.com/api/sns/
 # 评论区用户id置空
 replaceBody = type=http-response, pattern=https://edith.xiaohongshu.com/api/sns/v5/note/comment/list, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=red_id-%3Efmz200
 [MITM]
-hostname = %APPEND% edith.xiaohongshu.com, www.xiaohongshu.com
+hostname = %APPEND% edith.xiaohongshu.com, www.xiaohongshu.com, ci.xiaohongshu.com
