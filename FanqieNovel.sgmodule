@@ -57,12 +57,12 @@ DOMAIN,v6-default.ixigua.com,REJECT-DROP,extended-matching
 DOMAIN-SUFFIX,byteorge.com,REJECT-DROP,extended-matching
 DOMAIN-SUFFIX,bytegoofy.com,REJECT-DROP,extended-matching
 DOMAIN-SUFFIX,bytedance.com,REJECT-DROP,extended-matching
-IP-CIDR,49.71.37.101/32,REJECT-DROP,extended-matching,resolve
-IP-CIDR,117.71.105.23/32,REJECT-DROP,extended-matching,resolve
-IP-CIDR,218.94.207.205/32,REJECT-DROP,extended-matching,resolve
-IP-CIDR,117.92.229.188/32,REJECT-DROP,extended-matching,resolve
-IP-CIDR,101.36.166.16/32,REJECT-DROP,extended-matching,resolve
-IP-CIDR,180.96.2.114/32,REJECT-DROP,extended-matching,resolve
+IP-CIDR,49.71.37.101/32,REJECT-DROP,extended-matching,no-resolve
+IP-CIDR,117.71.105.23/32,REJECT-DROP,extended-matching,no-resolve
+IP-CIDR,218.94.207.205/32,REJECT-DROP,extended-matching,no-resolve
+IP-CIDR,117.92.229.188/32,REJECT-DROP,extended-matching,no-resolve
+IP-CIDR,101.36.166.16/32,REJECT-DROP,extended-matching,no-resolve
+IP-CIDR,180.96.2.114/32,REJECT-DROP,extended-matching,no-resolve
 URL-REGEX,*-default.ixigua.com,REJECT-DROP,extended-matching
 USER-AGENT,ttplayer*,REJECT-DROP,extended-matching
 
