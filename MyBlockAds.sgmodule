@@ -5,8 +5,25 @@
 #阿里巴巴  amdc.m.taobao.com, acs.m.taobao.com, gw.alicdn.com
 ^https?:\/\/gw\.alicdn\.com\/mt\/ - reject
 ^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ - reject
-#淘宝
 
+#百度网盘 pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, update.pan.baidu.com, fc-video.cdn.bcebos.com, rp.hpplay.cn
+^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx - reject
+^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad - reject
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list - reject
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry - reject
+^https?:\/\/pan\.baidu\.com\/pmall\/order\/privilege\/info - reject
+^https?:\/\/pan\.baidu\.com\/rest\/.+\/pcs\/adx - reject
+^https?:\/\/pan\.baidu\.com\/api\/useractivity\/activity - reject
+^https?:\/\/pan\.baidu\.com\/act\/.+\/bchannel\/list - reject
+^https?:\/\/pan\.baidu\.com\/api\/certuser\/get - reject
+^https?:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?vip - reject
+^https?:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/js\/.+\.js - reject
+^https?:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/index\.html - reject
+^https?:\/\/staticsns\.cdn\.bcebos\.com\/amis\/.+/banner.png - reject
+^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao - reject
+^https?:\/\/update\.pan\.baidu\.com\/statistics - reject
+^https?:\/\/fc-video\.cdn\.bcebos\.com - reject
+^https?:\/\/rp\.hpplay\.cn\/logouts - reject
 
 #斗鱼 daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn
 ^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd - reject
@@ -34,6 +51,10 @@
 # > 虎牙直播 cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com
 ^https?:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$ - reject
 ^https?:\/\/business\.msstatic\.com\/advertiser\/material - reject
+
+#京东 api.m.jd.com, dns.jd.com
+^https?:\/\/dns\.jd\.com\/ - reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 - reject
 
 # 肯德基 //res.kfc.com.cn
 ^https?:\/\/res\.kfc\.com.\cn\/advertisement\/ - reject
@@ -74,7 +95,6 @@
 #多个悬浮窗
 ^https?:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket - reject
 
-
 [Map Local]
 
 # 阿里云盘 //api.alipan.com, member.alipan.com
@@ -105,14 +125,6 @@
 
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
-
-# 百度云 //pan.baidu.com, update.pan.baidu.com
-^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|act\/v2\/welfare\/list|rest\/2\.0\/pcs\/adx)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-^https:\/\/update\.pan\.baidu\.com\/statistics\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-^https:\/\/www\.washpayer\.com\/(ad\/getBannerAd|ad\/user-adword|user\/getBannerList) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
 #豆瓣
 ^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
@@ -130,6 +142,9 @@
 ^https?://live-ads\.huya\.com/live/getAllEntrance.*$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 ^https?://live-ads\.huya\.com/live/getAllEntrance.*$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+#酷安 api.coolapk.com
+^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 #肯德基
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
@@ -157,9 +172,6 @@
 
 ^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
-#JD
-
-
 #闲鱼
 ^https?:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
@@ -176,16 +188,44 @@
 
 [Script]
 # 12306 
+12306 = type=http-request, pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js, requires-body=true, max-size=-1, timeout=60
 
+header = type=http-response, pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, timeout=60
 
-# 京东 //api.m.jd.com
+# 京东 
+myBlockAds = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
 
-# 酷安 //api.coolapk.com
+replaceBody = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(server|basic)Config, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22dnsvip%22%5C%3A%22.%2B%22-%3E%22dnsvip%22%3A%22%22
+
+# 酷安
+coolapk = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
+
+coolapk = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
+
+coolapk = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
 
 #朴朴
 PupuSplashAds = type=http-response, pattern=^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=2(%[A-Z0-9]+)+&store_id, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
 
-#什么值得买
+#什么值得买 homepage-api.smzdm.com, haojia-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, qianbao.smzdm.com
+
+smzdm_ads = type=http-response, pattern=^https?:\/\/user-api\.smzdm\.com\/vip\/creator_user_center, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/smzdm_ads.js, requires-body=true, max-size=-1, timeout=60
+
+Smzdm = type=http-response, pattern=^https?:\/\/app-api\.smzdm\.com\/util\/loading, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+
+Smzdm = type=http-response, pattern=^https?:\/\/app-api\.smzdm\.com\/util\/update, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+
+Smzdm = type=http-response, pattern=^https?:\/\/user-api\.smzdm\.com\/vip, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+
+Smzdm = type=http-response, pattern=^https?:\/\/user-api\.smzdm\.com\/vip\/bottom_card_list, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+
+Smzdm = type=http-response, pattern=^https?:\/\/haojia-api\.smzdm\.com\/home\/list, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+
+Smzdm = type=http-response, pattern=^https?:\/\/homepage-api\.smzdm\.com\/v3\/home, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+
+Smzdm = type=http-response, pattern=^https?:\/\/article-api\.smzdm\.com\/publish\/get_bubble, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.js, requires-body=true, max-size=-1, timeout=60
+
+Smzdm = type=http-response, pattern=^https?:\/\/qianbao\.smzdm\.com\/v\d\/app\/home, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.js, requires-body=true, max-size=-1, timeout=60
 
 
 #淘宝
@@ -193,8 +233,6 @@ myBlockAds = type=http-response, pattern=^https?:\/\/guide-acs\.m\.taobao\.com\/
 
 myBlockAds = type=http-response, pattern=^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
 
-
-
-
 [MITM]
-hostname = %APPEND% daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn,api.douban.com, img*.douban.com, frodo.douban.com, erebor.douban.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com, res.kfc.com.cn,img.meituan.net, p*.meituan.net, s3plus.meituan.net, www.meituan.net, flowplus.meituan.net, wmapi.meituan.net, apimobile.meituan.net, apimobile.meituan.com, wmapi.meituan.com, img.meituan.net, api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com, j1.pupuapi.com gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com,client.app.coc.10086.cn, h.client.app.coc.10086.cn,amdc.m.taobao.com, acs.m.taobao.com, gw.alicdn.com, acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
+hostname = %APPEND% daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn,api.douban.com, img*.douban.com, frodo.douban.com, erebor.douban.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com, res.kfc.com.cn,img.meituan.net, p*.meituan.net, s3plus.meituan.net, www.meituan.net, flowplus.meituan.net, wmapi.meituan.net, apimobile.meituan.net, apimobile.meituan.com, wmapi.meituan.com, img.meituan.net, api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com, j1.pupuapi.com gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com,client.app.coc.10086.cn, h.client.app.coc.10086.cn,amdc.m.taobao.com, acs.m.taobao.com, gw.alicdn.com, acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, update.pan.baidu.com, fc-video.cdn.bcebos.com, rp.hpplay.cn, api.m.jd.com, dns.jd.com,ad.12306.cn, mobile.12306.cn, api.coolapk.com, homepage-api.smzdm.com, haojia-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, qianbao.smzdm.com
+
