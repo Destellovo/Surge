@@ -17,7 +17,7 @@
 https://ci.xiaohongshu.com/system_config/watermark data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 
 # 笔记创作推荐
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/user_banner data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/user_banner data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 [Script]
 # 详情页,小部件
