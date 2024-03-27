@@ -3,6 +3,7 @@ DOMAIN,o33249.ingest.sentry.io
 DOMAIN,openai-api.arkoselabs.com
 DOMAIN,static.cloudflareinsights.com
 DOMAIN,ab.chatgpt.com
+DOMAIN,browser-intake-datadoghq.com
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,algolia.net
 DOMAIN-SUFFIX,auth0.com
