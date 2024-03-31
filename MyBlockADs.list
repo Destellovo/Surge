@@ -84,7 +84,7 @@ IP-CIDR,103.37.155.60/32
 #OPGG
 DOMAIN,googleads.g.doubleclick.net
 DOMAIN,tpc.googlesyndication.com
-DOMAIN,pagead2.googlesyndication.com 
+DOMAIN,pagead2.googlesyndication.com
 #什么值得买
 DOMAIN,api.zuihuimai.com
 
