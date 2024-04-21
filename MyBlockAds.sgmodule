@@ -1,6 +1,8 @@
 #!name=MyBlockAds
 #!desc=For Own Use
 #!category=For Own Use
+
+
 [URL Rewrite]
 #阿里巴巴  amdc.m.taobao.com, acs.m.taobao.com, gw.alicdn.com
 ^https?:\/\/gw\.alicdn\.com\/mt\/ - reject
