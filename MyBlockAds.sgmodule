@@ -108,8 +108,7 @@
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/1\.0\?type=originaljson data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 
 #滴滴 res.xiaojukeji.com, common.diditaxi.com.cn, hd.xiaojukeji.com, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, conf.diditaxi.com.cn
-^https?:\/\/hd\.xiaojukeji\.com\/d data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
+^https?:\/\/hd\.xiaojukeji\.com\/d data-type=text data="{}" status-code=200
 
 #淘宝
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
