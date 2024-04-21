@@ -52,9 +52,8 @@
 ^https?:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$ - reject
 ^https?:\/\/business\.msstatic\.com\/advertiser\/material - reject
 
-#京东 api.m.jd.com, dns.jd.com
-^https?:\/\/dns\.jd\.com\/ - reject
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 - reject
+# 京东 //api.m.jd.com
+^http:\/\/\w{32}\.jddebug\.com\/diagnose\? - reject
 
 # 肯德基 //res.kfc.com.cn
 ^https?:\/\/res\.kfc\.com.\cn\/advertisement\/ - reject
@@ -229,16 +228,17 @@ Didichuxing = type=http-response, pattern=^https?:\/\/daijia\.kuaidadi\.com\/gat
 Didichuxing = type=http-response, pattern=^https?:\/\/daijia\.kuaidadi\.com:443\/gateway, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, max-size=-1, timeout=60
 
 # 京东 
-myBlockAds = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
+jingdong = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js, requires-body=true, max-size=-1, timeout=60
 
-replaceBody = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(server|basic)Config, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=%22dnsvip%22%5C%3A%22.%2B%22-%3E%22dnsvip%22%3A%22%22
+# 京东极速版 //api.m.jd.com
+replaceBody = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=jdLiteAdvertisingVO-%3Erucu6
 
-# 酷安
-coolapk = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
+# 酷安 //api.coolapk.com
+coolapk = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
 
-coolapk = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
+coolapk = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
 
-coolapk = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
+coolapk = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
 
 #朴朴
 PupuSplashAds = type=http-response, pattern=^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=2(%[A-Z0-9]+)+&store_id, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, max-size=-1, timeout=60
