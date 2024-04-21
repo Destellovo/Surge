@@ -168,16 +168,9 @@
 ^https?:\/\/p\d.meituan.net\/movie\/.*?\?may_covertWebp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 
 #美团外卖
-^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data-type=text data="{}" status-code=200
 
-^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-^https:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
+^https?:\/\/img\.meituan\.net\/bizad\/.*.jpg data-type=text data=" " status-code=200
 #大众点评开屏广告
 ^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
