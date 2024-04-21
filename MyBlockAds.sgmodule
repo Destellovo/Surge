@@ -136,31 +136,32 @@
 #滴滴 res.xiaojukeji.com, common.diditaxi.com.cn, hd.xiaojukeji.com, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, conf.diditaxi.com.cn
 ^https?:\/\/hd\.xiaojukeji\.com\/d data-type=text data="{}" status-code=200
 
-#豆瓣
-^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 #斗鱼
-^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo data-type=text data=" " status-code=200
 
-^https?:\/\/staticlive\.douyucdn\.cn\/.+?\/getStartSend data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+^https?:\/\/staticlive\.douyucdn\.cn\/.+?\/getStartSend data-type=tiny-gif status-code=200
+
+^https?:\/\/capi\.douyucdn\.cn\/api\/ios_app\/check_update data-type=tiny-gif status-code=200
+
+^https?:\/\/capi\.douyucdn\.cn\/api\/v1\/getStartSend?client_sys=ios data-type=tiny-gif status-code=200
+
+^https?:\/\/douyucdn\.cn\/.+?\/appapi\/getinfo data-type=tiny-gif status-code=200
 
 
 #虎牙
-^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/ data-type=tiny-gif status-code=200
 
-^https?://live-ads\.huya\.com/live/getAllEntrance.*$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-^https?://live-ads\.huya\.com/live/getAllEntrance.*$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https?://live-ads\.huya\.com/live/getAllEntrance.*$ data-type=text data="{}" status-code=200
 
 #酷安 api.coolapk.com
-^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data-type=text data="{}" status-code=200
 
 #肯德基
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data-type=text data=" " status-code=200
 
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data-type=text data="{}" status-code=200
+
 
 # 美团 
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data-type=text data="{}" status-code=200
@@ -178,23 +179,24 @@
 
 ^https?:\/\/img\.meituan\.net\/bizad\/.*.jpg data-type=text data=" " status-code=200
 #大众点评开屏广告
-^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png data-type=text data="{}" status-code=200
 
-^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) data-type=text data=" " status-code=200
 
 #Picooc sdk.1rtb.net
-^https:\/\/sdk\.1rtb\.net\/sdk\/req_ad data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/sdk\.1rtb\.net\/sdk\/req_ad  data-type=text data=" " status-code=200
 
 #闲鱼
-^https?:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$ data-type=text data=" " status-code=200
 
-^https?:\/\/gw\.alicdn\.com\/tfs\/TB1.+?750-\d{4} data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/gw\.alicdn\.com\/tfs\/TB1.+?750-\d{4} data-type=text data=" " status-code=200
 
-^https?:\/\/heic\.alicdn\.com\/tps\/i4\/.+?\.jpg_1200x1200q90\.jpg_\.heic$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/heic\.alicdn\.com\/tps\/i4\/.+?\.jpg_1200x1200q90\.jpg_\.heic$ data-type=text data=" " status-code=200
 
-^https?:\/\/asp\.cntv\.myalicdn\.com\/.+?\?maxbr=850 data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/asp\.cntv\.myalicdn\.com\/.+?\?maxbr=850 data-type=text data=" " status-code=200
 
-^https?:\/\/(?>heic|gw)\.alicdn\.com\/tfs\/TB1.+?-\d{4}-\d{4}\.jpg_1200x1200q90\.jpg_\.\w{3,4}$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/(?>heic|gw)\.alicdn\.com\/tfs\/TB1.+?-\d{4}-\d{4}\.jpg_1200x1200q90\.jpg_\.\w{3,4}$ data-type=text data=" " status-code=200
+"
 
 # 中国移动  client.app.coc.10086.cn
 ^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) data-type=text data="{}" status-code=200
