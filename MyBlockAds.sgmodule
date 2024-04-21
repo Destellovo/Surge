@@ -4,6 +4,7 @@
 
 
 [URL Rewrite]
+
 #阿里巴巴  amdc.m.taobao.com, acs.m.taobao.com, gw.alicdn.com
 ^https?:\/\/gw\.alicdn\.com\/mt\/ - reject
 ^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ - reject
@@ -70,7 +71,6 @@
 ^https?:\/\/apimobile\.meituan\.com\/appupdate\/mach\/checkUpdate? - reject
 ^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ - reject
 ^https?:\/\/p\d{1}\.meituan\.net\/(adunion|display|mmc|wmbanner)\/ - reject
-# 美团订单详情页更多推荐
 ^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends - reject
 
 #美团外卖
@@ -93,7 +93,6 @@
 
 #中国移动 client.app.coc.10086.cn, h.client.app.coc.10086.cn
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList - reject
-#多个悬浮窗
 ^https?:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket - reject
 
 [Map Local]
@@ -179,6 +178,7 @@
 ^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data-type=text data="{}" status-code=200
 
 ^https?:\/\/img\.meituan\.net\/bizad\/.*.jpg data-type=text data=" " status-code=200
+
 #大众点评开屏广告
 ^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png data-type=text data="{}" status-code=200
 
