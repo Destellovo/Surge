@@ -4,11 +4,11 @@
 
 
 [Script]
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2F911tg3rs.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D06e66a536bcd6054b916502d06b10972&reset_day=10&title=Meta&icon=atom&color=#ecebe8
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2F911tg3rs.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D06e66a536bcd6054b916502d06b10972&reset_day=10&title=Meta&icon=atom&color=#f0ffff
 
-Sub_info1 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fjkwskh.xyz%2F%3FL1N1YnNjcmlwdGlvbi9DbGFzaD9zaWQ9NDIxMjUmdG9rZW49RlQ4NldwbHJlaEEmbW09NTIyMTEmNDQ0YjFjMTM4MGMyNGQ0ZDhlMTA0&reset_day=17&title=AmyTelecom&icon=sparkles&color=#f8e5c2
+Sub_info1 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fjkwskh.xyz%2F%3FL1N1YnNjcmlwdGlvbi9DbGFzaD9zaWQ9NDIxMjUmdG9rZW49RlQ4NldwbHJlaEEmbW09NTIyMTEmNDQ0YjFjMTM4MGMyNGQ0ZDhlMTA0&reset_day=17&title=AmyTelecom&icon=sparkles&color=#ffff8f
 
-Sub_info2 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fapi.xmancdn.com%2Fosubscribe.php%3Fsid%3D79121%26token%3DfxLixzUc%26sip002%3D1&reset_day=8&title=FlowerCloud&icon=camera.macro&color=#b8726d
+Sub_info2 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fapi.xmancdn.com%2Fosubscribe.php%3Fsid%3D79121%26token%3DfxLixzUc%26sip002%3D1&reset_day=8&title=FlowerCloud&icon=camera.macro&color=#ee4b2b
 
 [Panel]
 Sub_info = script-name=Sub_info,update-interval=600
