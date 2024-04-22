@@ -4,9 +4,6 @@
 
 
 [Script]
-电信余量 = type=cron,cronexp=*/5 * * * *,wake-system=1,script-path=https://github.com/ChinaTelecomOperators/ChinaTelecom/releases/download/Prerelease-Alpha/Tele_Cellular_Auto.js,script-update-interval=0
-
-Telecom_panel= script-path=https://github.com/ChinaTelecomOperators/ChinaTelecom/releases/download/Prerelease-Alpha/Tele_Cellular_Auto.js,type=generic
-
+Telecom_Panel= type=generic,timeout=10,script-path= https://github.com/ChinaTelecomOperators/ChinaTelecom/releases/download/Prerelease-Alpha/Tele_Cellular_Panel.js,argument=icon=list.bullet.rectangle&color=#cd4639
 [Panel]
-Telecom_panel = title="电信余量",content="余量信息面板",style=info,script-name=Telecom_panel
+Telecom_Panel= script-name=Telecom_Panel, title="电信流量面板", content="请刷新",,update-interval=3600
