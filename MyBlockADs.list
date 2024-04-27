@@ -114,13 +114,3 @@ DOMAIN,ipv4.music.163.com
 DOMAIN,ipv6.music.163.com
 DOMAIN-SUFFIX,163jiasu.com
 
-#知乎
-DOMAIN,appcloud.zhihu.com
-DOMAIN,appcloud2.in.zhihu.com
-DOMAIN,crash2.zhihu.com
-DOMAIN,mqtt.zhihu.com
-DOMAIN,sugar.zhihu.com
-DOMAIN,zxid-m.mobileservice.cn
-IP-CIDR,103.41.167.237/32
-IP-CIDR,118.89.204.198/32
-IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128
