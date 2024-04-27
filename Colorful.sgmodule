@@ -1,5 +1,6 @@
-#!name=解锁｜彩云天气
-#!desc=解锁@RuCu6 去广告@Keywos
+#!name=Colorful
+#!desc=Ad
+#!category=For Own Use
 
 [Map Local]
 ^https?:\/\/api\.caiyunapp\.com\/v1\/activity data-type=text data="{}" status-code=200
