@@ -4,7 +4,7 @@
 
 
 [Script]
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2F911tg3rs.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Daba7fbcfb918b34c9dc4bd4dc6afca9f&reset_day=10&title=Meta&icon=atom&color=#6f8faf
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2F911tg3rs.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Dc1188f100977f2309ae1fc4c72e1cf74&reset_day=10&title=Meta&icon=atom&color=#6f8faf
 
 Sub_info1 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fjkwskh.xyz%2F%3FL1N1YnNjcmlwdGlvbi9DbGFzaD9zaWQ9NDIxMjUmdG9rZW49RlQ4NldwbHJlaEEmbW09NTIyMTEmNDQ0YjFjMTM4MGMyNGQ0ZDhlMTA0&reset_day=17&title=AmyTelecom&icon=sparkles&color=#ffff00
 
