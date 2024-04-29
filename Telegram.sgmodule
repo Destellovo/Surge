@@ -1,0 +1,6 @@
+[Rule]
+IP-ASN,59930,United States,no-resolve // Telegram DC1
+IP-ASN,44907,Netherlands,no-resolve // Telegram DC2
+IP-ASN,211157,United States,no-resolve // Telegram DC3
+IP-ASN,62041,Netherlands,no-resolve // Telegram DC4
+IP-ASN,62014,Singapore,no-resolve // Telegram DC5
