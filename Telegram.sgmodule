@@ -5,10 +5,10 @@
 
 [Rule]
 
-# > Americas
-IP-ASN,59930,Americas,no-resolve
-IP-CIDR,91.108.12.0/22,Americas,no-resolve
-IP-CIDR6,2a0a:f280::/32,Americas,no-resolve
+# > United States
+IP-ASN,59930,United States,no-resolve
+IP-CIDR,91.108.12.0/22,United States,no-resolve
+IP-CIDR6,2a0a:f280::/32,United States,no-resolve
 
 # > Finland
 IP-ASN,211157,Finland,no-resolve
