@@ -1,6 +1,30 @@
 [Rule]
-IP-ASN,59930,United States,no-resolve // Telegram DC1
-IP-ASN,44907,Netherlands,no-resolve // Telegram DC2
-IP-ASN,211157,United States,no-resolve // Telegram DC3
-IP-ASN,62041,Netherlands,no-resolve // Telegram DC4
-IP-ASN,62014,Singapore,no-resolve // Telegram DC5
+
+# > Americas
+IP-ASN,59930,Americas,no-resolve
+IP-CIDR,91.108.12.0/22,Americas,no-resolve
+IP-CIDR6,2a0a:f280::/32,Americas,no-resolve
+
+# > Finland
+IP-ASN,211157,Finland,no-resolve
+IP-CIDR,91.105.192.0/23,Finland,no-resolve
+IP-CIDR,185.76.151.0/24,Finland,no-resolve
+
+# > Europe
+IP-ASN,62014,Netherlands,no-resolve
+IP-CIDR,149.154.160.0/20,Netherlands,no-resolve
+IP-CIDR,91.108.4.0/22,Netherlands,no-resolve
+IP-CIDR,91.108.8.0/22,Netherlands,no-resolve
+IP-CIDR6,2001:b28:f23d::/48,Netherlands,no-resolve
+IP-CIDR6,2001:67c:4e8::/48,Netherlands,no-resolve
+
+# > Singapore
+IP-ASN,62014,Singapore,no-resolve
+IP-CIDR,91.108.16.0/22,Singapore,no-resolve
+IP-CIDR,91.108.56.0/22,Singapore,no-resolve
+IP-CIDR6,2001:b28:f23f::/48,Singapore,no-resolve
+
+# > India
+IP-ASN,44907,India,no-resolve
+IP-CIDR,91.108.20.0/22,India,no-resolve
+IP-CIDR6,2001:b28:f23c::/48,India,no-resolve
