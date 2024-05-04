@@ -35,6 +35,9 @@
 ^https?:\/\/web\.chelaile\.net\.cn\/api\/adpub\/ad - reject
 ^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub - reject
 
+#得物
+^https?:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement - reject
+
 #斗鱼 daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn
 ^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd - reject
 ^https?:\/\/staticlive\.douyucdn\.cn\/upload\/signs\/ - reject
@@ -139,6 +142,9 @@
 ^https?:\/\/atrace\.chelaile\.net\.cn\/adpub\/ data-type=tiny-gif status-code=200
 
 ^https?:\/\/atrace\.chelaile\.net\.cn\/exhibit\?&adv_image data-type=tiny-gif status-code=200
+
+#得物
+^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg data-type=text data=" " status-code=200
 
 #滴滴 res.xiaojukeji.com, common.diditaxi.com.cn, hd.xiaojukeji.com, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, conf.diditaxi.com.cn
 ^https?:\/\/hd\.xiaojukeji\.com\/d data-type=text data="{}" status-code=200
@@ -299,4 +305,4 @@ myBlockAds = type=http-response, pattern=^https?:\/\/guide-acs\.m\.taobao\.com\/
 myBlockAds = type=http-response, pattern=^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% amdc.m.taobao.com, acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, gw.alicdn.com,pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, update.pan.baidu.com, fc-video.cdn.bcebos.com, rp.hpplay.cn,pic1.chelaile.net.cn, api.chelaile.net.cn, atrace.chelaile.net.cn, web.chelaile.net.cn, cdn.*.chelaileapp.cn,daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn,api.douban.com,elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com,elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com,cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com,api.m.jd.com, dns.jd.com,res.kfc.com.cn,img.meituan.net, p*.meituan.net, s3plus.meituan.net, www.meituan.net, flowplus.meituan.net, wmapi.meituan.net, apimobile.meituan.net, apimobile.meituan.com,api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com,j1.pupuapi.com,gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com,client.app.coc.10086.cn, h.client.app.coc.10086.cn,api.alipan.com, member.alipan.com,res.xiaojukeji.com, common.diditaxi.com.cn, hd.xiaojukeji.com, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, conf.diditaxi.com.cn,api.coolapk.com,homepage-api.smzdm.com, haojia-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, qianbao.smzdm.com
+hostname = %APPEND% amdc.m.taobao.com, acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, gw.alicdn.com,pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, update.pan.baidu.com, fc-video.cdn.bcebos.com, rp.hpplay.cn,pic1.chelaile.net.cn, api.chelaile.net.cn, atrace.chelaile.net.cn, web.chelaile.net.cn, cdn.*.chelaileapp.cn,app.dewu.com,cdn.poizon.com,daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn,api.douban.com,elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com,elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com,cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com,api.m.jd.com, dns.jd.com,res.kfc.com.cn,img.meituan.net, p*.meituan.net, s3plus.meituan.net, www.meituan.net, flowplus.meituan.net, wmapi.meituan.net, apimobile.meituan.net, apimobile.meituan.com,api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com,j1.pupuapi.com,gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com,client.app.coc.10086.cn, h.client.app.coc.10086.cn,api.alipan.com, member.alipan.com,res.xiaojukeji.com, common.diditaxi.com.cn, hd.xiaojukeji.com, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, conf.diditaxi.com.cn,api.coolapk.com,homepage-api.smzdm.com, haojia-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, qianbao.smzdm.com
