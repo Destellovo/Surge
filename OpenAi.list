@@ -29,6 +29,8 @@ DOMAIN-SUFFIX,segment.io
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-KEYWORD,openaicom-api
+DOMAIN-SUFFIX,livekit.cloud
+IP-CIDR,64.227.164.169/32
 
 # Copilot
 DOMAIN, api.githubcopilot.com
