@@ -6,7 +6,7 @@
 [Script]
 Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2F911tg3rs.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D9d49e389b66841cb56c9af0f4826601d&reset_day=10&title=Meta&icon=atom&color=#6f8faf
 
-Sub_info1 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fjkwskh.xyz%2F%3FL1N1YnNjcmlwdGlvbi9TdXJnZU5vZGVMaXN0P3NpZD00MjEyNSZ0b2tlbj1GVDg2V3BscmVoQSZtbT01MjIxMSZlZDVmNThmYzY1Yzg0ZTc4OTAxNDQ2M2JlNzZjZg%3D%3D&reset_day=17&title=AmyTelecom&icon=sparkles&color=#ffff00
+Sub_info1 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fjkwskh.xyz%2F%3FL1N1YnNjcmlwdGlvbi9TdXJnZU5vZGVMaXN0P3NpZD00MjEyNSZ0b2tlbj1GVDg2V3BscmVoQSZtbT01MjIxMSYwOQ%3D%3D&reset_day=17&title=AmyTelecom&icon=sparkles&color=#ffff00
 
 Sub_info2 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fapi.xmancdn.com%2Fosubscribe.php%3Fsid%3D79121%26token%3DfxLixzUc%26sip002%3D1&reset_day=8&title=FlowerCloud&icon=camera.macro&color=#ee4b2b
 
