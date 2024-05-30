@@ -6,10 +6,12 @@ DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-KEYWORD,zendesk
 
 #OPGG
+DOMAIN,adservice.google.com
+DOMAIN,app-measurement.com
 DOMAIN,googleads.g.doubleclick.net
 DOMAIN,tpc.googlesyndication.com
 DOMAIN,pagead2.googlesyndication.com
-
+DOMAIN-SUFFIX,doubleclick.net
 #umeng
 DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umengcloud.com
