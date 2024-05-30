@@ -11,6 +11,6 @@ DOMAIN,tpc.googlesyndication.com
 DOMAIN,pagead2.googlesyndication.com
 
 #umeng
-DOMAIN,errlog.umeng.com
+DOMAIN-SUFFIX,umeng.com
 
 
