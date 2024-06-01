@@ -1,3 +1,5 @@
+IP-CIDR,0.0.0.0/32
+
 #Dcard
 DOMAIN,dad-api.dcard.tw
 DOMAIN,vaconf-man.vm5apis.com
@@ -15,7 +17,5 @@ DOMAIN-SUFFIX,doubleclick.net
 #umeng
 DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umengcloud.com
-
-IP-CIDR,0.0.0.0/32
 
 
