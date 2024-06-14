@@ -22,6 +22,8 @@ DOMAIN,emby.embyplus.org
 DOMAIN,film.hovervan.org
 DOMAIN,emby.tkremby.xyz
 DOMAIN-SUFFIX,emby.wtf
+DOMAIN-KEYWORD,happymh
+
 #CMS
 DOMAIN-KEYWORD,olelive
 DOMAIN-KEYWORD,olevod
