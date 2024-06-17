@@ -18,5 +18,9 @@ DOMAIN-SUFFIX,doubleclick.net
 DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umengcloud.com
 
+#toutiao
+DOMAIN,sf3-fe-tos.pglstatp-toutiao.com
+DOMAIN,log-api.pangolin-sdk-toutiao-b.com
+
 DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN,firebase-settings.crashlytics.com
