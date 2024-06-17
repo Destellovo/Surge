@@ -64,9 +64,6 @@
 ^https?:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$ - reject
 ^https?:\/\/business\.msstatic\.com\/advertiser\/material - reject
 
-# 京东 //api.m.jd.com
-^http:\/\/\w{32}\.jddebug\.com\/diagnose\? - reject
-
 # 肯德基 //res.kfc.com.cn
 ^https?:\/\/res\.kfc\.com.\cn\/advertisement\/ - reject
 
