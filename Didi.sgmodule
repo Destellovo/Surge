@@ -1,0 +1,35 @@
+#!name=Didi
+#!desc=Didi_Ad
+
+[Rule]
+IP-CIDR,123.207.209.39/32,REJECT
+IP-CIDR,123.207.209.60/32,REJECT
+
+[Map Local]
+^https:\/\/hd\.xiaojukeji\.com\/d data-type=text data="{}" status-code=200
+
+[Script]
+移除广告 = type=http-response, pattern=^https:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/DiDi/DiDi_remove_ads.js, requires-body=true
+
+移除广告 = type=http-response, pattern=^https:\/\/daijia\.kuaidadi\.com\/gateway, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/DiDi/DiDi_remove_ads.js, requires-body=true
+
+移除广告 = type=http-response, pattern=^https:\/\/freight\.xiaojukeji\.com\/gateway, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/DiDi/DiDi_remove_ads.js, requires-body=true
+
+移除广告 = type=http-response, pattern=^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/DiDi/DiDi_remove_ads.js, requires-body=true
+
+移除广告 = type=http-response, pattern=^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/DiDi/DiDi_remove_ads.js, requires-body=true
+
+移除广告 = type=http-response, pattern=^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/DiDi/DiDi_remove_ads.js, requires-body=true
+
+移除广告 = type=http-response, pattern=^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/DiDi/DiDi_remove_ads.js, requires-body=true
+
+移除广告 = type=http-response, pattern=^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/DiDi/DiDi_remove_ads.js, requires-body=true
+
+移除广告 = type=http-response, pattern=^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/DiDi/DiDi_remove_ads.js, requires-body=true
+
+移除广告 = type=http-response, pattern=^https:\/\/api\.udache\.com\/gulfstream\/pre-sale\/v1\/other\/pGetSceneList, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/DiDi/DiDi_remove_ads.js, requires-body=true
+
+移除广告 = type=http-response, pattern=^https:\/\/conf\.diditaxi\.com\.cn\/ota\/na\/yuantu\/infoList, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/DiDi/DiDi_remove_ads.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% api.udache.com, common.diditaxi.com.cn, conf.diditaxi.com.cn, ct.xiaojukeji.com, daijia.kuaidadi.com, freight.xiaojukeji.com, res.xiaojukeji.com
