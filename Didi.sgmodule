@@ -1,5 +1,6 @@
 #!name=Didi
 #!desc=Didi_Ad
+#!category=For Own Use
 
 [Rule]
 IP-CIDR,123.207.209.39/32,REJECT
