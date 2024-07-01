@@ -1,3 +1,7 @@
+#!name=高德地图
+#!desc=Ad
+#!category=For Own Use
+
 [Map Local]
 # 导航详情页,路线规划,地点详情页,搜索详情页,导航结束页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(car-end|route-plan)\? data-type=text data="{}" status-code=200
