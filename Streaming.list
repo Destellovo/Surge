@@ -24,6 +24,9 @@ DOMAIN,film.hovervan.org
 DOMAIN,emby.tkremby.xyz
 DOMAIN,main.gugumedia.site
 DOMAIN-SUFFIX,emby.wtf
+DOMAIN-SUFFIX,emby.wtf
+
+#Happymh
 DOMAIN-KEYWORD,happymh
 
 #CMS
@@ -75,8 +78,6 @@ DOMAIN-SUFFIX,iz8qkg.com
 DOMAIN-SUFFIX,v82u1l.com
 DOMAIN-KEYWORD,pilipiliultra
 DOMAIN-KEYWORD,pilipili
-#终点站
-DOMAIN-SUFFIX,emby.wtf
 
 #Pikpak
 DOMAIN-SUFFIX,dlandroid.rcv.sandai.net
