@@ -1,1 +1,19 @@
-sb
+#!name=Sub_info
+#!desc=Sub_info
+#!category=For Own Use
+#!arguments=NAME_1:第一个机场的名字,URL_1:编码后的机场订阅,RESET-Day_1:重置日期,NAME_2:#第二个机场的名字,URL_2:编码后的机场订阅,RESET-Day_2:重置日期,NAME_3:#第三个机场的名字,URL_3:编码后的机场订阅,RESET-Day_3:重置日期
+#!arguments-desc=[参数设置]\n\n⓵ NAME: 写你机场的名字,默认开启单订阅。\n\n⓶ URL: 编码后的机场订阅。\n\n⓷ RESET_DAY: 流量每月重置的日期,如26号就写26,不设置则不显示流量重置日,仅显示到期日期。
+
+[Script]
+{{{NAME_1}}} = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Destellovo/Surge/main/Sub_info.js,script-update-interval=0,argument=url={{{URL_1}}}&reset_day={{{RESET-Day_1}}}&title={{{NAME_1}}}&icon=atom&color=#6f8faf
+
+{{{NAME_2}}} = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Destellovo/Surge/main/Sub_info.js,script-update-interval=0,argument=url={{{URL_2}}}&reset_day={{{RESET-Day_2}}}&title=AmyTelecom&icon=sparkles&color=#ffff00
+
+{{{NAME_3}}} = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Destellovo/Surge/main/Sub_info.js,script-update-interval=0,argument=url={{{URL_3}}}&reset_day={{{RESET-Day_3}}}&title={{{NAME_3}}}&icon=camera.macro&color=#ee4b2b
+
+[Panel]
+{{{NAME_1}}} = script-name={{{NAME_1}}},update-interval=600
+
+#{{{NAME_2}}} = script-name={{{NAME_2}}},update-interval=600
+
+{{{NAME_3}}} = script-name={{{NAME_3}}},update-interval=600
