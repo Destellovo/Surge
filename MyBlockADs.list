@@ -2,10 +2,6 @@ IP-CIDR,0.0.0.0/32
 
 #Dcard
 DOMAIN,dad-api.dcard.tw
-DOMAIN,vaconf-man.vm5apis.com
-DOMAIN,census-app-x.scorecardresearch.com
-DOMAIN-SUFFIX,appsflyersdk.com
-DOMAIN-KEYWORD,zendesk
 DOMAIN,carousel.dcard.tw
 
 
