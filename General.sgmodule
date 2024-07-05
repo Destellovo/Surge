@@ -1,3 +1,7 @@
+#!name=General
+#!desc=General
+#!category=For Own Use
+
 [General]
 # > 跳过代理
 # 跳过某个域名或者 IP 段，这些目标主机将不会由 Surge Proxy 处理。
