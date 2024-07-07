@@ -1,3 +1,6 @@
+#!name=Tieba
+#!desc=Tieba_Ad
+#!category=For Own Use
 
 [Rule]
 DOMAIN,afd.baidu.com,REJECT
