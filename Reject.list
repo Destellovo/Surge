@@ -4,7 +4,7 @@ IP-CIDR,0.0.0.0/32
 DOMAIN,dad-api.dcard.tw
 DOMAIN,carousel.dcard.tw
 DOMAIN-SUFFIX,zendesk.com
-
+DOMAIN-SUFFIX,appsflyersdk.com
 #OPGG
 DOMAIN,adservice.google.com
 DOMAIN,app-measurement.com
