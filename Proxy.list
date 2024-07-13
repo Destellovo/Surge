@@ -728,3 +728,6 @@ IP-CIDR,203.174.77.0/24,no-resolve
 #端
 DOMAIN-SUFFIX,theinitium.com
 
+#OPGG
+DOMAIN-SUFFIX,op.gg
+DOMAIN-SUFFIX,opgg-static.akamaized.net
