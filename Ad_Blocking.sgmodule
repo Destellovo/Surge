@@ -99,6 +99,7 @@ https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) - reject
 
 # 阿里云盘 //api.alipan.com, member.alipan.com
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders data-type=text data="{}" status-code=200
+
 ^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle data-type=text data="{}" status-code=200
 
 # 阿里巴巴
@@ -257,6 +258,11 @@ https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) - reject
 
 header = type=http-response, pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, timeout=60
 
+#阿里云盘
+adrive = type=http-response, pattern=^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body=true, max-size=-1, timeout=60
+
+adrive = type=http-response, pattern=^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body=true, max-size=-1, timeout=60
+
 # 京东 
 jingdong = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js, requires-body=true, max-size=-1, timeout=60
 
@@ -321,5 +327,5 @@ myBlockAds = type=http-response, pattern=^https?:\/\/poplayer\.template\.alibaba
 移除热点板块信息流广告 = type=http-response, pattern=^https:\/\/api\.xiaoheihe\.cn\/bbs\/app\/feeds\/news, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/XiaoHeiHe/XiaoHeiHe_remove_ads.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% amdc.m.taobao.com, acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, gw.alicdn.com,pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, update.pan.baidu.com, fc-video.cdn.bcebos.com, rp.hpplay.cn,pic1.chelaile.net.cn, api.chelaile.net.cn, atrace.chelaile.net.cn, web.chelaile.net.cn, cdn.*.chelaileapp.cn,app.dewu.com,cdn.poizon.com,daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn,api.douban.com,elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com,cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com,api.m.jd.com, dns.jd.com,res.kfc.com.cn,img.meituan.net s3plus.meituan.net, flowplus.meituan.net,api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com,j1.pupuapi.com,qidian.qpic.cn,mage.if.qidian.com,magev6.if.qidian.com,gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com,client.app.coc.10086.cn, h.client.app.coc.10086.cn,app.10086.cn, api.alipan.com, member.alipan.com,api.coolapk.com,homepage-api.smzdm.com, haojia-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, qianbao.smzdm.com,api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com,appconf.mail.163.com, client.mail.163.com, analytics.163.com,api.mcd.cn,apicloud.zol.com.cn,cloud.189.cn, zt-app.go189.cn,api.xiaoheihe.cn
+hostname = %APPEND% amdc.m.taobao.com, acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, gw.alicdn.com,pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, update.pan.baidu.com, fc-video.cdn.bcebos.com, rp.hpplay.cn,pic1.chelaile.net.cn, api.chelaile.net.cn, atrace.chelaile.net.cn, web.chelaile.net.cn, cdn.*.chelaileapp.cn,app.dewu.com,cdn.poizon.com,daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn,api.douban.com,elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com,cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com,api.m.jd.com, dns.jd.com,res.kfc.com.cn,img.meituan.net s3plus.meituan.net, flowplus.meituan.net,api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com,j1.pupuapi.com,qidian.qpic.cn,mage.if.qidian.com,magev6.if.qidian.com,gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com,client.app.coc.10086.cn, h.client.app.coc.10086.cn,app.10086.cn, *api.alipan.com, member.alipan.com,api.coolapk.com,homepage-api.smzdm.com, haojia-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, qianbao.smzdm.com,api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com,appconf.mail.163.com, client.mail.163.com, analytics.163.com,api.mcd.cn,apicloud.zol.com.cn,cloud.189.cn, zt-app.go189.cn,api.xiaoheihe.cn
 
