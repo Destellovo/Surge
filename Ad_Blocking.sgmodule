@@ -80,6 +80,20 @@ https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) - reject
 # 多个悬浮窗
 ^https?:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket - reject
 ^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject
+
+# 字节跳动广告
+^https:\/\/api-access\.pangolin-sdk-toutiao(\d|-b)?\.com\/api\/ad\/union\/sdk\/(settings|stats)\/ - reject
+^https:\/\/ether-pack\.pangolin-sdk-toutiao\.com\/union\/endcard\/ - reject
+^https:\/\/gromore\.pangolin-sdk-toutiao\.com\/api\/ad\/ - reject
+^https:\/\/lf\d?-cdn-tos\.bytescm\.com\/obj\/static\/ad\/ - reject
+^https:\/\/lf\d?-analytics\.bytescm\.com\/obj\/adjssdk\/ - reject
+^https:\/\/sf\d?-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/ - reject
+# 拼多多广告平台
+^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/ - reject
+^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_union - reject
+^https:\/\/images\.pinduoduo\.com\/mrk\/ - reject
+^https:\/\/images\.pinduoduo\.com\/marketing_api\/ - reject
+
 [Map Local]
 
 # 阿里云盘 //api.alipan.com, member.alipan.com
