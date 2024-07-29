@@ -1,4 +1,6 @@
-
+[General]
+#Pupu
+force-http-engine-hosts = %APPEND% 54.222.159.138:8053, 101.42.130.147:8053, 106.55.220.18:8053, 139.196.12.179:8053
 
 [Rule]
 #12306
@@ -10,6 +12,10 @@ DOMAIN,dad-api.dcard.tw, REJECT
 DOMAIN,carousel.dcard.tw, REJECT
 DOMAIN-SUFFIX,zendesk.com, REJECT
 DOMAIN-SUFFIX,appsflyersdk.com, REJECT
+#Douyu
+IP-CIDR,119.29.29.98/32,REJECT,no-resolve
+IP-CIDR,119.29.29.99/32,REJECT,no-resolve
+URL-REGEX,^http:\/\/linkmicschedule\.douyucdn\.cn\/im_schedule\/im_gate_list,REJECT
 #OPGG
 DOMAIN,adservice.google.com, REJECT
 DOMAIN,app-measurement.com, REJECT
@@ -17,6 +23,11 @@ DOMAIN,googleads.g.doubleclick.net, REJECT
 DOMAIN,tpc.googlesyndication.com, REJECT
 DOMAIN,pagead2.googlesyndication.com, REJECT
 DOMAIN-SUFFIX,doubleclick.net, REJECT
+#Pupu
+URL-REGEX,^http:\/\/54\.222\.159\.138:8053\/httpdns\/,REJECT
+URL-REGEX,^http:\/\/101\.42\.130\.147:8053\/httpdns\/,REJECT
+URL-REGEX,^http:\/\/106\.55\.220\.18:8053\/httpdns\/,REJECT
+URL-REGEX,^http:\/\/139\.196\.12\.179:8053\/httpdns\/,REJECT
 #字节跳动
 AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
 AND, ((DOMAIN-KEYWORD, -ttam-), (DOMAIN-SUFFIX, ibyteimg.com)), REJECT
@@ -221,6 +232,12 @@ DOMAIN,xlog.jd.com,REJECT
 DOMAIN,janapi.jd.com,REJECT
 
 [URL Rewrite]
+#BaiduDrive
+^https?:\/\/180\.76\.76\.200\/v\d\/resolve - reject
+^https?:\/\/180\.76\.76\.112\/v\d\/resolve - reject
+#Pupu
+^https:\/\/j1\.pupuapi\.com\/client\/account\/discount\/order - reject
+^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=100 - reject
 # 字节跳动广告
 ^https:\/\/ether-pack\.pangolin-sdk-toutiao\.com\/union\/endcard\/ - reject
 # 拼多多广告平台
@@ -228,9 +245,7 @@ DOMAIN,janapi.jd.com,REJECT
 ^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_union - reject
 ^https:\/\/images\.pinduoduo\.com\/mrk\/ - reject
 ^https:\/\/images\.pinduoduo\.com\/marketing_api\/ - reject
-#BaiduDrive
-^https?:\/\/180\.76\.76\.200\/v\d\/resolve - reject
-^https?:\/\/180\.76\.76\.112\/v\d\/resolve - reject
+
 
 [Map Local]
 #AliyunDrive
@@ -244,6 +259,8 @@ DOMAIN,janapi.jd.com,REJECT
 ^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user\?method=gamecenter data-type=text data="{}" status-code=200
 ^https:\/\/pan\.baidu\.com\/act\/v2\/welfare\/list data-type=text data="{}" status-code=200
 ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv data-type=text data="{}" status-code=200
+#Douyu
+^https:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo data-type=text data="{}" status-code=200
 
 [Script]
 #12306
@@ -252,6 +269,17 @@ DOMAIN,janapi.jd.com,REJECT
 #AliyunDrive
 AliyunDrive = type=http-response, pattern=^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body=true
 AliyunDrive = type=http-response, pattern=^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body=true
+#Douyu
+Douyu = type=http-response, pattern=^https:\/\/apiv2\.douyucdn\.cn\/mgapi\/livenc\/home\/getRecV3, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Douyu/Douyu_remove_ads.js, requires-body=true
+Douyu = type=http-response, pattern=^https:\/\/apiv2\.douyucdn\.cn\/japi\/entrance\/roomRes\/nc\/m\/list, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Douyu/Douyu_remove_ads.js, requires-body=true
+Douyu= type=http-response, pattern=^https:\/\/venus\.douyucdn\.cn\/venus\/config\/static\/update.+keyCodeSet=flow_config, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Douyu/Douyu_remove_ads.js, requires-body=true
+#Pupu
+Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/PuPuMall/PuPuMall_remove_ads.js, requires-body=true
+Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/search_component_banner, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/PuPuMall/PuPuMall_remove_ads.js, requires-body=true
+Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/search\/hot_keywords\/v3, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/PuPuMall/PuPuMall_remove_ads.js, requires-body=true
+Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/app_resource\/resource_preload\/list_h5_resource, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/PuPuMall/PuPuMall_remove_ads.js, requires-body=true
+Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/recommendation\/interests\/products, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/PuPuMall/PuPuMall_remove_ads.js, requires-body=true
+Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/PuPuMall/PuPuMall_remove_ads.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% ether-pack.pangolin-sdk-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com，ad.12306.cn, mobile.12306.cn,api.alipan.com, member.alipan.com, bizapi.alipan.com, pan.baidu.com, 180.76.76.200, 180.76.76.112
+hostname = %APPEND% ether-pack.pangolin-sdk-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com，ad.12306.cn, mobile.12306.cn,api.alipan.com, member.alipan.com, bizapi.alipan.com, pan.baidu.com, 180.76.76.200, 180.76.76.112, rtbapi.douyucdn.cn, apiv2.douyucdn.cn, venus.douyucdn.cn, j1.pupuapi.com
