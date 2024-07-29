@@ -22,12 +22,29 @@ DOMAIN,app-measurement.com, REJECT
 DOMAIN,googleads.g.doubleclick.net, REJECT
 DOMAIN,tpc.googlesyndication.com, REJECT
 DOMAIN,pagead2.googlesyndication.com, REJECT
-DOMAIN-SUFFIX,doubleclick.net, REJECT
+DOMAIN-SUFFIX,doubleclick-cn.net,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
 #Pupu
 URL-REGEX,^http:\/\/54\.222\.159\.138:8053\/httpdns\/,REJECT
 URL-REGEX,^http:\/\/101\.42\.130\.147:8053\/httpdns\/,REJECT
 URL-REGEX,^http:\/\/106\.55\.220\.18:8053\/httpdns\/,REJECT
 URL-REGEX,^http:\/\/139\.196\.12\.179:8053\/httpdns\/,REJECT
+# 虎牙直播开屏广告
+DOMAIN,business.msstatic.com,REJECT
+DOMAIN-SUFFIX,v1d.szbdyd.com,REJECT
+URL-REGEX,^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$,REJECT
+# 中国联通
+DOMAIN-SUFFIX,m1.ad.10010.com,REJECT
+# 中国电信
+DOMAIN,ad.21cn.com,REJECT
+DOMAIN,ad.k.21cn.com,REJECT
+DOMAIN,admarket.21cn.com,REJECT
+DOMAIN,adshows.21cn.com,REJECT
+IP-CIDR,122.229.8.47/32,REJECT,no-resolve
+IP-CIDR,122.229.29.89/32,REJECT,no-resolve
+# 快递100
+URL-REGEX,^http:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do,REJECT-TINYGIF
+URL-REGEX,^http:\/\/p\.kuaidi100\.com\/advertisement\/,REJECT-TINYGIF
 #字节跳动
 AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
 AND, ((DOMAIN-KEYWORD, -ttam-), (DOMAIN-SUFFIX, ibyteimg.com)), REJECT
@@ -240,12 +257,18 @@ DOMAIN,janapi.jd.com,REJECT
 ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=100 - reject
 # 字节跳动广告
 ^https:\/\/ether-pack\.pangolin-sdk-toutiao\.com\/union\/endcard\/ - reject
-# 拼多多广告平台
+# 拼多多广告平台 api.pinduoduo.com, api.yangkeduo.com
 ^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/ - reject
 ^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_union - reject
 ^https:\/\/images\.pinduoduo\.com\/mrk\/ - reject
 ^https:\/\/images\.pinduoduo\.com\/marketing_api\/ - reject
-
+# 闲鱼 //gw.alicdn.com, acs.m.taobao.com
+^https:\/\/gw\.alicdn\.com\/mt\/ - reject
+^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} - reject
+^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} - reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject
+#China Mobile
+^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) - reject
 
 [Map Local]
 #AliyunDrive
@@ -261,6 +284,10 @@ DOMAIN,janapi.jd.com,REJECT
 ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv data-type=text data="{}" status-code=200
 #Douyu
 ^https:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo data-type=text data="{}" status-code=200
+#Xianyu
+# Xianyu
+^https:\/\/iyes\.youku\.com\/uts\/v1\/start\/ data-type=text data="{}" status-code=200
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.get\/ data-type=text data="{}" status-code=200
 
 [Script]
 #12306
@@ -282,4 +309,4 @@ Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/recommen
 Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/PuPuMall/PuPuMall_remove_ads.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% ether-pack.pangolin-sdk-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com，ad.12306.cn, mobile.12306.cn,api.alipan.com, member.alipan.com, bizapi.alipan.com, pan.baidu.com, 180.76.76.200, 180.76.76.112, rtbapi.douyucdn.cn, apiv2.douyucdn.cn, venus.douyucdn.cn, j1.pupuapi.com
+hostname = %APPEND% ether-pack.pangolin-sdk-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com，ad.12306.cn, mobile.12306.cn,api.alipan.com, member.alipan.com, bizapi.alipan.com, pan.baidu.com, 180.76.76.200, 180.76.76.112, rtbapi.douyucdn.cn, apiv2.douyucdn.cn, venus.douyucdn.cn, j1.pupuapi.com,gw.alicdn.com, acs.m.taobao.com,api.pinduoduo.com, api.yangkeduo.com, video-dsp.pddpic.com, images.pinduoduo.com, client.app.coc.10086.cn,ether-pack.pangolin-sdk-toutiao.com, god.gameyw.netease.com, gromore.pangolin-sdk-toutiao.com, 
