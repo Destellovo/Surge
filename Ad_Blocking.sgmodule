@@ -2,12 +2,6 @@
 #!desc=For Own Use
 #!category=For Own Use
 
-[Rule]
-IP-CIDR,119.29.29.98/32,REJECT,no-resolve
-IP-CIDR,119.29.29.99/32,REJECT,no-resolve
-URL-REGEX,^http:\/\/linkmicschedule\.douyucdn\.cn\/im_schedule\/im_gate_list,REJECT
-
-
 
 [URL Rewrite]
 
