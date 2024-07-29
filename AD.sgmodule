@@ -1,3 +1,7 @@
+#!name=AD
+#!desc=For Own Use
+#!category=For Own Use
+
 [General]
 #Pupu
 force-http-engine-hosts = %APPEND% 54.222.159.138:8053, 101.42.130.147:8053, 106.55.220.18:8053, 139.196.12.179:8053
