@@ -1,10 +1,22 @@
 
 
-
-
-
 [Rule]
-
+#12306
+DOMAIN,ad.12306.cn,DIRECT
+#AliyunDrive
+IP-CIDR,203.107.1.1/24,REJECT,no-resolve
+#Dcard
+DOMAIN,dad-api.dcard.tw, REJECT
+DOMAIN,carousel.dcard.tw, REJECT
+DOMAIN-SUFFIX,zendesk.com, REJECT
+DOMAIN-SUFFIX,appsflyersdk.com, REJECT
+#OPGG
+DOMAIN,adservice.google.com, REJECT
+DOMAIN,app-measurement.com, REJECT
+DOMAIN,googleads.g.doubleclick.net, REJECT
+DOMAIN,tpc.googlesyndication.com, REJECT
+DOMAIN,pagead2.googlesyndication.com, REJECT
+DOMAIN-SUFFIX,doubleclick.net, REJECT
 #字节跳动
 AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
 AND, ((DOMAIN-KEYWORD, -ttam-), (DOMAIN-SUFFIX, ibyteimg.com)), REJECT
@@ -216,6 +228,30 @@ DOMAIN,janapi.jd.com,REJECT
 ^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_union - reject
 ^https:\/\/images\.pinduoduo\.com\/mrk\/ - reject
 ^https:\/\/images\.pinduoduo\.com\/marketing_api\/ - reject
+#BaiduDrive
+^https?:\/\/180\.76\.76\.200\/v\d\/resolve - reject
+^https?:\/\/180\.76\.76\.112\/v\d\/resolve - reject
+
+[Map Local]
+#AliyunDrive
+^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle data-type=text data="{}" status-code=200
+^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders data-type=text data="{}" status-code=200
+#BaiduDrive
+^https:\/\/pan\.baidu\.com\/api\/getconfig data-type=text data="{}" status-code=200
+^https:\/\/pan\.baidu\.com\/api\/getsyscfg data-type=text data="{}" status-code=200
+^https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist data-type=text data="{}" status-code=200
+^https:\/\/pan\.baidu\.com\/act\/api\/activityentry data-type=text data="{}" status-code=200
+^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user\?method=gamecenter data-type=text data="{}" status-code=200
+^https:\/\/pan\.baidu\.com\/act\/v2\/welfare\/list data-type=text data="{}" status-code=200
+^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv data-type=text data="{}" status-code=200
+
+[Script]
+#12306
+12306 = type=http-request, pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/12306/12306_remove_splashscreen_ads.js, requires-body=true
+12306 = type=http-response, pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/12306/12306_remove_ads.js
+#AliyunDrive
+AliyunDrive = type=http-response, pattern=^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body=true
+AliyunDrive = type=http-response, pattern=^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% ether-pack.pangolin-sdk-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
+hostname = %APPEND% ether-pack.pangolin-sdk-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com，ad.12306.cn, mobile.12306.cn,api.alipan.com, member.alipan.com, bizapi.alipan.com, pan.baidu.com, 180.76.76.200, 180.76.76.112
