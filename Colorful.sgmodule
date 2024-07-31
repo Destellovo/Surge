@@ -10,7 +10,6 @@
 
 [Script]
 彩云天气去广告 = type=http-response, pattern=^https:\/\/(wrapper\.cyapi\.cn|api\.caiyunapp\.com|cdn-w\.caiyunapp\.com)\/v1\/activity\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/ColorfulClouds/ColorfulClouds_remove_ads.js, requires-body=true
-bytq = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/bytq.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
 hostname = %APPEND% biz.cyapi.cn, starplucker.cyapi.cn, api.caiyunapp.com, cdn-w.caiyunapp.com,api.revenuecat.com
