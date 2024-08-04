@@ -306,6 +306,9 @@ DOMAIN,janapi.jd.com,REJECT
 ^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg data-type=text data=" " status-code=200
 #Douyu
 ^https:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo data-type=text data="{}" status-code=200
+#Douban
+^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ data-type=text data="{}" status-code=200
+^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* data-type=text data="{}" status-code=200
 #Eleme
 ^https?:\/\/fuss10\.elemecdn\.com\/.+?\.mp4 data-type=tiny-gif status-code=200
 #KFC
@@ -364,5 +367,5 @@ Taobao = type=http-response, pattern=^https?:\/\/poplayer\.template\.alibaba\.co
 Xiaoheihe = type=http-response, pattern=^https:\/\/api\.xiaoheihe\.cn\/bbs\/app\/feeds\/news, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/XiaoHeiHe/XiaoHeiHe_remove_ads.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% ether-pack.pangolin-sdk-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com，ad.12306.cn, mobile.12306.cn,api.alipan.com, member.alipan.com, bizapi.alipan.com, pan.baidu.com, 180.76.76.200, 180.76.76.112, rtbapi.douyucdn.cn, apiv2.douyucdn.cn, venus.douyucdn.cn, j1.pupuapi.com,gw.alicdn.com, acs.m.taobao.com,api.pinduoduo.com, api.yangkeduo.com, video-dsp.pddpic.com, images.pinduoduo.com, client.app.coc.10086.cn,ether-pack.pangolin-sdk-toutiao.com, god.gameyw.netease.com, gromore.pangolin-sdk-toutiao.com, api.xiaoheihe.cn,elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com,api.mcd.cn, res.kfc.com.cn, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net,acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, app.dewu.com, cdn.poizon.com
+hostname = %APPEND% ether-pack.pangolin-sdk-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com，ad.12306.cn, mobile.12306.cn,api.alipan.com, member.alipan.com, bizapi.alipan.com, pan.baidu.com, 180.76.76.200, 180.76.76.112, rtbapi.douyucdn.cn, apiv2.douyucdn.cn, venus.douyucdn.cn, api.douban.com,j1.pupuapi.com,gw.alicdn.com, acs.m.taobao.com,api.pinduoduo.com, api.yangkeduo.com, video-dsp.pddpic.com, images.pinduoduo.com, client.app.coc.10086.cn,ether-pack.pangolin-sdk-toutiao.com, god.gameyw.netease.com, gromore.pangolin-sdk-toutiao.com, api.xiaoheihe.cn,elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com,api.mcd.cn, res.kfc.com.cn, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net,acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, app.dewu.com, cdn.poizon.com
 
