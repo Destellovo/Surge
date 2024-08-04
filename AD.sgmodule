@@ -256,6 +256,10 @@ DOMAIN,janapi.jd.com,REJECT
 ^https?:\/\/180\.76\.76\.112\/v\d\/resolve - reject
 #Dewu
 ^https?:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement - reject
+#Douban
+^https?:\/\/img\d\.doubanio\.com\/view\/dale-online\/dale_ad\/ - reject
+^https?:\/\/frodo\.douban\.com\/api\/v2\/movie\/banner - reject
+^https?:\/\/erebor\.douban\.com\/count\/\?ad= - reject
 #Eleme
 ^https?:\/\/elemecdn\.com\/.+\/sitemap - reject
 ^https?:\/\/fuss10\.elemecdn\.com\/.+\/w\/640\/h\/\d{3,4} - reject
