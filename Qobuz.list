@@ -30,5 +30,6 @@ DOMAIN-SUFFIX,quobuz.com
 DOMAIN-SUFFIX,quobuz.fr
 DOMAIN-SUFFIX,static-qobuz.com
 DOMAIN-SUFFIX,akamaized.net
+DOMAIN-KEYWORD,qobuz
 IP-CIDR,52.211.1.180/32,no-resolve
 IP-CIDR,99.81.97.56/32,no-resolve
