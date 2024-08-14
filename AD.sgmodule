@@ -170,7 +170,7 @@ DOMAIN,mi.gdt.qq.com,REJECT
 DOMAIN,otheve.beacon.qq.com,REJECT
 DOMAIN,pgdt.gtimg.cn,REJECT
 DOMAIN,pgdt.ugdtimg.com,REJECT
-DOMAIN,qzonestyle.gtimg.cn,REJECT
+# DOMAIN, qzonestyle.gtimg.cn, REJECT // 误杀
 DOMAIN,qzs.gdtimg.com,REJECT
 DOMAIN,qzs.qq.com,REJECT
 DOMAIN,rmonitor.qq.com,REJECT
@@ -239,6 +239,8 @@ DOMAIN,adx-bj.anythinktech.com,REJECT
 DOMAIN,api.anythinktech.com,REJECT
 DOMAIN,tk.anythinktech.com,REJECT
 DOMAIN,da.anythinktech.com,REJECT
+# 小米
+DOMAIN,sdkconfig.ad.xiaomi.com,REJECT
 # 美团
 DOMAIN,al-log.d.meituan.net,REJECT
 DOMAIN,babel-statistics-android.d.meituan.net,REJECT
