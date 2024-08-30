@@ -15,6 +15,7 @@ DOMAIN-SUFFIX,v.smtcdns.com,REJECT
 #Dcard
 DOMAIN,dad-api.dcard.tw, REJECT
 DOMAIN,carousel.dcard.tw, REJECT
+DOMAIN,survey.survicate.com, REJECT
 DOMAIN-SUFFIX,zendesk.com, REJECT
 DOMAIN-SUFFIX,appsflyersdk.com, REJECT
 #Douyu
