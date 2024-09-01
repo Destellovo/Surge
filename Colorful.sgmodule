@@ -2,15 +2,22 @@
 #!desc=Ad
 #!category=For Own Use
 
-
 [Map Local]
-^https:\/\/biz\.cyapi\.cn\/(p\/v1\/entries|p\/v1\/trial_card\/info|v2\/product) data-type=text data="{}" status-code=200
-
-^https:\/\/starplucker\.cyapi\.cn\/v3\/(config\/cypage\/\w+\/conditions|notification\/message_center|operation\/homefeatures) data-type=text data="{}" status-code=200
+# 普通版广告
+^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather data-type=text data="{}" status-code=200
 
 [Script]
-彩云天气去广告 = type=http-response, pattern=^https:\/\/(wrapper\.cyapi\.cn|api\.caiyunapp\.com|cdn-w\.caiyunapp\.com)\/v1\/activity\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/ColorfulClouds/ColorfulClouds_remove_ads.js, requires-body=true
+# 赏叶赏花
+caiyun = type=http-response, pattern=^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather, script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, requires-body=true, max-size=-1, timeout=60
+
+# 解锁vip
+caiyun = type=http-response, pattern=^https:\/\/biz\.cyapi\.cn\/v2\/user, script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, requires-body=true, max-size=-1, timeout=60
+
+# 卫星云图 48小时预报
+caiyun = type=http-request, pattern=^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images), script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, timeout=60
+
+# 7.20.0版本显示VIP
+caiyun = type=http-response, pattern=^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_detail$, script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% biz.cyapi.cn, starplucker.cyapi.cn, api.caiyunapp.com, cdn-w.caiyunapp.com,api.revenuecat.com
-
+hostname = %APPEND% *.cyapi.cn
