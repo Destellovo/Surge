@@ -87,7 +87,7 @@ IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve
 # 其他 - 服务器推送配置
 拦截服务器推送配置 = type=http-response, pattern=^https:\/\/appcloud2\.zhihu\.com\/v3\/config, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body=true
 
-拦截服务器推送配置 = type=http-response, pattern=^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\?, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body=true
+拦截服务器推送配置 = type=http-response, pattern=^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all\?, script-path=https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body=true
 
 [MITM]
 hostname = %APPEND% *.zhihu.com
