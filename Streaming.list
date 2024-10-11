@@ -125,3 +125,8 @@ DOMAIN-SUFFIX,pstatic.net
 #Pica
 DOMAIN-SUFFIX,picacomic.com
 DOMAIN-KEYWORD,picacomic
+
+#Deezer
+DOMAIN-SUFFIX,deezer.com
+DOMAIN-SUFFIX,dzcdn.net
+USER-AGENT,Deezer*
