@@ -3,13 +3,13 @@
 #!category=For Own Use
 
 [Rule]
-DOMAIN,httpdns.music.163.com,REJECT
-DOMAIN,httpdns.n.netease.com,REJECT
-DOMAIN,iadmat.nosdn.127.net,REJECT
-DOMAIN,iadmatapk.nosdn.127.net,REJECT
-DOMAIN,iadmusicmat.music.126.net,REJECT
-# DOMAIN, iadmusicmatvideo.music.126.net, REJECT
-DOMAIN-SUFFIX,163jiasu.com,REJECT
+DOMAIN,httpdns.music.163.com,REJECT,extended-matching,pre-matching
+DOMAIN,httpdns.n.netease.com,REJECT,extended-matching,pre-matching
+DOMAIN,iadmat.nosdn.127.net,REJECT,extended-matching,pre-matching
+DOMAIN,iadmatapk.nosdn.127.net,REJECT,extended-matching,pre-matching
+DOMAIN,iadmusicmat.music.126.net,REJECT,extended-matching,pre-matching
+# DOMAIN, iadmusicmatvideo.music.126.net, REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,163jiasu.com,REJECT,extended-matching,pre-matching
 
 [Header Rewrite]
 # 新版加密通用处理
