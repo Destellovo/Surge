@@ -2,39 +2,20 @@
 #!desc=For Own Use
 #!category=For Own Use
 
-[General]
-#Pupu
-force-http-engine-hosts = %APPEND% 54.222.159.138:8053, 101.42.130.147:8053, 106.55.220.18:8053, 139.196.12.179:8053
-
 [Rule]
-#12306
-DOMAIN,ad.12306.cn,DIRECT
-#AliyunDrive
-IP-CIDR,203.107.1.1/24,REJECT,no-resolve
-DOMAIN-SUFFIX,v.smtcdns.com,REJECT
-#Dcard
-DOMAIN,dad-api.dcard.tw, REJECT
-DOMAIN,carousel.dcard.tw, REJECT
-DOMAIN,survey.survicate.com, REJECT
-DOMAIN-SUFFIX,zendesk.com, REJECT
-DOMAIN-SUFFIX,appsflyersdk.com, REJECT
-#Douyu
-IP-CIDR,119.29.29.98/32,REJECT,no-resolve
-IP-CIDR,119.29.29.99/32,REJECT,no-resolve
-URL-REGEX,^http:\/\/linkmicschedule\.douyucdn\.cn\/im_schedule\/im_gate_list,REJECT
-#OPGG
-DOMAIN,adservice.google.com, REJECT
-DOMAIN,app-measurement.com, REJECT
-DOMAIN,googleads.g.doubleclick.net, REJECT
-DOMAIN,tpc.googlesyndication.com, REJECT
-DOMAIN,pagead2.googlesyndication.com, REJECT
+# Outlook
+DOMAIN,acdn.adnxs.com,REJECT
+DOMAIN,mediation.adnxs.com,REJECT
+DOMAIN,sin3-ib.adnxs.com,REJECT
+# 小米
+DOMAIN,sdkconfig.ad.xiaomi.com,REJECT
+DOMAIN,data.mistat.xiaomi.com,REJECT
+DOMAIN,tracking.intl.miui.com,REJECT
+# 米家
+DOMAIN,sdkconfig.ad.xiaomi.com,REJECT
+# 通用广告
 DOMAIN-SUFFIX,doubleclick-cn.net,REJECT
 DOMAIN-SUFFIX,doubleclick.net,REJECT
-#Pupu
-URL-REGEX,^http:\/\/54\.222\.159\.138:8053\/httpdns\/,REJECT
-URL-REGEX,^http:\/\/101\.42\.130\.147:8053\/httpdns\/,REJECT
-URL-REGEX,^http:\/\/106\.55\.220\.18:8053\/httpdns\/,REJECT
-URL-REGEX,^http:\/\/139\.196\.12\.179:8053\/httpdns\/,REJECT
 # 虎牙直播开屏广告
 DOMAIN,business.msstatic.com,REJECT
 DOMAIN-SUFFIX,v1d.szbdyd.com,REJECT
@@ -51,328 +32,210 @@ IP-CIDR,122.229.29.89/32,REJECT,no-resolve
 # 快递100
 URL-REGEX,^http:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do,REJECT-TINYGIF
 URL-REGEX,^http:\/\/p\.kuaidi100\.com\/advertisement\/,REJECT-TINYGIF
-AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
-AND, ((DOMAIN-KEYWORD, -ttam-), (DOMAIN-SUFFIX, ibyteimg.com)), REJECT
-AND, ((DOMAIN-KEYWORD, ssdk-), (DOMAIN-SUFFIX, pangle.io)), REJECT
-AND, ((DOMAIN-KEYWORD, pangolin), (DOMAIN-SUFFIX, sgsnssdk.com)), REJECT
-AND, ((DOMAIN-KEYWORD, lf), (DOMAIN-KEYWORD, -short.bytetos.com)), REJECT
-AND, ((DOMAIN-KEYWORD, v), (DOMAIN-KEYWORD, -be-pack.pglstatp-toutiao.com)), REJECT
-AND, ((DOMAIN-KEYWORD, sf), (DOMAIN-KEYWORD, -be-pack.pglstatp-toutiao.com)), REJECT
-AND, ((DOMAIN-KEYWORD, s), (DOMAIN-KEYWORD, -fe-scm.pglstatp-toutiao.com)), REJECT
-AND, ((DOMAIN-KEYWORD, sf), (DOMAIN-KEYWORD, -ttcdn-tos.pstatp.com)), REJECT
-AND, ((DOMAIN-KEYWORD, sf), (DOMAIN-KEYWORD, -static.i18n-pglstatp.com)), REJECT
-AND, ((DOMAIN-KEYWORD, if), (DOMAIN-KEYWORD, -analytics.bytescm.com)), REJECT
-AND, ((DOMAIN-KEYWORD, lf), (DOMAIN-KEYWORD, -analytics.bytescm.com)), REJECT
-AND, ((DOMAIN-KEYWORD, ads), (DOMAIN-KEYWORD, normal), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
-AND, ((DOMAIN-KEYWORD, api), (DOMAIN-KEYWORD, -access-), (DOMAIN-SUFFIX, pangle.io)), REJECT
-AND, ((DOMAIN-KEYWORD, api), (DOMAIN-KEYWORD, -log-), (DOMAIN-SUFFIX, pangle.io)), REJECT
-AND, ((DOMAIN-KEYWORD, api), (DOMAIN-KEYWORD, -dual-event-), (DOMAIN-SUFFIX, pangle.io)), REJECT
-AND, ((DOMAIN-KEYWORD, api), (DOMAIN-KEYWORD, pangolin), (DOMAIN-SUFFIX, sgsnssdk.com)), REJECT
-AND, ((DOMAIN-KEYWORD, ads), (DOMAIN-KEYWORD, -normal-lq), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
-URL-REGEX,^http:\/\/p\d+-be-pack-sign\.pglstatp-toutiao\.com\/(ad-app-package|web\.business\.image)\/,REJECT
-DOMAIN,mon.zijieapi.com,REJECT
-DOMAIN,i.snssdk.com,REJECT
-DOMAIN,is.snssdk.com,REJECT
-DOMAIN,bds.snssdk.com,REJECT
-DOMAIN,dm.bytedance.com,REJECT
-DOMAIN,dm.pstatp.com,REJECT
-DOMAIN,dm.toutiao.com,REJECT
-DOMAIN,log.snssdk.com,REJECT
-DOMAIN,s3a.pstatp.com,REJECT
-DOMAIN,sdfp.snssdk.com,REJECT
-DOMAIN,tosv.boe.byted.org,REJECT
-DOMAIN,tosv.byted.org,REJECT
-DOMAIN,extlog.snssdk.com,REJECT
-DOMAIN,mssdk-bu.bytedance.com,REJECT
-DOMAIN,toblog.ctobsnssdk.com,REJECT
-DOMAIN,mssdk.volces.com,REJECT
-DOMAIN,pangolin.snssdk.com,REJECT
-DOMAIN,gromore.pangolin-sdk-toutiao.com,REJECT
-DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
-# DOMAIN-KEYWORD, api-access.pangolin-sdk-toutiao, REJECT // 被复写替代
-DOMAIN-KEYWORD,log-api.pangolin-sdk-toutiao,REJECT
-DOMAIN-KEYWORD,-ad.byteoversea.com,REJECT
-DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
-DOMAIN-KEYWORD,asiad.byteactivity,REJECT
-# 讯飞AI营销
-DOMAIN-KEYWORD,iflyad.bj.openstorage.cn,REJECT
-DOMAIN-KEYWORD,bjimp.voiceads.cn,REJECT
-# InMobi - 邑盟信息技术（上海）有限公司
-DOMAIN,config.inmobi.cn,REJECT
-# 北京锐讯灵通科技有限公司
-DOMAIN,ztoken.uyunad.com,REJECT
-# 快手联盟 - 广告服务商
-DOMAIN,gdfp.gifshow.com,REJECT
-DOMAIN,open.e.kuaishou.com,REJECT
-DOMAIN-SUFFIX,adukwai.com,REJECT
-# SupersonicAds
-DOMAIN,init.supersonicads.com,REJECT
-# 上海倍孜
-DOMAIN,sdk.beizi.biz,REJECT
-# 秒针系统 - 广告服务商
-DOMAIN,admaster.com.cn,REJECT
-DOMAIN-SUFFIX,miaozhen.com,REJECT
-# 艾狄墨搏 - 广告服务商
-DOMAIN,monitor.ssp.admobile.top,REJECT
-DOMAIN,sdk.ssp.admobile.top,REJECT
-DOMAIN-SUFFIX,admobile.top,REJECT
-# 袤博 - 广告服务商
-DOMAIN,api-c.dutils.com,REJECT
-DOMAIN,api-d.dutils.com,REJECT
-DOMAIN,api-p0.yksdks.com,REJECT
-DOMAIN,cache-verify.dutils.com,REJECT
-DOMAIN,cdn-api-verify.dutils.com,REJECT
-DOMAIN,devs-data.dutils.com,REJECT
-DOMAIN,log-verify.dutils.com,REJECT
-DOMAIN,m.mpl.dutils.com,REJECT
-DOMAIN,api.share.mob.com,REJECT
-DOMAIN,api.verify.mob.com,REJECT
-DOMAIN,log-verify.mob.com,REJECT
-DOMAIN,sdk.push.mob.com,REJECT
-# 极光 - 广告服务商
-DOMAIN,ali-stats.jpush.cn,REJECT
-DOMAIN,ce3e75d5.jpush.cn,REJECT
-DOMAIN,config-junion.jpush.cn,REJECT
-DOMAIN,config.jpush.cn,REJECT
-DOMAIN,fcapi-ipv6.jpush.cn,REJECT
-DOMAIN,gd-stats.jpush.cn,REJECT
-DOMAIN,s.jpush.cn,REJECT
-DOMAIN,sdk.verification.jiguang.cn,REJECT
-DOMAIN,sis-ipv6.jpush.cn,REJECT
-DOMAIN,smartop-sdkapi.jiguang.cn,REJECT
-DOMAIN,status-ipv6.jpush.cn,REJECT
-DOMAIN,tsis.jpush.cn,REJECT
-DOMAIN,user.jpush.cn,REJECT
-DOMAIN-SUFFIX,jiguang.cn,REJECT
-DOMAIN-SUFFIX,jpush.cn,REJECT
-DOMAIN-SUFFIX,jpush.io,REJECT
-# 百度联盟 - 广告服务商
-DOMAIN,als.baidu.com,REJECT
-DOMAIN,bgg.baidu.com,REJECT
-DOMAIN,cpro.baidustatic.com,REJECT
-DOMAIN,feed-image.baidu.com,REJECT
-DOMAIN,mobads-logs.baidu.com,REJECT
-DOMAIN,mobads-pre-config.cdn.bcebos.com,REJECT
-DOMAIN,mobads.baidu.com,REJECT
-DOMAIN,nadvideo2.baidu.com,REJECT
-DOMAIN,wn.pos.baidu.com,REJECT
-DOMAIN-SUFFIX,union.baidu.cn,REJECT
-DOMAIN-SUFFIX,union.baidu.com,REJECT
-# 腾讯
-DOMAIN,adsmind.gdtimg.com,REJECT
-DOMAIN,adsmind.ugdtimg.com,REJECT
-DOMAIN,c2.gdt.qq.com,REJECT
-DOMAIN,huatuocode.huatuo.qq.com,REJECT
-DOMAIN,info4.video.qq.com,REJECT
-DOMAIN,info6.video.qq.com,REJECT
-DOMAIN,ios.bugly.qq.com,REJECT
-DOMAIN,ios.video.mpush.qq.com,REJECT
-# DOMAIN, mazu.m.qq.com, REJECT // 误杀
-DOMAIN,mi.gdt.qq.com,REJECT
-DOMAIN,otheve.beacon.qq.com,REJECT
-DOMAIN,pgdt.gtimg.cn,REJECT
-DOMAIN,pgdt.ugdtimg.com,REJECT
-# DOMAIN, qzonestyle.gtimg.cn, REJECT // 误杀
-DOMAIN,qzs.gdtimg.com,REJECT
-DOMAIN,qzs.qq.com,REJECT
-DOMAIN,rmonitor.qq.com,REJECT
-DOMAIN,sdk.e.qq.com,REJECT
-DOMAIN,sdkconfig.video.qq.com,REJECT
-DOMAIN,t.gdt.qq.com,REJECT
-DOMAIN,tmead.y.qq.com,REJECT-NO-DROP
-DOMAIN,tmeadbak.y.qq.com,REJECT
-DOMAIN,tmeadcomm.y.qq.com,REJECT
-DOMAIN,tpns.qq.com,REJECT
-DOMAIN,v.gdt.qq.com,REJECT
-DOMAIN,v2.gdt.qq.com,REJECT
-DOMAIN,win.gdt.qq.com,REJECT
-DOMAIN,wup.imtt.qq.com,REJECT
-DOMAIN,tpstelemetry.tencent.com,REJECT
-DOMAIN-KEYWORD,trace.qq.com,REJECT
-DOMAIN-KEYWORD,trace.video.qq.com,REJECT
-DOMAIN-SUFFIX,gdt.qq.com,REJECT
-DOMAIN-SUFFIX,l.qq.com,REJECT
-DOMAIN-SUFFIX,ugdtimg.com,REJECT
-IP-CIDR,47.110.187.87/32,REJECT,no-resolve
-# App全渠道统计
-DOMAIN-SUFFIX,openinstall.io,REJECT
-# 个推
-DOMAIN,sdk-open-phone.getui.com,REJECT
-DOMAIN,c-hzgt2.getui.com,REJECT
-DOMAIN,sdk-conf.getui.com,REJECT
-DOMAIN-SUFFIX,mobileservice.cn,REJECT
-DOMAIN-SUFFIX,getui.com,REJECT
-DOMAIN-SUFFIX,igexin.com,REJECT
-# 友盟
-DOMAIN,cnlogs.umeng.com,REJECT
-DOMAIN,errlog.umeng.com,REJECT
-DOMAIN,errnewlog.umeng.com,REJECT
-DOMAIN,ucc.umeng.com,REJECT
-DOMAIN,ulogs.umeng.com,REJECT
-DOMAIN,utoken.umeng.com,REJECT
-DOMAIN,deeplink.umeng.com,REJECT
-DOMAIN,aspect-upush.umeng.com,REJECT
-DOMAIN,plbslog.umeng.com,REJECT
-DOMAIN,log.umtrack.com,REJECT
-DOMAIN,aaid.umeng.com,REJECT
-# FUNLINK - 北京泛连科技
-DOMAIN,adtracker.adfunlink.com,REJECT
-# 天目 - 广告服务商
-DOMAIN,sdk.tianmu.mobi,REJECT
-# 上海优比客思科技有限公司 - 广告服务商
-DOMAIN,e-u1.ubixioe.com,REJECT
-DOMAIN,sdk-data.ubixioe.com,REJECT
-DOMAIN,tower.ubixioe.com,REJECT
-DOMAIN,tx-cfg-u1.ubixioe.com,REJECT
-DOMAIN,tx-data-u1.ubixioe.com,REJECT
-# 阿里巴巴
-DOMAIN,ossgw.alicdn.com,REJECT
-DOMAIN,ems.youku.com,REJECT
-DOMAIN,hudong.alicdn.com,REJECT
-DOMAIN,et.tanx.com,REJECT
-DOMAIN,beacon-api.aliyuncs.com,REJECT
-DOMAIN,adash.man.aliyuncs.com,REJECT
-DOMAIN,applog.uc.cn,REJECT
-AND, ((DOMAIN-KEYWORD, adash), (DOMAIN-SUFFIX, ut.taobao.com)), REJECT
-# 网易
-DOMAIN,nex.163.com,REJECT
-DOMAIN,iad.g.163.com,REJECT
-DOMAIN,adx-bj.anythinktech.com,REJECT
-DOMAIN,api.anythinktech.com,REJECT
-DOMAIN,tk.anythinktech.com,REJECT
-DOMAIN,da.anythinktech.com,REJECT
-# 小米
-DOMAIN,sdkconfig.ad.xiaomi.com,REJECT
-# 美团
-DOMAIN,al-log.d.meituan.net,REJECT
-DOMAIN,babel-statistics-android.d.meituan.net,REJECT
-DOMAIN,maplocatesdksnapshot.d.meituan.net,REJECT
-DOMAIN,metrics-picture.d.meituan.net,REJECT
-DOMAIN,route-stats.d.meituan.net,REJECT
-# 京东
-DOMAIN,dsp-x.jd.com,REJECT
-DOMAIN,xlog.jd.com,REJECT
-DOMAIN,janapi.jd.com,REJECT
+# 亲邻开门
+DOMAIN,mall-dsp2.qinlinkeji.com,REJECT
+DOMAIN,mallapi2.qinlinkeji.com,REJECT
+# Pixiv - 作品底部广告
+DOMAIN,open-pixon.ads-pixiv.net,REJECT
 
 [URL Rewrite]
-#BaiduDrive
-^https?:\/\/180\.76\.76\.200\/v\d\/resolve - reject
-^https?:\/\/180\.76\.76\.112\/v\d\/resolve - reject
-#Dewu
-^https?:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement - reject
-#Douban
-^https?:\/\/img\d\.doubanio\.com\/view\/dale-online\/dale_ad\/ - reject
-^https?:\/\/frodo\.douban\.com\/api\/v2\/movie\/banner - reject
-^https?:\/\/erebor\.douban\.com\/count\/\?ad= - reject
-#Eleme
-^https?:\/\/elemecdn\.com\/.+\/sitemap - reject
-^https?:\/\/fuss10\.elemecdn\.com\/.+\/w\/640\/h\/\d{3,4} - reject
-^https?:\/\/fuss10\.elemecdn\.com\/.+\/w\/750\/h\/\d{3,4} - reject
-^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_1\d{3},h_2\d{3}\/format,webp\/ - reject
-^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_6\d{2},h_8\d{2}\/format,webp\/ - reject
-^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{3},h_\d{4}\/format,webp\/ - reject
-^https?:\/\/cube\.elemecdn\.com\/\w\/\w{2}\/\w+mp4\.mp4\? - reject
-^https?:\/\/www1\.elecfans\.com\/www\/delivery\/ - reject
-^https?:\/\/(nr-op|cube)\.elemecdn\.com\/.+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{4,},h_\d{4,}\/($|format,webp\/$) - reject
-#KFC
-^https?:\/\/res\.kfc\.com.\cn\/advertisement\/ - reject
-#Pupu
-^https:\/\/j1\.pupuapi\.com\/client\/account\/discount\/order - reject
-^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=100 - reject
-# 字节跳动广告
-^https:\/\/ether-pack\.pangolin-sdk-toutiao\.com\/union\/endcard\/ - reject
-# 拼多多广告平台 api.pinduoduo.com, api.yangkeduo.com
-^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/ - reject
-^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_union - reject
-^https:\/\/images\.pinduoduo\.com\/mrk\/ - reject
-^https:\/\/images\.pinduoduo\.com\/marketing_api\/ - reject
-#China Mobile
+# 摩托范弹窗广告
+^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk - reject
+# 车来了 - 为您推荐
+^https:\/\/cdn\.web\.chelaile\.net\.cn\/info-flow\/index\.html - reject
+# 最右
+^http:\/\/mercury-gateway\.ixiaochuan\.cn\/mercury\/v1\/ad\/ - reject
+^https?:\/\/home\.mi\.com\/cgi-op\/api\/v\d\/recommendation\/banner - reject
+^https?:\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? - reject
+# 小米运动
+^https:\/\/api-mifit-cn2\.huami\.com\/discovery\/mi\/cards\/startpage_ad - reject
+# 米读
+^https:\/\/apiwz\.midukanshu\.com\/advert\/getPopup$ - reject
+^https:\/\/apiwz\.midukanshu\.com\/advert\/treasureInfo$ - reject
+^https:\/\/apiwz\.midukanshu\.com\/config\/getAds$ - reject
+# 有兔阅读（米兔）
+^http:\/\/img\.dailmo\.com\/img\/61\/23c7125bfe6166d69f3bff5b0ca4d31e\.jpg - reject
+^http:\/\/img\.dailmo\.com\/img\/50\/edb40c6392f848df37f9c31d8a6f90f6\.jpg - reject
+^http:\/\/img\.dailmo\.com\/img\/6\/90585d9e96c73dd49644af57d8501624\.jpg - reject
+^http:\/\/img\.dailmo\.com\/img\/5\/6cb2aa237ce1f65944aa1ecb29fbdeef\.jpg - reject
+^http:\/\/img\.allahall\.com\/img\/61\/23c7125bfe6166d69f3bff5b0ca4d31e\.jpg - reject
+^http:\/\/img\.allahall\.com\/img\/50\/edb40c6392f848df37f9c31d8a6f90f6\.jpg - reject
+^http:\/\/img\.allahall\.com\/img\/6\/90585d9e96c73dd49644af57d8501624\.jpg - reject
+^http:\/\/img\.allahall\.com\/img\/5\/6cb2aa237ce1f65944aa1ecb29fbdeef\.jpg - reject
+^http:\/\/img\.allahall\.com\/img\/59\/6a13a75dfe46ebfdac96bd27ef098885\.jpg - reject
+# 拼多多 //api.pinduoduo.com, api.yangkeduo.com
+^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
+# 闲鱼 //gw.alicdn.com, acs.m.taobao.com
+^https:\/\/gw\.alicdn\.com\/mt\/ - reject
+^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} - reject
+^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} - reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject
+# 首页悬浮标签
+^http:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
+# 我的页面轮播图
+^http:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
+# 中国移动开屏广告
 ^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) - reject
-#Xianyu
-^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch - reject
-^https:\/\/dinamicx\.alibabausercontent\.com\/pub\/fish_home_top_kingkong_new\/ - reject
+^https?:\/\/tower\.ubixioe\.com\/mob\/mediation - reject
+^https?:\/\/sdk1xyajs\.data\.kuiniuca\.com - reject
+# 威锋 - 开屏广告
+^https:\/\/api\.wfdata\.club\/v2\/yesfeng\/yesList - reject
+# 10099
+^https:\/\/app\.10099\.com\.cn\/contact-web\/api\/version\/getFlashScreenPage - reject
 
 [Map Local]
-#AliyunDrive
-^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle data-type=text data="{}" status-code=200
-^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders data-type=text data="{}" status-code=200
-#BaiduDrive
-^https:\/\/pan\.baidu\.com\/api\/getconfig data-type=text data="{}" status-code=200
-^https:\/\/pan\.baidu\.com\/api\/getsyscfg data-type=text data="{}" status-code=200
-^https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist data-type=text data="{}" status-code=200
-^https:\/\/pan\.baidu\.com\/act\/api\/activityentry data-type=text data="{}" status-code=200
-^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user\?method=gamecenter data-type=text data="{}" status-code=200
-^https:\/\/pan\.baidu\.com\/act\/v2\/welfare\/list data-type=text data="{}" status-code=200
-^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv data-type=text data="{}" status-code=200
-#Dewu
-^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg data-type=text data=" " status-code=200
-#Douyu
-^https:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo data-type=text data="{}" status-code=200
-#Douban
-^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ data-type=text data="{}" status-code=200
-^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* data-type=text data="{}" status-code=200
-#Eleme
-^https?:\/\/fuss10\.elemecdn\.com\/.+?\.mp4 data-type=tiny-gif status-code=200
-#KFC
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data-type=text data=" " status-code=200
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data-type=text data="{}" status-code=200
-#Meituan
-^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data-type=text data="{}" status-code=200
-^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) data-type=text data="{}" status-code=200
-^https?:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg data-type=text data="{}" status-code=200
-^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json data-type=text data="{}" status-code=200
-^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ data-type=text data="{}" status-code=200
-#Dazhongdianping
-^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png data-type=text data="{}" status-code=200
-^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) data-type=text data=" " status-code=200
-#McDonald's
-^https?:\/\/api\.mcd\.cn\/bff\/portal\/home\/splash data-type=text data=" " status-code=200
-#Taobao
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data-type=text data="{}" status-code=200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise data-type=text data="{}" status-code=200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit data-type=text data="{}" status-code=200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash data-type=text data="{}" status-code=200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise data-type=text data="{}" status-code=200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get data-type=text data="{}" status-code=200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome data-type=text data="{}" status-code=200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources data-type=text data="{}" status-code=200
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) data-type=text data="{}" status-code=200
-#Xiaoheihe
-^https:\/\/api\.xiaoheihe\.cn\/account\/get_ads_info_v2 data-type=text data="{}" status-code=200
-# Xianyu
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/ data-type=text data="{}" status-code=200
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/ data-type=text data="{}" status-code=200
-#旅法师营地
-^https?:\/\/www\.iyingdi\.cn\/ad data-type=text data=" " status-code=200
+# 米家
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) data-type=text data="{}" status-code=200
 
-[Script]
-#12306
-12306 = type=http-request, pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/12306/12306_remove_splashscreen_ads.js, requires-body=true
-12306 = type=http-response, pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/12306/12306_remove_ads.js
-#AliyunDrive
-AliyunDrive = type=http-response, pattern=^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body=true
-AliyunDrive = type=http-response, pattern=^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body=true
-#Douyu
-Douyu = type=http-response, pattern=^https:\/\/apiv2\.douyucdn\.cn\/mgapi\/livenc\/home\/getRecV3, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Douyu/Douyu_remove_ads.js, requires-body=true
-Douyu = type=http-response, pattern=^https:\/\/apiv2\.douyucdn\.cn\/japi\/entrance\/roomRes\/nc\/m\/list, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Douyu/Douyu_remove_ads.js, requires-body=true
-Douyu= type=http-response, pattern=^https:\/\/venus\.douyucdn\.cn\/venus\/config\/static\/update.+keyCodeSet=flow_config, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Douyu/Douyu_remove_ads.js, requires-body=true
-#Pupu
-Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/PuPuMall/PuPuMall_remove_ads.js, requires-body=true
-Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/search_component_banner, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/PuPuMall/PuPuMall_remove_ads.js, requires-body=true
-Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/search\/hot_keywords\/v3, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/PuPuMall/PuPuMall_remove_ads.js, requires-body=true
-Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/app_resource\/resource_preload\/list_h5_resource, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/PuPuMall/PuPuMall_remove_ads.js, requires-body=true
-Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/recommendation\/interests\/products, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/PuPuMall/PuPuMall_remove_ads.js, requires-body=true
-Pupu = type=http-response, pattern=^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/PuPuMall/PuPuMall_remove_ads.js, requires-body=true
-#Taobao
-Taobao = type=http-response, pattern=^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
-Taobao = type=http-response, pattern=^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, max-size=-1, timeout=60
-#Xiaoheihe
-Xiaoheihe = type=http-response, pattern=^https:\/\/api\.xiaoheihe\.cn\/bbs\/app\/feeds\/news, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/XiaoHeiHe/XiaoHeiHe_remove_ads.js, requires-body=true
-#Xianyu
-xianyu_ads = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js, requires-body=true, max-size=-1, timeout=60
-xianyu_ads = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js, requires-body=true, max-size=-1, timeout=60
-xianyu_ads = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js, requires-body=true, max-size=-1, timeout=60
-xianyu_ads = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js, requires-body=true, max-size=-1, timeout=60
-xianyu_ads = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js, requires-body=true, max-size=-1, timeout=60
+# 小米
+^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start data-type=text data=" " status-code=200
+
+^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ data-type=text data=" " status-code=200
+
+^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen data-type=text data=" " status-code=200
+
+^https?:\/\/api-mifit.+?\.huami\.com\/discovery\/mi\/discovery\/.+?_ad\? data-type=text data=" " status-code=200
+
+^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/homepage_ad\? data-type=tiny-gif status-code=200
+
+^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sleep_ad\? data-type=tiny-gif status-code=200
+
+^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sport_summary_ad\? data-type=tiny-gif status-code=200
+
+^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sport_training_ad\? data-type=tiny-gif status-code=200
+
+^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/step_detail_ad\? data-type=tiny-gif status-code=200
+
+^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/training_video_ad\? data-type=tiny-gif status-code=200
+
+# 小米有品
+^https:\/\/shopapi\.io\.mi\.com\/mtop\/mf\/resource\/homePage\/pageConfig data-type=text data=" " status-code=200
+
+# 米家
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab)\? data-type=text data="{}" status-code=200
+
+^http:\/\/app\.zhoudamozi\.com\/ad\/.+ data-type=text data=" " status-code=200
+
+# QQ钱包广告 //m.qianbao.qq.com
+^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getQQshopData\? data-type=text data="{}" status-code=200
+
+^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getGameData\? data-type=text data="{}" status-code=200
+
+# QQ钱包公益广告
+^https:\/\/m\.qianbao\.qq\.com\/services\/walletHome\/getFootData\? data-type=text data="{}" status-code=200
+
+# 和风天气 hfapp-service.qweather.net
+^https:\/\/hfapp-service\.qweather\.net\/v2\.0\/app\/ad\/list\? data-type=text data="{}" status-code=200
+
+# 掌上英雄联盟 @𝑨梦 @𝑪𝒉𝒙𝒎𝟏𝟎𝟐𝟑
+^https?:\/\/us\.l\.qq\.com\/exapp data-type=text data=" " status-code=200
+
+# 翻译广告
+^https:\/\/dict\.youdao\.com\/course\/tab\/translateTab data-type=text data="{}" status-code=200
+
+# 听读训练
+^https:\/\/dict\.youdao\.com\/homepage\/tile data-type=text data="{}" status-code=200
+
+# 首次查词弹窗
+^https:\/\/api-overmind\.youdao\.com\/openapi\/get\/luna\/dict\/dict-mobile\/prod\/dictCommonConfig data-type=text data="{}" status-code=200
+
+# 首页弹窗
+^https:\/\/cdke\.youdao\.com\/course3\/recommend\/dict\/startup data-type=text data="{}" status-code=200
+
+# 搜索预想
+^https:\/\/dict\.youdao\.com\/commonsearch data-type=text data="{}" status-code=200
+
+# 会员优惠券弹窗
+^https:\/\/dict\.youdao\.com\/vip\/activity\/couponinfo data-type=text data="{}" status-code=200
+
+# 首页左上角福利中心
+^https:\/\/dict\.youdao\.com\/dictusertask\/system data-type=text data="{}" status-code=200
+
+# 深圳通
+^https?:\/\/ecard\.shenzhentong\.com\/wxweb\/bwxppub2\/QryAdvertList\.do data-type=text data=" " status-code=200
+
+# 埋堆堆 @Kuraki //sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com
+^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList data-type=text data="{}" status-code=200
+
+^https?:\/\/t-dsp\.pinduoduo\.com data-type=text data=" " status-code=200
+
+^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php data-type=text data=" " status-code=200
+
+^http?:\/\/sfo\.mddcloud\.com\.cn\/api\/v2\/sfo\/popup_displays? data-type=text data="{}" status-code=200
+
+^https?:\/\/toblog\.ctobsnssdk\.com data-type=text data=" " status-code=200
+
+^https?:\/\/conf-darwin\.xycdn\.com data-type=text data="{}" status-code=200
+
+# 闲鱼 - 开屏广告
+^https:\/\/iyes\.youku\.com\/uts\/v1\/start\/ data-type=text data="{}" status-code=200
+
+# 闲鱼 - 底部浮层发布球
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.get\/ data-type=text data="{}" status-code=200
+
+# 创客贴设计 - 开屏广告
+^https:\/\/gw\.chuangkit\.com\/team\/app\/common\/ad\/ data-type=text data="{}" status-code=200
+
+# 稿定设计 - 开屏广告
+^https:\/\/qiye\.gaoding\.com\/api\/v3\/oc\/v2\/delivery-pits\/ios-splash\/ data-type=text data="{}" status-code=200
+
+# 猫眼 - 移除开屏广告、红包悬浮
+^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.jpg\?imageMogr2\/quality\/ data-type=text data="{}" status-code=200
+
+^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.(jpg|png)\?imageMogr2\/thumbnail\/(860x0|!165x165|!1049x1169) data-type=text data="{}" status-code=200
+
+# 站酷 - 开屏广告
+^https:\/\/api\.zcool\.com\.cn\/v\d\.\d\.\d/common\/open-screen data-type=text data="{}" status-code=200
+
+# 下厨房 - 开屏广告
+^https:\/\/api\.xiachufang\.com\/v2\/ad\/ data-type=text data="{}" status-code=200
+
+# 懒饭 - 开屏广告
+^https:\/\/lanfanapp\.com\/api\/v1\/ads\/ data-type=text data="{}" status-code=200
+
+#向日葵 #开屏广告 #主机名client-api-v2.oray.com
+^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP data-type=text data="{}" status-code=200
+
+#向日葵 #首页文字广告
+^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE data-type=text data="{}" status-code=200
+
+#向日葵 #发现页广告
+^https:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION data-type=text data="{}" status-code=200
+
+# 飞智游戏厅 - 开屏广告
+^https:\/\/api\.flydigi\.com\/android\/v2\/ad data-type=text data="{}" status-code=200
+
+# 小爱音箱 - 我的页面会员推广
+^https:\/\/info\.mina\.xiaoaisound\.com\/payGuide\/userCenter data-type=text data="{}" status-code=200
+
+# 小爱音箱 - 首页推广轮播图
+^https:\/\/info\.mina\.xiaoaisound\.com\/advertise\/ data-type=text data="{}" status-code=200
+
+# 水印相机 - 去开屏广告
+^https:\/\/api\.xiangji\.qq\.com\/splash$ data-type=text data="{}" status-code=200
+
+# 央视频广告
+^https:\/\/cdn\.cmgadx\.com\/sdk\/pool\/ data-type=text data="{}" status-code=200
+
+# 亲邻开门
+^https:\/\/qadx\.qinlinad\.com\/ad\/ data-type=text data="{}" status-code=200
+
+# 运动页面活动推广
+^https:\/\/watch\.iot\.mi\.com\/cgi-op\/api\/v1\/watch\/health\/resource\?business=MI_WATCH_SPORT data-type=text data="{}" status-code=200
+
+# 设备页面横幅推广
+^https:\/\/watch\.iot\.mi\.com\/cgi-op\/api\/v1\/watch\/health\/resource\?business=MI_HEALTH_DEVICE_TAB_PAGE data-type=text data="{}" status-code=200
+
+# 淘票票 - 开屏广告
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryloadingbanner\/ data-type=text data="{}" status-code=200
+
+# 淘票票 - 弹窗
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.life\.popup\.get\/ data-type=text data="{}" status-code=200
+
+# Pixiv - 底栏广告
+^https:\/\/d\.socdm\.com\/adsv\/ data-type=text data="{}" status-code=200
+
 [MITM]
-hostname = %APPEND% ether-pack.pangolin-sdk-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com，ad.12306.cn, mobile.12306.cn,api.alipan.com, member.alipan.com, bizapi.alipan.com, pan.baidu.com, 180.76.76.200, 180.76.76.112, rtbapi.douyucdn.cn, apiv2.douyucdn.cn, venus.douyucdn.cn, api.douban.com,j1.pupuapi.com,gw.alicdn.com, acs.m.taobao.com,api.pinduoduo.com, api.yangkeduo.com, video-dsp.pddpic.com, images.pinduoduo.com, client.app.coc.10086.cn,ether-pack.pangolin-sdk-toutiao.com, god.gameyw.netease.com, gromore.pangolin-sdk-toutiao.com, api.xiaoheihe.cn,elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com,api.mcd.cn, res.kfc.com.cn, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net,acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, app.dewu.com, cdn.poizon.com,acs.m.goofish.com, g-acs.m.goofish.com, dinamicx.alibabausercontent.com,www.iyingdi.cn
+hostname = %APPEND% api.zcool.com.cn, acs.m.goofish.com, acs.m.taobao.com, api-access.pangolin-sdk-toutiao*.com, api-access.pangolin-sdk-toutiao.com, api-mifit*.huami.com, api-mifit-cn2.huami.com, api-mifit.huami.com, api-overmind.youdao.com, api.ahmobile.cn, api.angkeduo.com, api.jr.mi.com, api.m.mi.com, api.pinduoduo.com, api.wfdata.club, apiwz.midukanshu.com, app.zhoudamozi.com, cdke.youdao.com, conf-darwin.xycdn.com, dict.youdao.com, ecard.shenzhentong.com, ether-pack.pangolin-sdk-toutiao.com, gromore.pangolin-sdk-toutiao.com, gw.alicdn.com, gw.chuangkit.com, hfapp-service.qweather.net, home.mi.com, home.umetrip.com, img.allahall.com, img.dailmo.com, iyes.youku.com, lfd?-analytics.bytescm.com, lfd?-cdn-tos.bytescm.com, m.qianbao.qq.com, mercury-gateway.ixiaochuan.cn, mob.mddcloud.com.cn, mobads-pre-config.cdn.bcebos.com, p0.pipi.cn, qiye.gaoding.com, sdk1xyajs.data.kuiniuca.com, sfd?-fe-tos.pglstatp-toutiao.com, sfo.mddcloud.com.cn, shopapi.io.mi.com, shealthyapi.senssun.com, t-dsp.pinduoduo.com, toblog.ctobsnssdk.com, tower.ubixioe.com, umerp.umetrip.com, us.l.qq.com, lanfanapp.com, api.xiachufang.com, info.mina.xiaoaisound.com, api.xiangji.qq.com, video-dsp.pddpic.com, images.pinduoduo.com, client.app.coc.10086.cn, cdn.cmgadx.com, qadx.qinlinad.com, watch.iot.mi.com, cdn.web.chelaile.net.cn, d.socdm.com
+
+
