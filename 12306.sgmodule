@@ -1,3 +1,6 @@
+#!name=Amap
+#!desc=Ad
+#!category=For Own Use
 
 
 [Rule]
@@ -13,3 +16,4 @@ DOMAIN,ad.12306.cn,DIRECT
 
 [MITM]
 hostname = %APPEND% ad.12306.cn, mobile.12306.cn
+
