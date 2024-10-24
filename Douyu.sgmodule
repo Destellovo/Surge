@@ -1,6 +1,6 @@
-
-
-
+#!name=Douyu
+#!desc=Ad
+#!category=For Own Use
 
 [Rule]
 # 拦截HTTPDNS
