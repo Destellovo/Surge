@@ -4,39 +4,39 @@
 
 [Rule]
 # Outlook
-DOMAIN,acdn.adnxs.com,REJECT
-DOMAIN,mediation.adnxs.com,REJECT
-DOMAIN,sin3-ib.adnxs.com,REJECT
+DOMAIN,acdn.adnxs.com,REJECT,extended-matching,pre-matching
+DOMAIN,mediation.adnxs.com,REJECT,extended-matching,pre-matching
+DOMAIN,sin3-ib.adnxs.com,REJECT,extended-matching,pre-matching
 # 小米
-DOMAIN,sdkconfig.ad.xiaomi.com,REJECT
-DOMAIN,data.mistat.xiaomi.com,REJECT
-DOMAIN,tracking.intl.miui.com,REJECT
+DOMAIN,sdkconfig.ad.xiaomi.com,REJECT,extended-matching,pre-matching
+DOMAIN,data.mistat.xiaomi.com,REJECT,extended-matching,pre-matching
+DOMAIN,tracking.intl.miui.com,REJECT,extended-matching,pre-matching
 # 米家
-DOMAIN,sdkconfig.ad.xiaomi.com,REJECT
+DOMAIN,sdkconfig.ad.xiaomi.com,REJECT,extended-matching,pre-matching
 # 通用广告
 DOMAIN-SUFFIX,doubleclick-cn.net,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,doubleclick.net,REJECT,extended-matching,pre-matching
 # 虎牙直播开屏广告
-DOMAIN,business.msstatic.com,REJECT
-DOMAIN-SUFFIX,v1d.szbdyd.com,REJECT
-URL-REGEX,^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$,REJECT
+DOMAIN,business.msstatic.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,v1d.szbdyd.com,REJECT,extended-matching,pre-matching
+URL-REGEX,^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$,REJECT,extended-matching
 # 中国联通
-DOMAIN-SUFFIX,m1.ad.10010.com,REJECT
+DOMAIN-SUFFIX,m1.ad.10010.com,REJECT,extended-matching,pre-matching
 # 中国电信
-DOMAIN,ad.21cn.com,REJECT
-DOMAIN,ad.k.21cn.com,REJECT
-DOMAIN,admarket.21cn.com,REJECT
-DOMAIN,adshows.21cn.com,REJECT
-IP-CIDR,122.229.8.47/32,REJECT,no-resolve
-IP-CIDR,122.229.29.89/32,REJECT,no-resolve
+DOMAIN,ad.21cn.com,REJECT,extended-matching,pre-matching
+DOMAIN,ad.k.21cn.com,REJECT,extended-matching,pre-matching
+DOMAIN,admarket.21cn.com,REJECT,extended-matching,pre-matching
+DOMAIN,adshows.21cn.com,REJECT,extended-matching,pre-matching
+IP-CIDR,122.229.8.47/32,REJECT,no-resolve,pre-matching
+IP-CIDR,122.229.29.89/32,REJECT,no-resolve,pre-matching
 # 快递100
-URL-REGEX,^http:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do,REJECT-TINYGIF
-URL-REGEX,^http:\/\/p\.kuaidi100\.com\/advertisement\/,REJECT-TINYGIF
+URL-REGEX,^http:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do,REJECT-TINYGIF,extended-matching
+URL-REGEX,^http:\/\/p\.kuaidi100\.com\/advertisement\/,REJECT-TINYGIF,extended-matching
 # 亲邻开门
-DOMAIN,mall-dsp2.qinlinkeji.com,REJECT
-DOMAIN,mallapi2.qinlinkeji.com,REJECT
+DOMAIN,mall-dsp2.qinlinkeji.com,REJECT,extended-matching,pre-matching
+DOMAIN,mallapi2.qinlinkeji.com,REJECT,extended-matching,pre-matching
 # Pixiv - 作品底部广告
-DOMAIN,open-pixon.ads-pixiv.net,REJECT
+DOMAIN,open-pixon.ads-pixiv.net,REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
 # 摩托范弹窗广告
@@ -237,5 +237,4 @@ DOMAIN,open-pixon.ads-pixiv.net,REJECT
 
 [MITM]
 hostname = %APPEND% api.zcool.com.cn, acs.m.goofish.com, acs.m.taobao.com, api-access.pangolin-sdk-toutiao*.com, api-access.pangolin-sdk-toutiao.com, api-mifit*.huami.com, api-mifit-cn2.huami.com, api-mifit.huami.com, api-overmind.youdao.com, api.ahmobile.cn, api.angkeduo.com, api.jr.mi.com, api.m.mi.com, api.pinduoduo.com, api.wfdata.club, apiwz.midukanshu.com, app.zhoudamozi.com, cdke.youdao.com, conf-darwin.xycdn.com, dict.youdao.com, ecard.shenzhentong.com, ether-pack.pangolin-sdk-toutiao.com, gromore.pangolin-sdk-toutiao.com, gw.alicdn.com, gw.chuangkit.com, hfapp-service.qweather.net, home.mi.com, home.umetrip.com, img.allahall.com, img.dailmo.com, iyes.youku.com, lfd?-analytics.bytescm.com, lfd?-cdn-tos.bytescm.com, m.qianbao.qq.com, mercury-gateway.ixiaochuan.cn, mob.mddcloud.com.cn, mobads-pre-config.cdn.bcebos.com, p0.pipi.cn, qiye.gaoding.com, sdk1xyajs.data.kuiniuca.com, sfd?-fe-tos.pglstatp-toutiao.com, sfo.mddcloud.com.cn, shopapi.io.mi.com, shealthyapi.senssun.com, t-dsp.pinduoduo.com, toblog.ctobsnssdk.com, tower.ubixioe.com, umerp.umetrip.com, us.l.qq.com, lanfanapp.com, api.xiachufang.com, info.mina.xiaoaisound.com, api.xiangji.qq.com, video-dsp.pddpic.com, images.pinduoduo.com, client.app.coc.10086.cn, cdn.cmgadx.com, qadx.qinlinad.com, watch.iot.mi.com, cdn.web.chelaile.net.cn, d.socdm.com
-
 
