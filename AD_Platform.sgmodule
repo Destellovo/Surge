@@ -1,3 +1,6 @@
+#!name=AD_Platform
+#!desc=Ad
+#!category=For Own Use
 
 [Rule]
 AND, ((DOMAIN-KEYWORD, -ad-,extended-matching), (DOMAIN-SUFFIX, byteimg.com,extended-matching)), REJECT,pre-matching
