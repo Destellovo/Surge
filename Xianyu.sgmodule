@@ -3,7 +3,7 @@
 #!category=For Own Use
 
 [Rule]
-AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, %E9%97%B2%E9%B1%BC*)), REJECT,extended-matching,pre-matching
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,extended-matching), (USER-AGENT, %E9%97%B2%E9%B1%BC*)), REJECT
 
 [Map Local]
 # 首页顶部标签
@@ -38,17 +38,16 @@ AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-A
 
 [Script]
 # 我的页面
-移除我的页面推广 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/, script-path=https://proxyresource.pages.dev/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body=true
+移除我的页面推广 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/, script-path=https://kelee.one/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body=true
 
 # 首页信息流
-移除首页信息流推广 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/, script-path=https://proxyresource.pages.dev/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body=true
+移除首页信息流推广 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/, script-path=https://kelee.one/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body=true
 
 # 首页顶部标签
-移除首页顶部标签推广 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/, script-path=https://proxyresource.pages.dev/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body=true
+移除首页顶部标签推广 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/, script-path=https://kelee.one/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body=true
 
 # 搜索结果广告
-移除搜索结果广告 = type=http-response, pattern=^https:\/\/g-(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/, script-path=https://proxyresource.pages.dev/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body=true
+移除搜索结果广告 = type=http-response, pattern=^https:\/\/g-(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/, script-path=https://kelee.one/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body=true
 
 [MITM]
 hostname = %APPEND% acs.m.goofish.com, g-acs.m.goofish.com
-
