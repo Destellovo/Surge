@@ -1,4 +1,6 @@
-
+#!name=Youtube
+#!desc=Ad
+#!category=For Own Use
 
 [Rule]
 AND, ((DOMAIN-SUFFIX, googlevideo.com,extended-matching),  (PROTOCOL, QUIC)), REJECT
