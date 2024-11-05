@@ -2,7 +2,7 @@
 #!desc=AD_RedPaper
 #!category=For Own Use
 
- [Rule]
+[Rule]
 AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com,extended-matching)),REJECT
 
 [Body Rewrite]
