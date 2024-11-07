@@ -2,6 +2,7 @@
 #!desc=Ad
 #!category=For Own Use
 
+
 [Rule]
 AND,((URL-REGEX,"^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch",extended-matching),(USER-AGENT,"AMapiPhone*")),REJECT
 DOMAIN,amap-aos-info-nogw.amap.com,REJECT,extended-matching,pre-matching
