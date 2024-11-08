@@ -2,7 +2,6 @@
 #!desc=AD_RedPaper
 #!category=For Own Use
 
-
 [Rule]
 AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com,extended-matching)),REJECT
 
@@ -47,3 +46,4 @@ http-response-jq ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/trend
 
 [MITM]
 hostname = %APPEND% edith.xiaohongshu.com, rec.xiaohongshu.com, www.xiaohongshu.com
+
