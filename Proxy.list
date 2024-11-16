@@ -314,3 +314,15 @@ IP-CIDR,203.174.77.0/24,no-resolve
 IP-CIDR6,2400:dcc0::/32,no-resolve
 USER-AGENT,LINE%20TV*
 PROCESS-NAME,com.linecorp.linetv
+
+# lemon8
+DOMAIN,lf-lemon8-web-sg.ttwstatic.com
+DOMAIN,lf-lemon8-web-va.ttwstatic.com
+DOMAIN,p16-va.topbuzzcdn.com
+DOMAIN,p16.topbuzzcdn.com
+DOMAIN,rtlog.isnssdk.com
+DOMAIN,sf16-short-va.bytedapm.com
+DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,lemon8-app.com
+DOMAIN-SUFFIX,lemon8cdn.com
+DOMAIN-SUFFIX,sgsnssdk.com
