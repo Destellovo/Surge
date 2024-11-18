@@ -214,3 +214,8 @@ DOMAIN-KEYWORD,musical.ly
 DOMAIN-KEYWORD,tiktok
 USER-AGENT,TikTok*
 PROCESS-NAME,com.zhiliaoapp.musically
+
+#Soop
+DOMAIN-SUFFIX,sooplive.co.kr
+DOMAIN-KEYWORD,sooplive
+
