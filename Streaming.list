@@ -130,7 +130,8 @@ DOMAIN,pt-static2.jsmsat.com
 
 #Webtoon
 DOMAIN-SUFFIX,pstatic.net
-
+DOMAIN-SUFFIX,webtoons.com
+DOMAIN-SUFFIX,braze-images.com
 #Pica
 DOMAIN-SUFFIX,picacomic.com
 DOMAIN-KEYWORD,picacomic
