@@ -62,7 +62,7 @@ http-response ^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\? "recomme
 
 ^https:\/\/appcloud2\.zhihu\.com\/v3\/resource\?group_name=mp data-type=text data="{}" status-code=200
 
-# 网页版去广告 //www.zhihu.com, zhuanlan.zhihu.com
+# 网页版去广告 //www.zhihu.com,zhuanlan.zhihu.com
 ^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/h5\/recommendation\? data-type=text data="{}" status-code=200
 
 ^https:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation data-type=text data="{}" status-code=200
@@ -100,4 +100,3 @@ http-response ^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\? "recomme
 
 [MITM]
 hostname = %APPEND% *.zhihu.com
-
