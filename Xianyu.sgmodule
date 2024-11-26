@@ -3,7 +3,7 @@
 #!category=For Own Use
 
 [Rule]
-AND,((URL-REGEX,"^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch",extended-matching),(USER-AGENT,"%E9%97%B2%E9%B1%BC*")),REJECT
+AND,((URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch",extended-matching),(USER-AGENT,"%E9%97%B2%E9%B1%BC*")),REJECT
 
 [Map Local]
 # 首页顶部标签
@@ -51,4 +51,3 @@ AND,((URL-REGEX,"^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch",extended-
 
 [MITM]
 hostname = %APPEND% acs.m.goofish.com, g-acs.m.goofish.com
-
