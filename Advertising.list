@@ -1,2 +1,5 @@
 #Dcard
 DOMAIN,dad-api.dcard.tw
+
+#PCDN
+PROTOCOL,STUN,REJECT
