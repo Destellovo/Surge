@@ -4,9 +4,6 @@
 
 
 [Rule]
-#Reject
-RULE-SET,https://raw.githubusercontent.com/Destellovo/Surge/main/Telegram_Reject.list,Policy
-AND,((PROCESS-NAME,Telegram), (HOSTNAME-TYPE,IPv4)),REJECT-DROP
 
 # > United States
 IP-ASN,59930,United States,no-resolve
