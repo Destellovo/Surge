@@ -5,8 +5,7 @@
 
 [Rule]
 
-
-AND,((OR,((PROCESS-NAME,Telegram), (IN-PORT,6153))), (HOSTNAME-TYPE,IPv4)),REJECT-DROP
+IP-CIDR,95.161.76.100/31,REJECT,pre-matching,no-resolve
 
 # > United States
 IP-ASN,59930,United States,no-resolve
