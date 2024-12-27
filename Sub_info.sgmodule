@@ -1,5 +1,5 @@
-#!name=Sub_info
-#!desc=Sub_info
+#!name=Sub info
+#!desc=Sub info
 #!category=For Own Use
 #!arguments=NAME_1:第一个机场的名字,URL_1:编码后的机场订阅,RESET-Day_1:重置日期,NAME_2:#第二个机场的名字,URL_2:编码后的机场订阅,RESET-Day_2:重置日期,NAME_3:#第三个机场的名字,URL_3:编码后的机场订阅,RESET-Day_3:重置日期
 #!arguments-desc=[参数设置]\n\n⓵ NAME: 写你机场的名字,默认开启单订阅。\n\n⓶ URL: 编码后的机场订阅。\n\n⓷ RESET_DAY: 流量每月重置的日期,如26号就写26,不设置则不显示流量重置日,仅显示到期日期。
