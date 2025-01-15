@@ -22,7 +22,7 @@ DOMAIN,embyplus.org
 DOMAIN,emby.embyplus.org
 DOMAIN,film.hovervan.org
 DOMAIN,emby.tkremby.xyz
-DOMAIN,main.gugumedia.site
+DOMAIN-SUFFIX,gugumedia.site
 DOMAIN-SUFFIX,emby.wtf
 DOMAIN-SUFFIX,emby.wtf
 DOMAIN,emby-us-v4.mius.uk
