@@ -1,3 +1,6 @@
+#!name=Hupu
+#!desc=Hupu_Ad
+#!category=For Own Use
 
 [Map Local]
 ^https:\/\/games\.mobileapi\.hupu\.com\/\d\/\d\.\d\.\d+\/bplapi\/reddot\/v1\/app\/getReddot data-type=text data="{}" status-code=200
