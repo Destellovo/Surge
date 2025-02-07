@@ -36,6 +36,7 @@ DOMAIN,us.nanflix.net
 
 #TDCK Emby
 DOMAIN,free.28.al
+DOMAIN-SUFFIX,28.al
 
 DOMAIN,media.nijigem.by
 DOMAIN,789.123456.al
