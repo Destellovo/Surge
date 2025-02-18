@@ -3,6 +3,9 @@
 #Micu
 DOMAIN,media.micu.hk
 
+#Halo
+DOMAIN,anycast.media.cloudaria.net
+
 #SIESTA
 DOMAIN,d01.abcj.uk
 DOMAIN,d02.abcj.uk
