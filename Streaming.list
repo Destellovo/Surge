@@ -49,41 +49,19 @@ DOMAIN,qdz-de.vfing.de
 DOMAIN,qdz-hk-0.vfing.de
 DOMAIN,qdz-hk-1.vfing.de
 
+DOMAIN-SUFFIX,imetyou.top
 
-DOMAIN,media.nijigem.by
-DOMAIN,789.123456.al
-DOMAIN,free.emby.eu.org
-DOMAIN,ju.dog
-DOMAIN,1.4545.cf
-DOMAIN,porn.aca.best
-DOMAIN,misakaf.org
-DOMAIN,embymv.tk
-DOMAIN,gd.9521732.xyz
-DOMAIN-SUFFIX,9521732.xyz
-DOMAIN,193.123.232.141
-DOMAIN,abnormalize.icu
-DOMAIN,cf.imetyou.top
-DOMAIN,emby.imetyou.top
-DOMAIN,fk.imetyou.top
-DOMAIN,kr.imetyou.top
-DOMAIN,sg.imetyou.top
-DOMAIN,chun.imetyou.top
+#zhipianren
 DOMAIN,embyplus.org
 DOMAIN,emby.embyplus.org
-DOMAIN,film.hovervan.org
 DOMAIN,emby.tkremby.xyz
+
+#gugu
 DOMAIN-SUFFIX,gugumedia.site
 DOMAIN-SUFFIX,guguemby.site
-DOMAIN-SUFFIX,emby.wtf
-DOMAIN-SUFFIX,emby.wtf
-DOMAIN,emby-us-v4.mius.uk
-DOMAIN,xn--pp5aa2sb.com
-DOMAIN,em.lanchats.com
 DOMAIN,node1.guguemby.site
 
 DOMAIN-SUFFIX,tanhuatv.site
-DOMAIN,nanflix.net
-DOMAIN,pornemby.com
 
 #Happymh
 DOMAIN-KEYWORD,happymh
