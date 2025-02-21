@@ -2,7 +2,8 @@
 DOMAIN,dad-api.dcard.tw
 
 #PCDN
-PROTOCOL,STUN,REJECT
+PROTOCOL,STUN
+AND,((DOMAIN-KEYWORD,stun), (DOMAIN-KEYWORD,bilibili))
 
 #TFT
 DOMAIN-SUFFIX,dcloud.net.cn
