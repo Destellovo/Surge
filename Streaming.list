@@ -41,6 +41,9 @@ DOMAIN-SUFFIX,biliblili.uk
 #Nanflix
 DOMAIN,us.nanflix.net
 
+#HKA
+DOMAIN,hkb-emby.aliz.work
+
 #TDCK Emby
 DOMAIN,free.28.al
 DOMAIN-SUFFIX,28.al
