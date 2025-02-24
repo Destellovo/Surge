@@ -44,6 +44,10 @@ DOMAIN,us.nanflix.net
 #HKA
 DOMAIN,hkb-emby.aliz.work
 
+#liustar
+DOMAIN,embyhw1.liustar.click
+DOMAIN,embyhw2.liustar.click
+
 #TDCK Emby
 DOMAIN,free.28.al
 DOMAIN-SUFFIX,28.al
