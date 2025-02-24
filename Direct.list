@@ -5,18 +5,12 @@ DOMAIN-SUFFIX,jiashule.com
 DOMAIN-SUFFIX,wechat.com
 
 #Api
-cip.cc
-
-appc.qixin.com
-
-forge.speedtest.cn
-
-rmb.pingan.com.cn
-
-api-v3.speedtest.cn
-
-ipservice.ws.126.net
-
+DOMAIN,cip.cc
+DOMAIN,appc.qixin.com
+DOMAIN,forge.speedtest.cn
+DOMAIN,rmb.pingan.com.cn
+DOMAIN,api-v3.speedtest.cn
+DOMAIN,ipservice.ws.126.net
 DOMAIN,api.bilibili.com
 DOMAIN,api.live.bilibili.com
 DOMAIN,myip.ipip.net
