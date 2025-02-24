@@ -4,6 +4,30 @@ DOMAIN-SUFFIX,jiashule.com
 
 DOMAIN-SUFFIX,wechat.com
 
+#Api
+cip.cc
+
+appc.qixin.com
+
+forge.speedtest.cn
+
+rmb.pingan.com.cn
+
+api-v3.speedtest.cn
+
+ipservice.ws.126.net
+
+DOMAIN,api.bilibili.com
+DOMAIN,api.live.bilibili.com
+DOMAIN,myip.ipip.net
+DOMAIN,ip.ip233.cn
+DOMAIN,uapi.woobx.cn
+DOMAIN,ip.im
+DOMAIN,ips.market.alicloudapi.com
+DOMAIN,api.ip.plus
+DOMAIN,dashi.163.com
+DOMAIN,webapi.designkit.com
+
 DOMAIN-SUFFIX,novaxns.one
 
 DOMAIN-KEYWORD,kanwo8
