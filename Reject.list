@@ -7,3 +7,9 @@ AND,((DOMAIN-KEYWORD,stun), (DOMAIN-KEYWORD,bilibili))
 
 #TFT
 DOMAIN-SUFFIX,dcloud.net.cn
+
+#hihimanga
+DOMAIN,br-trk.smadex.com
+DOMAIN,googleads.g.doubleclick.net
+DOMAIN,impression.appsflyer.com
+
