@@ -31,6 +31,7 @@ DOMAIN,streamer.pilipiliultra.com
 
 #Melon
 DOMAIN-SUFFIX,1024.name
+DOMAIN-SUFFIX,1024.one
 DOMAIN,spare.1024.name
 IP-CIDR,188.253.5.84/32
 DOMAIN,sxiaolong-my.sharepoint.com
