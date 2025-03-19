@@ -81,7 +81,7 @@ DOMAIN-SUFFIX,tanhuatv.site
 
 #AlphaTv
 DOMAIN-SUFFIX,alphatvapp.top
-IP-CIDR,37.123.192.219
+IP-CIDR,37.123.192.219/24
 
 #Happymh
 DOMAIN-KEYWORD,happymh
