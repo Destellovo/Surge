@@ -10,6 +10,9 @@ DOMAIN,smart.media.cloudaria.net
 #SYN
 DOMAIN,stream.synn.cc
 
+#Fac
+DOMAIN-SUFFIX,313445.xyz
+
 #SIESTA
 DOMAIN,d01.abcj.uk
 DOMAIN,d02.abcj.uk
