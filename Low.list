@@ -7,6 +7,9 @@ DOMAIN,media.micu.hk
 DOMAIN,anycast.media.cloudaria.net
 DOMAIN,smart.media.cloudaria.net
 
+#SYN
+DOMAIN,stream.synn.cc
+
 #SIESTA
 DOMAIN,d01.abcj.uk
 DOMAIN,d02.abcj.uk
