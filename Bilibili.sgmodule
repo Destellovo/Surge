@@ -7,8 +7,8 @@ DOMAIN,api.biliapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,api.biliapi.net,REJECT,extended-matching,pre-matching
 DOMAIN,app.biliapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,app.biliapi.net,REJECT,extended-matching,pre-matching
-URL-REGEX,"^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH",REJECT-TINYGIF
-URL-REGEX,"^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH",REJECT-TINYGIF
+URL-REGEX,"^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH",REJECT-TINYGIF,extended-matching
+URL-REGEX,"^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH",REJECT-TINYGIF,extended-matching
 
 [Body Rewrite]
 http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:list|show|event\/list2)\? '.data |= with_entries(if .key | IN("show", "event_list") then .value = [] else . end)'
@@ -32,4 +32,3 @@ Proto处理 = type=http-response, pattern=^https:\/\/(?:grpc\.biliapi\.net|app\.
 
 [MITM]
 hostname = %APPEND% grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com
-
