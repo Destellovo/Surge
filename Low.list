@@ -114,6 +114,7 @@ IP-CIDR,103.197.185.84/24
 #Happymh
 DOMAIN-KEYWORD,happymh
 DOMAIN-SUFFIX,hihimanga.com
+DOMAIN-SUFFIX,jmpic.xyz
 
 #CMS
 DOMAIN-KEYWORD,olelive
