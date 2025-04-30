@@ -30,6 +30,8 @@ DOMAIN,d04.abcj.uk
 DOMAIN,n01.abcj.uk
 DOMAIN,n02.abcj.uk
 DOMAIN,n03.abcj.uk
+DOMAIN,cdn.abcj.uk
+DOMAIN-SUFFIX,abcj.uk
 
 #Moyun
 DOMAIN,myg.mobaiemby.site
