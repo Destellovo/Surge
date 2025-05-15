@@ -3,7 +3,7 @@
 
 
 [Rule]
-DOMAIN,adx-api.zdmimg.com,REJECT
+DOMAIN,adx-api.zdmimg.com,REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
 ^https:\/\/h5\.smzdm\.com\/user\/coupon\/coupon_list\? - reject
