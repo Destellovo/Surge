@@ -44,12 +44,8 @@ DOMAIN,pili.994959.xyz
 DOMAIN,caddy.pilipili.me
 
 #Melon
-DOMAIN-SUFFIX,1024.name
-DOMAIN-SUFFIX,1024.one
-DOMAIN,spare.1024.name
-IP-CIDR,188.253.5.84/32
-DOMAIN,sxiaolong-my.sharepoint.com
-DOMAIN,sharepoint.com
+DOMAIN-SUFFIX,chilledmelon.com
+
 
 #laoda
 DOMAIN,xmz2f-nkdd5-x4q9x.biliblili.uk
