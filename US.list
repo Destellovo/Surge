@@ -1,3 +1,6 @@
+#Google
+DOMAIN-KEYWORD,google
+
 # ChatGPT
 AND,((DOMAIN-KEYWORD,chatgpt-async-webps-prod-),(DOMAIN-SUFFIX,webpubsub.azure.com))
 AND,((DOMAIN-KEYWORD,openaicom-api-),(DOMAIN-SUFFIX,azurefd.net))
