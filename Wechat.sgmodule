@@ -1,0 +1,11 @@
+
+
+
+[Rule]
+DOMAIN,wxa.wxs.qq.com,REJECT,extended-matching,pre-matching
+DOMAIN,wximg.wxs.qq.com,REJECT,extended-matching,pre-matching
+DOMAIN,wxsmw.wxs.qq.com,REJECT,extended-matching,pre-matching
+
+[MITM]
+hostname = %APPEND% wxa.wxs.qq.com, wximg.wxs.qq.com, wxsmw.wxs.qq.com
+
