@@ -1,8 +1,9 @@
 
-
-
-
-
+#trakt
+DOMAIN-SUFFIX,api.trakt.tv
+#tmbd
+DOMAIN-SUFFIX,themoviedb.org
+DOMAIN-SUFFIX,tmdb.org
 #API
 DOMAIN,ipinfo.io
 DOMAIN,ip-score.com
