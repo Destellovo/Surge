@@ -44,3 +44,5 @@ Proto处理 = type=http-response, pattern=^https:\/\/(?:grpc\.biliapi\.net|app\.
 
 [MITM]
 hostname = %APPEND% grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com
+
+
