@@ -14,8 +14,8 @@ DOMAIN,emby.yunti.online
 DOMAIN,media.micu.hk
 
 #Halo
-DOMAIN,anycast.media.cloudaria.net
-DOMAIN,smart.media.cloudaria.net
+DOMAIN,anycast.cloudaria.one
+one
 
 #SYN
 DOMAIN,stream.synn.cc
