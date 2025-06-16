@@ -15,7 +15,7 @@ DOMAIN,media.micu.hk
 
 #Halo
 DOMAIN,anycast.cloudaria.one
-
+DOMAIN,anycast.media.cloudaria.net
 #SYN
 DOMAIN,stream.synn.cc
 
