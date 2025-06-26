@@ -3,6 +3,7 @@
 #!category=For Own Use
 
 [Rule]
+AND,((URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch",extended-matching),(USER-AGENT,"%E6%B7%98%E5%AE%9D*")),REJECT
 DOMAIN,adashx.m.taobao.com,REJECT,extended-matching,pre-matching
 DOMAIN,ossgw.alicdn.com,REJECT,extended-matching,pre-matching
 DOMAIN,ems.youku.com,REJECT,extended-matching,pre-matching
