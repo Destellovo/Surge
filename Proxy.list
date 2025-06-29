@@ -10,7 +10,13 @@ DOMAIN,ip-score.com
 DOMAIN,ipwhois.app
 DOMAIN,ip-api.com
 DOMAIN,api-ipv4.ip.sb
-
+#CL
+DOMAIN,66img.cc
+DOMAIN,11img.com
+DOMAIN,23img.com
+DOMAIN-SUFFIX,sda1.dev
+DOMAIN-SUFFIX,qpic.ws
+DOMAIN-SUFFIX,7pzzv.us
 #Cloudflare
 DOMAIN-SUFFIX,cf-ipfs.com
 DOMAIN-SUFFIX,cf-ns.com
