@@ -1,6 +1,7 @@
 #Dcard
 DOMAIN,dad-api.dcard.tw
-
+#hayypymh
+DOMAIN,x3os.com
 #PCDN
 PROTOCOL,STUN
 AND,((DOMAIN-KEYWORD,stun), (DOMAIN-KEYWORD,bilibili))
