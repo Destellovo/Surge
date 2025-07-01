@@ -95,10 +95,7 @@ IP-CIDR,154.40.33.88/24
 IP-CIDR,148.135.94.8/24
 IP-CIDR,103.197.185.84/24
 
-#Happymh
-DOMAIN-KEYWORD,happymh
-DOMAIN-SUFFIX,hihimanga.com
-DOMAIN-SUFFIX,jmpic.xyz
+
 
 #CMS
 DOMAIN-KEYWORD,olelive
@@ -188,10 +185,6 @@ DOMAIN-KEYWORD,trafficjunky
 DOMAIN,video.rmzsglng.com
 DOMAIN,pt-static2.jsmsat.com
 
-#Webtoon
-DOMAIN-SUFFIX,pstatic.net
-DOMAIN-SUFFIX,webtoons.com
-DOMAIN-SUFFIX,braze-images.com
 #Pica
 DOMAIN-SUFFIX,picacomic.com
 DOMAIN-KEYWORD,picacomic
