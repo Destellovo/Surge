@@ -1,4 +1,11 @@
-
+#Happymh
+DOMAIN-KEYWORD,happymh
+DOMAIN-SUFFIX,hihimanga.com
+DOMAIN-SUFFIX,jmpic.xyz
+#Webtoon
+DOMAIN-SUFFIX,pstatic.net
+DOMAIN-SUFFIX,webtoons.com
+DOMAIN-SUFFIX,braze-images.com
 #trakt
 DOMAIN-SUFFIX,api.trakt.tv
 #tmbd
