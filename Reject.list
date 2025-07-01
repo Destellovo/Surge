@@ -2,6 +2,8 @@
 DOMAIN,dad-api.dcard.tw
 #happymh
 DOMAIN,x3os.com
+DOMAIN,bobapsoabauns.com
+DOMAIN,wugroansaghadry.com
 #PCDN
 PROTOCOL,STUN
 AND,((DOMAIN-KEYWORD,stun), (DOMAIN-KEYWORD,bilibili))
