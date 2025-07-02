@@ -4,6 +4,7 @@ DOMAIN,dad-api.dcard.tw
 DOMAIN,x3os.com
 DOMAIN,bobapsoabauns.com
 DOMAIN,wugroansaghadry.com
+DOMAIN,amt3.com
 #PCDN
 PROTOCOL,STUN
 AND,((DOMAIN-KEYWORD,stun), (DOMAIN-KEYWORD,bilibili))
