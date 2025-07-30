@@ -1,21 +1,2 @@
 
-#happymh
-DOMAIN,x3os.com
-DOMAIN,bobapsoabauns.com
-DOMAIN,wugroansaghadry.com
-DOMAIN,amt3.com
-#PCDN
-PROTOCOL,STUN
-AND,((DOMAIN-KEYWORD,stun), (DOMAIN-KEYWORD,bilibili))
-
-#TFT
-DOMAIN-SUFFIX,dcloud.net.cn
-
-#hihimanga
-DOMAIN,br-trk.smadex.com
-DOMAIN,googleads.g.doubleclick.net
-DOMAIN,impression.appsflyer.com
-
-#HLTV
-DOMAIN,cdn.liftoff-creatives.io
 
