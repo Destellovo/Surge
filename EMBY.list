@@ -48,6 +48,7 @@ DOMAIN,emby-direct.pilipiliultra.com
 DOMAIN,emby.pilipiliultra.com
 DOMAIN,pili.994959.xyz
 DOMAIN,caddy.pilipili.me
+DOMAIN-SUFFIX,pilipiliultra.com
 
 #Melon
 DOMAIN-SUFFIX,chilledmelon.com
