@@ -2,12 +2,9 @@
 #!desc=Ad
 #!category=For Own Use
 
-
 [Rule]
-AND,((OR,((DOMAIN-KEYWORD,p1-be-pb,extended-matching),(DOMAIN-KEYWORD,lf3-plat,extended-matching),(DOMAIN-KEYWORD,lf6-plat,extended-matching),(DOMAIN-KEYWORD,lf9-plat,extended-matching),(DOMAIN-KEYWORD,lf26-plat,extended-matching),(DOMAIN-KEYWORD,s1-fe-scm,extended-matching),(DOMAIN-KEYWORD,s9-fe-scm,extended-matching),(DOMAIN-KEYWORD,s3-fe-scm,extended-matching),(DOMAIN-KEYWORD,sf3-be-tos,extended-matching),(DOMAIN-KEYWORD,sf1-fe-tos,extended-matching),(DOMAIN-KEYWORD,v1-be-pack,extended-matching),(DOMAIN-KEYWORD,sf1-be-tos,extended-matching),(DOMAIN-KEYWORD,v9-be-pack,extended-matching),(DOMAIN-KEYWORD,v6-be-pack,extended-matching),(DOMAIN-KEYWORD,v5-be-pack,extended-matching),(DOMAIN-KEYWORD,v3-be-pack,extended-matching),(DOMAIN-KEYWORD,sf6-fe-tos,extended-matching),(DOMAIN-KEYWORD,sf3-fe-tos,extended-matching),(DOMAIN-KEYWORD,p1-platform,extended-matching),(DOMAIN-KEYWORD,sf1-be-pack,extended-matching),(DOMAIN-KEYWORD,sf1-vc-pack,extended-matching),(DOMAIN-KEYWORD,sf3-be-pack,extended-matching),(DOMAIN-KEYWORD,sf3-vc-pack,extended-matching),(DOMAIN-KEYWORD,sf6-be-pack,extended-matching),(DOMAIN-KEYWORD,v1-dpa-pack,extended-matching),(DOMAIN-KEYWORD,p9-be-endcard,extended-matching),(DOMAIN-KEYWORD,p1-be-endcard,extended-matching),(DOMAIN-KEYWORD,sf1-scmcdn-tos,extended-matching),(DOMAIN-KEYWORD,sf3-scmcdn-tos,extended-matching),(DOMAIN-KEYWORD,sf6-scmcdn-tos,extended-matching),(DOMAIN-KEYWORD,lf3-reward-sign,extended-matching),(DOMAIN-KEYWORD,p6-be-pack-sign,extended-matching),(DOMAIN-KEYWORD,p3-be-pack-sign,extended-matching),(DOMAIN-KEYWORD,s3-platform-scm,extended-matching),(DOMAIN-KEYWORD,s9-platform-scm,extended-matching),(DOMAIN-KEYWORD,p9-be-pack-sign,extended-matching),(DOMAIN-KEYWORD,lf9-reward-sign,extended-matching),(DOMAIN-KEYWORD,v6-be-pack-nxyd,extended-matching),(DOMAIN-KEYWORD,lf3-ad-union-sdk,extended-matching),(DOMAIN-KEYWORD,lf6-ad-union-sdk,extended-matching),(DOMAIN-KEYWORD,p26-be-pack-sign,extended-matching),(DOMAIN-KEYWORD,sf1-be-auditpack,extended-matching),(DOMAIN-KEYWORD,lf9-ad-union-sdk,extended-matching),(DOMAIN-KEYWORD,lf3-sf-be-tos-sign,extended-matching),(DOMAIN-KEYWORD,lf9-sf-be-tos-sign,extended-matching),(DOMAIN-KEYWORD,lf6-sf-be-tos-sign,extended-matching),(DOMAIN-KEYWORD,lf26-sf-be-tos-sign,extended-matching),(DOMAIN-KEYWORD,lf6-sf-be-pack-sign,extended-matching),(DOMAIN-KEYWORD,lf9-sf-be-pack-sign,extended-matching),(DOMAIN-KEYWORD,lf3-sf-be-pack-sign,extended-matching),(DOMAIN-KEYWORD,lf26-sf-be-pack-sign,extended-matching))),(DOMAIN-SUFFIX,pglstatp-toutiao.com,extended-matching)),REJECT,pre-matching
-AND,((OR,((DOMAIN-KEYWORD,api-access,extended-matching),(DOMAIN-KEYWORD,api-access,extended-matching),(DOMAIN-KEYWORD,api-access,extended-matching),(DOMAIN-KEYWORD,api-access,extended-matching),(DOMAIN-KEYWORD,content-union,extended-matching),(DOMAIN-KEYWORD,dpa-pack,extended-matching),(DOMAIN-KEYWORD,ecom,extended-matching),(DOMAIN-KEYWORD,empower,extended-matching),(DOMAIN-KEYWORD,endcard-pack,extended-matching),(DOMAIN-KEYWORD,ether-pack,extended-matching),(DOMAIN-KEYWORD,gromore,extended-matching),(DOMAIN-KEYWORD,log-api,extended-matching),(DOMAIN-KEYWORD,mix,extended-matching),(DOMAIN-KEYWORD,novel,extended-matching),(DOMAIN-KEYWORD,track-pack-lq,extended-matching))),(DOMAIN-KEYWORD,pangolin-sdk-toutiao,extended-matching)),REJECT,pre-matching
-AND,((DOMAIN-KEYWORD,tnc,extended-matching),(OR,((DOMAIN-SUFFIX,zijieapi.com,extended-matching),(DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)))),REJECT,pre-matching
-AND,((DOMAIN-KEYWORD,pangolin,extended-matching),(OR,((DOMAIN-SUFFIX,zijieapi.com,extended-matching),(DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)))),REJECT,pre-matching
+AND,((DOMAIN-KEYWORD,tnc),(OR,((DOMAIN-SUFFIX,capcutapi.com),(DOMAIN-SUFFIX,zijieapi.com),(DOMAIN-SUFFIX,isnssdk.com),(DOMAIN-SUFFIX,toutiaoapi.com),(DOMAIN-SUFFIX,bytedance.com),(DOMAIN-SUFFIX,snssdk.com),(DOMAIN-SUFFIX,sgsnssdk.com)))),DIRECT
+AND,((OR,((DOMAIN-KEYWORD,api-access,extended-matching),(DOMAIN-KEYWORD,log-api,extended-matching))),(DOMAIN-KEYWORD,pangolin-sdk-toutiao,extended-matching)),REJECT,pre-matching
 AND,((DOMAIN-KEYWORD,-ad-,extended-matching),(DOMAIN-SUFFIX,byteimg.com,extended-matching)),REJECT,pre-matching
 AND,((DOMAIN-KEYWORD,ads,extended-matching),(DOMAIN-KEYWORD,normal,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching)),REJECT,pre-matching
 DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT,extended-matching,pre-matching
@@ -169,6 +166,12 @@ DOMAIN-SUFFIX,bxsnews.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,tradplusad.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,fancyapi.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,medproad.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,applovin.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,iads.unity3d.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,unityads.unitychina.cn,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,tapjoy.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,ads.vungle.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,adsmoloco.com,REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
 ^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/ - reject
@@ -178,6 +181,4 @@ DOMAIN-SUFFIX,medproad.com,REJECT,extended-matching,pre-matching
 
 [MITM]
 hostname = %APPEND% video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
-
-
 
