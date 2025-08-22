@@ -8,14 +8,14 @@
 IP-CIDR,95.161.76.100/31,REJECT,pre-matching,no-resolve
 
 # > United States
-IP-ASN,59930,🇺🇸Oracle SJC,no-resolve
-IP-CIDR,91.108.12.0/22,🇺🇸Oracle SJC,no-resolve
-IP-CIDR6,2a0a:f280::/32,🇺🇸Oracle SJC,no-resolve
+IP-ASN,59930,🇺🇸 BWH,no-resolve
+IP-CIDR,91.108.12.0/22,🇺🇸 BWH,no-resolve
+IP-CIDR6,2a0a:f280::/32,🇺🇸 BWH,no-resolve
 
 # > US
-IP-ASN,211157,🇺🇸Oracle SJC,no-resolve
-IP-CIDR,91.105.192.0/23,🇺🇸Oracle SJC,no-resolve
-IP-CIDR,185.76.151.0/24,🇺🇸Oracle SJC,no-resolve
+IP-ASN,211157,🇺🇸 BWH,no-resolve
+IP-CIDR,91.105.192.0/23,🇺🇸 BWH,no-resolve
+IP-CIDR,185.76.151.0/24,🇺🇸 BWH,no-resolve
 
 # > Europe
 IP-ASN,62041,🇩🇪Oracle FRA,no-resolve
