@@ -1,6 +1,8 @@
 #Reverse Proxy
 IP-CIDR,130.61.174.49/24
 IP-CIDR,64.181.251.115/24
+#gee
+DOMAIN-SUFFIX,emby.pro
 #yqb
 DOMAIN,emby.heisi.org
 #Tufei
