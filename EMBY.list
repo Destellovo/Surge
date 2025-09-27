@@ -1,9 +1,8 @@
 #Reverse Proxy
 IP-CIDR,130.61.174.49/24
 IP-CIDR,64.181.251.115/24
-
-#191920
-DOMAIN-SUFFIX,191920.xyz
+#Nya
+DOMAIN-SUFFIX,bangumi.ca
 #gee
 DOMAIN-SUFFIX,emby.pro
 #yqb
