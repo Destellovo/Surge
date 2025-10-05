@@ -1,6 +1,10 @@
 #Reverse Proxy
 IP-CIDR,130.61.174.49/24
 IP-CIDR,64.181.251.115/24
+#playz
+DOMAIN,playz.mjji.de
+#sntp
+DOMAIN,lite.cn2gias.uk
 #Zhousanwan
 DOMAIN,zhousanwan.com:443
 #Nya
