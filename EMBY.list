@@ -1,6 +1,4 @@
-#Reverse Proxy
-IP-CIDR,130.61.174.49/24
-IP-CIDR,64.181.251.115/24
+DOMAIN-SUFFIX,surrit.com
 DOMAIN,caiji.cyou
 DOMAIN,emos.lol
 #playz
