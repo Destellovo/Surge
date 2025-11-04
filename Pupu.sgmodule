@@ -1,3 +1,7 @@
+#!name=Pupu
+#!desc=For Own Use
+#!category=For Own Use
+
 [URL Rewrite]
 ^https:\/\/j1\.pupuapi\.com\/client\/account\/discount\/order - reject
 ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=100 - reject
