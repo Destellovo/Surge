@@ -1,3 +1,7 @@
+#!name=FanqieNovel
+#!desc=FanqieNovel_Ad
+#!category=For Own Use
+
 [Rule]
 DOMAIN,zlink.ugsdk.cn,REJECT,extended-matching,pre-matching
 DOMAIN,mon.toutiaocloud.net,REJECT,extended-matching,pre-matching
