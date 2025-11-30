@@ -3,6 +3,7 @@
 #!category=For Own Use
 #!arguments=showUpList:"auto",purifyTopReplies:true,airborne:false,logLevel:"off"
 
+
 [Rule]
 DOMAIN,api.biliapi.com,REJECT,extended-matching,pre-matching
 DOMAIN,app.biliapi.com,REJECT,extended-matching,pre-matching
@@ -46,3 +47,4 @@ ProtoBuf处理 = type=http-response, pattern=^https:\/\/(grpc\.biliapi\.net|app\
 
 [MITM]
 hostname = %APPEND% grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, line3-h5-mobile-api.biligame.com
+
