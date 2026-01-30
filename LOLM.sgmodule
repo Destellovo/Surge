@@ -1,4 +1,6 @@
-
+#!name=MLOL
+#!desc=Ad
+#!category=For Own Use
 
 [Map Local]
 ^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platstrongshell\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
