@@ -31,3 +31,4 @@ http-response-jq ^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\? '.data.card
 
 [MITM]
 hostname = %APPEND% bootpreload.uve.weibo.com, weibointl.api.weibo.cn, api.weibo.cn
+
