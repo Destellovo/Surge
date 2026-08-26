@@ -1,0 +1,14 @@
+#!name=漫画网页横幅广告清理
+#!desc=清理 manwa.wang 与 mxs11.cc 阅读页、详情页的横幅、透明点击层、隐藏 iframe 及动态广告
+#!author=Minis
+
+
+[Script]
+漫画网页去广告 = type=http-response, pattern=^https?:\/\/(?:manwa\.wang\/chapter\/\d+\/\d+\.html|(?:www\.)?mxs11\.cc\/(?:chapter|book)\/\d+)(?:[/?#].*)?$, requires-body=true, max-size=0, timeout=10, script-path=https://raw.githubusercontent.com/Destellovo/Surge/main/manhuaad.js
+
+[Rule]
+URL-REGEX,^https?:\/\/[^/]+:(?:8005|9179|30009)\/(?:w2u4v5w3gf|y3j0trtgl4|d|sc)\/,REJECT
+URL-REGEX,^https?:\/\/[^/]+:20110\/(?:js\/in-static\.js|news\/decide-obscure\.html|script\/damage_loop\.html),REJECT
+
+[MITM]
+hostname = %APPEND% manwa.wang, www.mxs11.cc, mxs11.cc
