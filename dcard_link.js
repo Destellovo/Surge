@@ -8,6 +8,16 @@
  * 保留密碼表單、影片、圖片和頁面正文。
  */
 let body = $response.body || "";
+const requestURL = ($request && $request.url) || "";
+const responseHeaders = $response.headers || {};
+const contentType = responseHeaders["Content-Type"] || responseHeaders["content-type"] || "";
+const isTargetPage = /^https?:\/\/(?:lurl|myppt)\.cc\/[A-Za-z0-9_-]+(?:[?#][^/]*)?$/i.test(requestURL);
+const isHTML = !contentType || /(?:text\/html|application\/xhtml\+xml)/i.test(contentType);
+
+// 双重保护：即使模块正则配置错误，也绝不改写 CSS、JS、图片、视频等资源。
+if (!isTargetPage || !isHTML) {
+  $done({});
+} else {
 
 // 改寫正文後清除可能失效的 HTTP 實體標頭。
 const headers = Object.assign({}, $response.headers || {});
@@ -148,3 +158,4 @@ if (/<\/head\s*>/i.test(body)) {
 }
 
 $done({ body, headers });
+}
