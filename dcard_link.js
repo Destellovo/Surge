@@ -1,6 +1,7 @@
 /*
- * Surge HTTP Response Script — Dcard 链接页去广告
- * Target: dcard.tw links
+ * Surge HTTP Response Script — LURL / MyPPT 短網址頁去廣告
+ * Targets: https://lurl.cc/<short-code>
+ *          https://myppt.cc/<short-code>
  *
  * 移除 Google/AnyMind/Taboola 等廣告載入器、GPT/AdSense 版位、
  * Google 自動插入廣告、底部固定橫幅與動態建立的廣告節點；
