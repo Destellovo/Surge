@@ -1,11 +1,12 @@
 /*
- * Surge HTTP Response Script — LURL / MyPPT / Imgus 短網址頁去廣告
+ * Surge HTTP Response Script — LURL / MyPPT / Imgus / Drrop 短網址頁去廣告
  * Targets: https://lurl.cc/<short-code>
  *          https://myppt.cc/<short-code>
  *          https://imgus.cc/<short-code>
+ *          https://drrop.cc/v/<short-code>
  *
  * 移除短網址頁面的廣告載入器、廣告版位、底部固定橫幅與動態廣告節點；
- * 對沒有公開提示的 LURL / MyPPT 頁面，將當前設備日期 MMDD 預填到密碼欄；
+ * 對沒有公開提示的 LURL / MyPPT / Drrop 頁面，將當前設備日期 MMDD 預填到密碼欄；
  * 此功能只預填、不提交，使用者可手動修改或按原頁面按鈕驗證；
  * 同時移除 imgus.cc 頁面下方的推薦文章，保留密碼表單、影片、圖片和頁面正文。
  */
@@ -15,7 +16,8 @@ const responseHeaders = $response.headers || {};
 const contentType = responseHeaders["Content-Type"] || responseHeaders["content-type"] || "";
 const isLurlMypptPage = /^https?:\/\/(?:lurl|myppt)\.cc\/[A-Za-z0-9_-]+(?:[?#][^/]*)?$/i.test(requestURL);
 const isImgusPage = /^https?:\/\/imgus\.cc\/[A-Za-z0-9_-]+(?:[?#][^/]*)?$/i.test(requestURL);
-const isTargetPage = isLurlMypptPage || isImgusPage;
+const isDrropPage = /^https?:\/\/drrop\.cc\/v\/[A-Za-z0-9_-]+(?:[?#][^/]*)?$/i.test(requestURL);
+const isTargetPage = isLurlMypptPage || isImgusPage || isDrropPage;
 const isHTML = !contentType || /(?:text\/html|application\/xhtml\+xml)/i.test(contentType);
 
 // 双重保护：即使模块正则配置错误，也绝不改写 CSS、JS、图片、视频等资源。
@@ -36,8 +38,13 @@ function isAdScript(tag) {
     .replace(/&amp;/g, "&");
   const code = src ? "" : tag;
 
-  // 广告/统计网络。域名通常会随供应商变化，但这些资源是本页实测来源。
-  if (src && /(?:googletagmanager\.com|googlesyndication\.com|doubleclick\.net|taboola\.com|tblcontent\.com|qovani\.com|anymind360\.com|4dex\.io|pbstck\.com|criteo\.com|onetag-sys\.com|openx\.net|fundingchoicesmessages\.google\.com|connect\.facebook\.net|facebook\.com\/tr)/i.test(src)) {
+  // 其他网站的广告/统计脚本；Drrop 的 Next.js 应用脚本不在这里处理.
+  if (!isDrropPage && src && /(?:googletagmanager\.com|googlesyndication\.com|doubleclick\.net|taboola\.com|tblcontent\.com|qovani\.com|anymind360\.com|4dex\.io|pbstck\.com|criteo\.com|onetag-sys\.com|openx\.net|fundingchoicesmessages\.google\.com|connect\.facebook\.net|facebook\.com\/tr)/i.test(src)) {
+    return true;
+  }
+
+  // Drrop 页面会在 Next.js 水合期间从 API 获取内容；保留所有应用脚本，只清理明确的广告节点。
+  if (isDrropPage && src && /(?:static\.cloudflareinsights\.com|s\.pemsrv\.com)/i.test(src)) {
     return true;
   }
 
@@ -70,9 +77,15 @@ if (isImgusPage) {
   body = body.replace(/<body\b([^>]*)>/i, '<body$1 data-dcard-imgus-clean="1">');
 }
 
+if (isDrropPage) {
+  // Drrop 是 Next.js 页面；只添加标记，不删除应用脚本，避免密码表单无法水合。
+  body = body.replace(/<body\b([^>]*)>/i, '<body$1 data-dcard-drrop-clean="1">');
+  // 移除服务器传给 Player 的广告链接，避免解锁时打开广告标签页；不改动 API 验证流程。
+  body = body.replace(/(\\?"adUrl\\?"\s*:\s*)\\?"[^\"]*\\?"/gi, '$1null');
+}
+
 // CSS 先于 body 生效，避免顶部广告、底部悬浮广告和全屏 vignette 闪现。
 const payload = `<style id="lurl-myppt-ad-clean">
-#TW_lurl_cc_res_urlpage_top_new,
 #TW_lurl_cc_res_urlpage_top,
 #TW_lurl_cc_res_urlpage_mid,
 #AdAAnchor,
@@ -104,7 +117,22 @@ body[data-dcard-imgus-clean="1"] #app > [data-dcard-recommendations="1"],
 body[data-dcard-imgus-clean="1"] #app > .row[data-dcard-recommendations="1"],
 body[data-dcard-imgus-clean="1"] #app > hr,
 body[data-dcard-imgus-clean="1"] img[src*="googlesyndication.com"],
-body[data-dcard-imgus-clean="1"] iframe[src*="google"] {
+body[data-dcard-drrop-clean="1"] [data-ad],
+body[data-dcard-drrop-clean="1"] [data-ad-slot],
+body[data-dcard-drrop-clean="1"] [id="ad"],
+body[data-dcard-drrop-clean="1"] [id^="ad-"],
+body[data-dcard-drrop-clean="1"] [id^="ad_"],
+body[data-dcard-drrop-clean="1"] [id*="ad-slot" i],
+body[data-dcard-drrop-clean="1"] [id="oneadMICSPEEDDFPTag"],
+body[data-dcard-drrop-clean="1"] [class^="ad-"],
+body[data-dcard-drrop-clean="1"] [class*=" ad-"],
+body[data-dcard-drrop-clean="1"] [class^="ads-"],
+body[data-dcard-drrop-clean="1"] [class*=" ads-"],
+body[data-dcard-drrop-clean="1"] [class*="ad-slot" i],
+body[data-dcard-drrop-clean="1"] .adsbygoogle,
+body[data-dcard-drrop-clean="1"] iframe[src*="google"],
+body[data-dcard-drrop-clean="1"] iframe[src*="doubleclick"],
+body[data-dcard-drrop-clean="1"] iframe[src*="pemsrv"] {
   display:none!important;
   width:0!important;
   height:0!important;
@@ -143,13 +171,14 @@ var selectors = [
 var host = (location.hostname || '').toLowerCase();
 var isMyPpt = host === 'myppt.cc' || /\\.myppt\\.cc$/.test(host);
 var isImgus = host === 'imgus.cc' || /\\.imgus\\.cc$/.test(host);
+var isDrrop = host === 'drrop.cc' || /\\.drrop\\.cc$/.test(host);
 
 var datePasswordTimer = 0;
 
 function getDatePassword(){
   // 优先使用页面公开显示的密码提示；没有提示时使用设备当前日期 MMDD。
   var text = (document.body && (document.body.innerText || document.body.textContent)) || '';
-  var hint = text.match(/(?:密碼提示|密码提示)\s*[：:]\s*(\d{4})/i);
+  var hint = text.match(/(?:密碼提示|密码提示|上傳者留的提示)\s*[：:]?\s*(\d{4})/i);
   if(hint) return hint[1];
   var now = new Date();
   var month = now.getMonth() + 1;
@@ -158,6 +187,9 @@ function getDatePassword(){
 }
 
 function getPasswordInput(){
+  if(isDrrop){
+    return document.querySelector('#pw,input[type="password"]');
+  }
   if(isMyPpt){
     return document.querySelector('#pasahaicsword,input[name="pasahaicsword"]');
   }
@@ -172,16 +204,28 @@ function bindDatePassword(){
     ['keydown','beforeinput','paste','drop'].forEach(function(name){
       input.addEventListener(name,function(){input.__dcardManualPassword = true;});
     });
+    input.addEventListener('input',function(){
+      // React/Vue 等框架会在用户输入时同步状态；不主动覆盖用户修改。
+      if(!input.__dcardFilling && input.value !== input.__dcardDateValue){
+        input.__dcardManualPassword = true;
+      }
+    });
   }
   var value = getDatePassword();
   if(!value || input.__dcardManualPassword) return true;
   // 允许页面稍后出现公开提示时，替换此前临时填入的当前日期；不覆盖其他来源或用户输入的值。
   if(input.value && input.value !== input.__dcardDateValue) return true;
-  input.value = value;
-  input.setAttribute('value', value);
-  input.setAttribute('data-dcard-date-filled', '1');
+  input.__dcardFilling = true;
+  try{
+    var setter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value');
+    if(setter && setter.set) setter.set.call(input,value);
+    else input.value = value;
+  }catch(_){ input.value = value; }
+  input.__dcardFilling = false;
+  input.setAttribute('data-dcard-date-filled','1');
   input.__dcardDateValue = value;
   try{
+    if(input._valueTracker) input._valueTracker.setValue('');
     input.dispatchEvent(new Event('input',{bubbles:true}));
     input.dispatchEvent(new Event('change',{bubbles:true}));
   }catch(_){ }
@@ -235,6 +279,10 @@ function clean(root){
 
   var q=(root&&root.querySelectorAll)?root:document;
   try{Array.prototype.forEach.call(q.querySelectorAll(selectors.join(',')),remove)}catch(_){ }
+  if(isDrrop){
+    try{Array.prototype.forEach.call(document.querySelectorAll('[data-ad],[data-ad-slot],[id="ad"],[id^="ad-"],[id^="ad_"],[id*="ad-slot" i],[id="oneadMICSPEEDDFPTag"],[class^="ad-"],[class*=" ad-"],[class^="ads-"],[class*=" ads-"],[class*="ad-slot" i],.adsbygoogle,iframe[src*="google"],iframe[src*="doubleclick"],iframe[src*="pemsrv"]'),remove)}catch(_){ }
+  }
+
   // Google 可能把广告节点包在自动插入容器中；若容器只含广告，也一并移除。
   if(isMyPpt){
     try{Array.prototype.forEach.call(document.querySelectorAll('.google-auto-placed'),function(e){
