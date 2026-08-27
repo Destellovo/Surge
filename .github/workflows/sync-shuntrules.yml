@@ -1,0 +1,116 @@
+name: Sync ShuntRules
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-shuntrules
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout destination repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Fetch and synchronize rules
+        env:
+          SOURCE_README: https://raw.githubusercontent.com/luestr/ShuntRules/main/README.md
+          SOURCE_BASE: https://rule.kelee.one/Loon/
+          RULE_UA: script-hub/1.0.0
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import concurrent.futures
+          import os
+          import re
+          import tempfile
+          import urllib.request
+          from pathlib import Path
+
+          out = Path('Rules')
+          out.mkdir(parents=True, exist_ok=True)
+          readme_url = os.environ['SOURCE_README']
+          ua = os.environ['RULE_UA']
+
+          def get(url):
+              req = urllib.request.Request(url, headers={'User-Agent': ua})
+              with urllib.request.urlopen(req, timeout=45) as response:
+                  data = response.read()
+                  if response.status != 200 or not data:
+                      raise RuntimeError(f'{url}: HTTP {response.status} or empty response')
+                  return data
+
+          readme = get(readme_url).decode('utf-8')
+          urls = list(dict.fromkeys(re.findall(
+              r'https?://rule\.kelee\.one/Loon/[^\s)>)]+?\.lsr', readme)))
+          if not urls:
+              raise RuntimeError('README 中没有找到 .lsr 规则链接')
+
+          items = []
+          for url in urls:
+              source_name = url.rsplit('/', 1)[-1]
+              if not re.fullmatch(r'[A-Za-z0-9._-]+\.lsr', source_name):
+                  raise RuntimeError(f'非法源文件名: {source_name}')
+              items.append((url, source_name[:-4] + '.list'))
+
+          def fetch(item):
+              url, name = item
+              return name, get(url)
+
+          failures = []
+          received = {}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+              futures = {pool.submit(fetch, item): item for item in items}
+              for future in concurrent.futures.as_completed(futures):
+                  item = futures[future]
+                  try:
+                      name, data = future.result()
+                      if data.lstrip().lower().startswith((b'<!doctype html', b'<html')):
+                          raise RuntimeError('疑似 HTML 拦截页')
+                      received[name] = data
+                  except Exception as exc:
+                      failures.append(f'{item[1]}: {exc}')
+
+          if failures:
+              raise RuntimeError('规则获取失败:\n' + '\n'.join(sorted(failures)))
+          expected = {name for _, name in items}
+          if set(received) != expected:
+              raise RuntimeError('获取结果与 README 链接集合不一致')
+
+          for name, data in received.items():
+              destination = out / name
+              with tempfile.NamedTemporaryFile(dir=out, prefix=f'.{name}.', delete=False) as tmp:
+                  tmp.write(data)
+                  temporary = Path(tmp.name)
+              temporary.replace(destination)
+
+          for path in out.glob('*.list'):
+              if path.name not in expected:
+                  path.unlink()
+          for path in out.glob('*.lsr'):
+              path.unlink()
+          print(f'Synchronized {len(received)} rules')
+          PY
+
+      - name: Commit changes if needed
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Rules
+          if git diff --cached --quiet; then
+            echo 'No rule changes detected.'
+            exit 0
+          fi
+          git commit -m 'Sync ShuntRules rules'
+          git push
