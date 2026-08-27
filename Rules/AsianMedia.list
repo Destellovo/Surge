@@ -1,0 +1,33 @@
+# UpdateTime：2026-08-26 03:14:48
+# RuleCount：31
+DOMAIN, api.biliapi.com
+DOMAIN, app.biliapi.com
+DOMAIN, api.bilibili.com
+DOMAIN, app.bilibili.com
+DOMAIN, m.bilibili.com
+DOMAIN, www.bilibili.com
+DOMAIN, akmcdnoversea-tw.inter.iqiyi.com
+DOMAIN, chuangcachecdnoversea-tw.inter.iqiyi.com
+DOMAIN, intl.iqiyi.com
+DOMAIN, intl-rcd.iqiyi.com
+DOMAIN, intl-subscription.iqiyi.com
+DOMAIN, cache.video.iqiyi.com
+DOMAIN, mobileso.bz.mgtv.com
+DOMAIN, upos-hz-mirrorakam.akamaized.net
+DOMAIN, api.biliapi.net
+DOMAIN, app.biliapi.net
+DOMAIN, grpc.biliapi.net
+DOMAIN, akmcdnoversea-tw.inter.ptqy.gitv.tv
+DOMAIN, chuangcachecdnoversea-tw.inter.ptqy.gitv.tv
+DOMAIN-SUFFIX, iq.com
+DOMAIN-SUFFIX, api.mgtv.com
+DOMAIN-SUFFIX, wetvinfo.com
+DOMAIN-SUFFIX, wetv.vip
+DOMAIN-KEYWORD, cn-hk-eq-bcache-
+IP-CIDR, 23.40.241.251/32, no-resolve
+IP-CIDR, 23.40.242.10/32, no-resolve
+IP-CIDR, 103.44.56.0/22, no-resolve
+IP-CIDR, 116.211.202.206/32, no-resolve
+IP-CIDR, 116.211.202.216/32, no-resolve
+IP-CIDR, 118.26.32.0/23, no-resolve
+IP-CIDR, 118.26.120.0/24, no-resolve

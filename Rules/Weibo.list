@@ -1,0 +1,6 @@
+# UpdateTime：2026-08-26 03:15:42
+# RuleCount：4
+DOMAIN-SUFFIX, weibo.cn
+DOMAIN-SUFFIX, weibo.com
+DOMAIN-SUFFIX, weibocdn.com
+DOMAIN-KEYWORD, weibo

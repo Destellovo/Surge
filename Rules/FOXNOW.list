@@ -1,0 +1,6 @@
+# UpdateTime：2026-08-26 03:11:56
+# RuleCount：4
+DOMAIN-SUFFIX, fox.com
+DOMAIN-SUFFIX, foxdcg.com
+DOMAIN-SUFFIX, uplynk.com
+USER-AGENT, FOX%20NOW*

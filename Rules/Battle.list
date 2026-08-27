@@ -1,0 +1,10 @@
+# UpdateTime：2026-08-26 03:11:41
+# RuleCount：8
+DOMAIN, cdn.blz-contentstack.com
+DOMAIN, blizzard.nefficient.co.kr
+DOMAIN, blzddist1-a.akamaihd.net
+DOMAIN, blzddistkr1-a.akamaihd.net
+DOMAIN, bnetproduct-a.akamaihd.net
+DOMAIN-SUFFIX, battlenet.com.cn
+DOMAIN-SUFFIX, blizzard.com
+DOMAIN-SUFFIX, battle.net

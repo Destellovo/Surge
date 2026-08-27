@@ -1,0 +1,8 @@
+# UpdateTime：2026-08-26 03:14:43
+# RuleCount：6
+DOMAIN, global.quickconnect.cn
+DOMAIN, account.synology.com
+DOMAIN, sns.synology.com
+DOMAIN-SUFFIX, quickconnect.com
+DOMAIN-SUFFIX, download.synology.com
+DOMAIN-SUFFIX, quickconnect.to

@@ -1,0 +1,6 @@
+# UpdateTime：2026-08-26 03:12:23
+# RuleCount：4
+DOMAIN, teams.events.data.microsoft.com
+DOMAIN-SUFFIX, teams.live.com
+DOMAIN-SUFFIX, teams.microsoft.com
+DOMAIN-SUFFIX, teams.cdn.live.net

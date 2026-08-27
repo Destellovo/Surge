@@ -1,0 +1,11 @@
+# UpdateTime：2026-08-26 03:11:44
+# RuleCount：9
+DOMAIN, hls.itunes.apple.com
+DOMAIN, hls-amt.itunes.apple.com
+DOMAIN, np-edge.itunes.apple.com
+DOMAIN, play-edge.itunes.apple.com
+DOMAIN, uts-api.itunes.apple.com
+DOMAIN, tv.applemusic.com
+DOMAIN-SUFFIX, tv.apple.com
+USER-AGENT, AppleTV*
+USER-AGENT, com.apple.tv*

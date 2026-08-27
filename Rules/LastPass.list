@@ -1,0 +1,4 @@
+# UpdateTime：2026-08-26 03:11:41
+# RuleCount：2
+DOMAIN-SUFFIX, lastpass.com
+USER-AGENT, LastPass*

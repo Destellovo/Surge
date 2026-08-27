@@ -1,0 +1,8 @@
+# UpdateTime：2026-08-26 03:11:57
+# RuleCount：6
+DOMAIN, edge.api.brightcove.com
+DOMAIN, content.jwplatform.com
+DOMAIN, videos-f.jwpsrv.com
+DOMAIN, bcbolt446c5271-a.akamaihd.net
+DOMAIN-SUFFIX, encoretvb.com
+USER-AGENT, encoreTVB*

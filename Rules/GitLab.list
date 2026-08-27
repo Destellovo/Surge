@@ -1,0 +1,8 @@
+# UpdateTime：2026-08-26 03:11:38
+# RuleCount：6
+DOMAIN-SUFFIX, gitlab-assets.oss-cn-hongkong.aliyuncs.com
+DOMAIN-SUFFIX, gitlab.com
+DOMAIN-SUFFIX, gitter.im
+DOMAIN-SUFFIX, gitlab.net
+DOMAIN-SUFFIX, gitlab-static.net
+DOMAIN-SUFFIX, gitter-static.net

@@ -1,0 +1,22 @@
+# UpdateTime：2026-08-26 03:13:29
+# RuleCount：20
+DOMAIN, 44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
+DOMAIN, s3-ap-southeast-1.amazonaws.com
+DOMAIN, hbounify-prod.evergent.com
+DOMAIN, hbolb.onwardsmg.com
+DOMAIN, wmff.warnermediacdn.com
+DOMAIN, bcbolthboa-a.akamaihd.net
+DOMAIN, hboasia1-i.akamaihd.net
+DOMAIN, hboasia2-i.akamaihd.net
+DOMAIN, hboasia3-i.akamaihd.net
+DOMAIN, hboasia4-i.akamaihd.net
+DOMAIN, hboasia5-i.akamaihd.net
+DOMAIN, hboasialive.akamaized.net
+DOMAIN, hbogoprod-vod.akamaized.net
+DOMAIN, cf-images.ap-southeast-1.prod.boltdns.net
+DOMAIN, players.brightcove.net
+DOMAIN, dai3fd1oh325y.cloudfront.net
+DOMAIN-SUFFIX, hbogoasia.com
+DOMAIN-SUFFIX, hbogoasia.hk
+DOMAIN-KEYWORD, .hbogoasia.
+USER-AGENT, HBO%20GO%20PROD*

@@ -1,0 +1,14 @@
+# UpdateTime：2026-08-26 03:13:19
+# RuleCount：12
+DOMAIN, telegraph.prd.api.discomax.com
+DOMAIN, wmff.warnermediacdn.com
+DOMAIN-SUFFIX, cinemax.com
+DOMAIN-SUFFIX, discomax.com
+DOMAIN-SUFFIX, hbomax.com
+DOMAIN-SUFFIX, hbomaxcdn.com
+DOMAIN-SUFFIX, hbonow.com
+DOMAIN-SUFFIX, max.com
+DOMAIN-SUFFIX, maxgo.com
+DOMAIN-SUFFIX, h264.io
+DOMAIN-SUFFIX, hbomaxdash.s.llnwi.net
+USER-AGENT, HBOMAX*

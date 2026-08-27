@@ -1,0 +1,6 @@
+# UpdateTime：2026-08-26 03:12:16
+# RuleCount：4
+DOMAIN-SUFFIX, sndcdn.com
+DOMAIN-SUFFIX, soundcloud.com
+DOMAIN-SUFFIX, p-cdn.us
+USER-AGENT, SoundCloud*

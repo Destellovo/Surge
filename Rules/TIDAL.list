@@ -1,0 +1,8 @@
+# UpdateTime：2026-08-26 03:16:04
+# RuleCount：6
+DOMAIN-SUFFIX, tidal-cms.s3.amazonaws.com
+DOMAIN-SUFFIX, tidal.com
+DOMAIN-SUFFIX, tidalhifi.com
+DOMAIN-SUFFIX, wimpmusic.com
+USER-AGENT, TIDAL*
+USER-AGENT, TIDAL*dia

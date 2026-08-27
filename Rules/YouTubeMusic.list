@@ -1,0 +1,7 @@
+# UpdateTime：2026-08-26 03:11:47
+# RuleCount：5
+DOMAIN, music.youtube.com
+USER-AGENT, YouTubeMusic*
+USER-AGENT, *YouTubeMusic*
+USER-AGENT, com.google.ios.youtubemusic*
+USER-AGENT, *com.google.ios.youtubemusic*

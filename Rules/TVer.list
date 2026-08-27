@@ -1,0 +1,9 @@
+# UpdateTime：2026-08-26 03:11:41
+# RuleCount：7
+DOMAIN-SUFFIX, edge.api.brightcove.com
+DOMAIN-SUFFIX, tver.co.jp
+DOMAIN-SUFFIX, dogatch.jp
+DOMAIN-SUFFIX, gorin.jp
+DOMAIN-SUFFIX, screens-lab.jp
+DOMAIN-SUFFIX, tver.jp
+USER-AGENT, TVer-Release*

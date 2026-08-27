@@ -1,0 +1,10 @@
+# UpdateTime：2026-08-26 03:11:40
+# RuleCount：8
+DOMAIN-SUFFIX, shop.app
+DOMAIN-SUFFIX, myshopify.com
+DOMAIN-SUFFIX, shopify.com
+DOMAIN-SUFFIX, shopifycdn.com
+DOMAIN-SUFFIX, shopifycloud.com
+DOMAIN-SUFFIX, shopifystatus.com
+DOMAIN-SUFFIX, shopifysvc.com
+DOMAIN-SUFFIX, shopify.dev

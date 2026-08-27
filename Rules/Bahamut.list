@@ -1,0 +1,10 @@
+# UpdateTime：2026-08-26 03:12:56
+# RuleCount：8
+DOMAIN, bahamut.akamaized.net
+DOMAIN-SUFFIX, digicert.com
+DOMAIN-SUFFIX, gvt1.com
+DOMAIN-SUFFIX, viblast.com
+DOMAIN-SUFFIX, hinet.net
+DOMAIN-SUFFIX, bahamut.com.tw
+DOMAIN-SUFFIX, gamer.com.tw
+USER-AGENT, Anime*

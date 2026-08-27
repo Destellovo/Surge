@@ -1,0 +1,14 @@
+# UpdateTime：2026-08-26 03:11:38
+# RuleCount：12
+DOMAIN-SUFFIX, appdomain.cloud
+DOMAIN-SUFFIX, bluemix.com
+DOMAIN-SUFFIX, ibm.com
+DOMAIN-SUFFIX, s81c.com
+DOMAIN-SUFFIX, weather.com
+DOMAIN-SUFFIX, ibm.eu
+DOMAIN-SUFFIX, ibm
+DOMAIN-SUFFIX, bluemix.net
+DOMAIN-SUFFIX, ibm.net
+DOMAIN-SUFFIX, s-bluemix.net
+DOMAIN-SUFFIX, ibm.us
+DOMAIN-SUFFIX, weatherchannel

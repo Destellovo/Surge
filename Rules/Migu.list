@@ -1,0 +1,7 @@
+# UpdateTime：2026-08-26 03:11:48
+# RuleCount：5
+DOMAIN-SUFFIX, cmvideo.cn
+DOMAIN-SUFFIX, migu.cn
+DOMAIN-SUFFIX, miguvideo.com
+USER-AGENT, MiguVideo*
+USER-AGENT, %E5%92%AA%E5%92%95%E8%A7%86%E9%A2%91

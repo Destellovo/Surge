@@ -1,0 +1,6 @@
+# UpdateTime：2026-08-26 03:13:06
+# RuleCount：4
+DOMAIN-SUFFIX, doh.360.cn
+DOMAIN-SUFFIX, dns.alidns.com
+DOMAIN-SUFFIX, doh.pub
+IP-CIDR, 1.12.12.12/32, no-resolve

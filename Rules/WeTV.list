@@ -1,0 +1,10 @@
+# UpdateTime：2026-08-26 03:11:39
+# RuleCount：8
+DOMAIN, wetv.qq.com
+DOMAIN-SUFFIX, iflix.com
+DOMAIN-SUFFIX, vv.video.qq.com
+DOMAIN-SUFFIX, wetvinfo.com
+DOMAIN-SUFFIX, iflix-images.akamaized.net
+DOMAIN-SUFFIX, wetv.vip
+USER-AGENT, WeTV*
+IP-CIDR, 150.109.28.51/32, no-resolve

@@ -1,0 +1,22 @@
+# UpdateTime：2026-08-26 03:11:38
+# RuleCount：20
+DOMAIN-SUFFIX, tenco.cc
+DOMAIN-SUFFIX, akabeesoft2.com
+DOMAIN-SUFFIX, akabeesoft3.com
+DOMAIN-SUFFIX, akatsukiworks.com
+DOMAIN-SUFFIX, alicesoft.com
+DOMAIN-SUFFIX, cosmiccute.com
+DOMAIN-SUFFIX, dmm.com
+DOMAIN-SUFFIX, dmm-extension.com
+DOMAIN-SUFFIX, dmmapis.com
+DOMAIN-SUFFIX, dmmrex.com
+DOMAIN-SUFFIX, hibiki-site.com
+DOMAIN-SUFFIX, navismithapis-cdn.com
+DOMAIN-SUFFIX, wheel-soft.com
+DOMAIN-SUFFIX, dmm.hk
+DOMAIN-SUFFIX, dmm.co.jp
+DOMAIN-SUFFIX, ddo.jp
+DOMAIN-SUFFIX, api-p.videomarket.jp
+DOMAIN-SUFFIX, minori.ph
+IP-CIDR, 125.6.189.7/32, no-resolve
+IP-CIDR, 203.104.209.7/32, no-resolve

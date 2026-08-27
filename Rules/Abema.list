@@ -1,0 +1,22 @@
+# UpdateTime：2026-08-26 03:11:47
+# RuleCount：20
+DOMAIN, abematv.akamaized.net
+DOMAIN, ds-linear-abematv.akamaized.net
+DOMAIN, ds-vod-abematv.akamaized.net
+DOMAIN, linear-abematv.akamaized.net
+DOMAIN, vod-abematv.akamaized.net
+DOMAIN-SUFFIX, abema-tv.com
+DOMAIN-SUFFIX, amebame.com
+DOMAIN-SUFFIX, amebaownd.com
+DOMAIN-SUFFIX, amebaowndme.com
+DOMAIN-SUFFIX, hayabusa.dev
+DOMAIN-SUFFIX, abema.io
+DOMAIN-SUFFIX, hayabusa.io
+DOMAIN-SUFFIX, ameba.jp
+DOMAIN-SUFFIX, ameblo.jp
+DOMAIN-SUFFIX, bucketeer.jp
+DOMAIN-SUFFIX, dokusho-ojikan.jp
+DOMAIN-SUFFIX, winticket.jp
+DOMAIN-SUFFIX, hayabusa.media
+DOMAIN-SUFFIX, adx.promo
+DOMAIN-SUFFIX, abema.tv
