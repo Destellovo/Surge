@@ -5,6 +5,8 @@
  *          https://imgus.cc/<short-code>
  *
  * 移除短網址頁面的廣告載入器、廣告版位、底部固定橫幅與動態廣告節點；
+ * 對沒有公開提示的 LURL / MyPPT 頁面，將當前設備日期 MMDD 預填到密碼欄；
+ * 此功能只預填、不提交，使用者可手動修改或按原頁面按鈕驗證；
  * 同時移除 imgus.cc 頁面下方的推薦文章，保留密碼表單、影片、圖片和頁面正文。
  */
 let body = $response.body || "";
@@ -142,11 +144,69 @@ var host = (location.hostname || '').toLowerCase();
 var isMyPpt = host === 'myppt.cc' || /\\.myppt\\.cc$/.test(host);
 var isImgus = host === 'imgus.cc' || /\\.imgus\\.cc$/.test(host);
 
+var datePasswordTimer = 0;
+
+function getDatePassword(){
+  // 优先使用页面公开显示的密码提示；没有提示时使用设备当前日期 MMDD。
+  var text = (document.body && (document.body.innerText || document.body.textContent)) || '';
+  var hint = text.match(/(?:密碼提示|密码提示)\s*[：:]\s*(\d{4})/i);
+  if(hint) return hint[1];
+  var now = new Date();
+  var month = now.getMonth() + 1;
+  var day = now.getDate();
+  return (month < 10 ? '0' : '') + month + (day < 10 ? '0' : '') + day;
+}
+
+function getPasswordInput(){
+  if(isMyPpt){
+    return document.querySelector('#pasahaicsword,input[name="pasahaicsword"]');
+  }
+  return document.querySelector('#password,input[name="password"]');
+}
+
+function bindDatePassword(){
+  var input = getPasswordInput();
+  if(!input) return false;
+  if(!input.__dcardDateBound){
+    input.__dcardDateBound = true;
+    ['keydown','beforeinput','paste','drop'].forEach(function(name){
+      input.addEventListener(name,function(){input.__dcardManualPassword = true;});
+    });
+  }
+  var value = getDatePassword();
+  if(!value || input.__dcardManualPassword) return true;
+  // 允许页面稍后出现公开提示时，替换此前临时填入的当前日期；不覆盖其他来源或用户输入的值。
+  if(input.value && input.value !== input.__dcardDateValue) return true;
+  input.value = value;
+  input.setAttribute('value', value);
+  input.setAttribute('data-dcard-date-filled', '1');
+  input.__dcardDateValue = value;
+  try{
+    input.dispatchEvent(new Event('input',{bubbles:true}));
+    input.dispatchEvent(new Event('change',{bubbles:true}));
+  }catch(_){ }
+  return true;
+}
+
+function scheduleDatePassword(){
+  // MutationObserver 可能连续触发；共用一个重试计时器，避免重复创建定时器。
+  if(datePasswordTimer) return;
+  var attempts = 0;
+  function retry(){
+    datePasswordTimer = 0;
+    if(bindDatePassword() || ++attempts >= 20) return;
+    datePasswordTimer = setTimeout(retry,250);
+  }
+  retry();
+}
+
 function remove(e){
   try{e.remove()}catch(_){if(e.parentNode)e.parentNode.removeChild(e)}
 }
 
 function clean(root){
+  scheduleDatePassword();
+
   // imgus.cc：移除推薦文章標題、卡片列表及分隔線；不影響密碼表單與媒體內容。
   if(isImgus){
     try{
