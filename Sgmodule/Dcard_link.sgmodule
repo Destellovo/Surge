@@ -1,10 +1,10 @@
-#!name=LURL / MyPPT / Imgus 短網址去廣告
-#!desc=移除 lurl.cc、myppt.cc 与 imgus.cc 短网址页面的广告、底部横幅及 imgus 推荐文章，并预填当前日期密码
+#!name=LURL / MyPPT / Imgus / Drrop 短网址去广告
+#!desc=移除 lurl.cc、myppt.cc、imgus.cc 与 drrop.cc/v/ 页面广告，并预填公开提示或当前日期密码
 #!author=Destello
 #!category=For Own Use
 
 [Script]
-LURL / MyPPT / Imgus 页面去广告 = type=http-response, pattern=^https?:\/\/(?:(?:lurl|myppt)\.cc\/[A-Za-z0-9_-]+(?:[?#][^/]*)?|imgus\.cc\/[A-Za-z0-9_-]+(?:[?#][^/]*)?)$, requires-body=true, max-size=1048576, timeout=10, script-path=https://raw.githubusercontent.com/Destellovo/Surge/main/JS/dcard_link.js
+LURL / MyPPT / Imgus / Drrop 页面去广告 = type=http-response, pattern=^https?:\/\/(?:(?:lurl|myppt)\.cc\/[A-Za-z0-9_-]+(?:[?#][^/]*)?|imgus\.cc\/[A-Za-z0-9_-]+(?:[?#][^/]*)?|drrop\.cc\/v\/[A-Za-z0-9_-]+(?:[?#][^/]*)?)$, requires-body=true, max-size=1048576, timeout=10, script-path=https://raw.githubusercontent.com/Destellovo/Surge/main/JS/dcard_link.js
 
 [Rule]
 # 只拦截广告网络资源；不拦截 lurl.cc / myppt.cc 自身的图片、视频和解锁接口。
@@ -21,6 +21,7 @@ DOMAIN-SUFFIX,criteo.com,REJECT
 DOMAIN-SUFFIX,onetag-sys.com,REJECT
 DOMAIN-SUFFIX,openx.net,REJECT
 DOMAIN-SUFFIX,fundingchoicesmessages.google.com,REJECT
+DOMAIN-SUFFIX,s.pemsrv.com,REJECT
 
 [MITM]
-hostname = %APPEND% lurl.cc, myppt.cc, imgus.cc
+hostname = %APPEND% lurl.cc, myppt.cc, imgus.cc, drrop.cc, api.drrop.cc
