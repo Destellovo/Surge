@@ -1,234 +1,149 @@
-# UpdateTime：2026-08-26 03:15:52
-# RuleCount：232
-DOMAIN, ad.12306.cn
-DOMAIN, bdtj.tagtic.cn
-DOMAIN, ad.10010.com
-DOMAIN, analytics.95516.com
-DOMAIN, app.adjust.com
-DOMAIN, init.ess.apple.com
-DOMAIN, itunes.apple.com
-DOMAIN, smp-device-content.apple.com
-DOMAIN, time.apple.com
-DOMAIN, app.appsflyer.com
-DOMAIN, img.bfzypic.com
-DOMAIN, tiao.cjkypo.com
-DOMAIN, img.ffzypic.com
-DOMAIN, vip.ffzyread.com
-DOMAIN, alt1-mtalk.google.com
-DOMAIN, alt2-mtalk.google.com
-DOMAIN, alt3-mtalk.google.com
-DOMAIN, alt4-mtalk.google.com
-DOMAIN, alt5-mtalk.google.com
-DOMAIN, alt6-mtalk.google.com
-DOMAIN, alt7-mtalk.google.com
-DOMAIN, alt8-mtalk.google.com
-DOMAIN, dl.google.com
-DOMAIN, dl.l.google.com
-DOMAIN, mtalk.google.com
-DOMAIN, clientservices.googleapis.com
-DOMAIN, update.googleapis.com
-DOMAIN, vip.imgffzy.com
-DOMAIN, img.liangzipic.com
-DOMAIN, image.maimn.com
-DOMAIN, eco-push-api-client.meiqia.com
-DOMAIN, new-api.meiqia.com
-DOMAIN, tracking.miui.com
-DOMAIN, log.mmstat.com
-DOMAIN, sycm.mmstat.com
-DOMAIN, m3u8.mstopq.com
-DOMAIN, fairplay.l.qq.com
-DOMAIN, livew.l.qq.com
-DOMAIN, vd.l.qq.com
-DOMAIN, vi.l.qq.com
-DOMAIN, deo.shopeemobile.com
-DOMAIN, analytics.strava.com
-DOMAIN, ts.thefilehosting.com
-DOMAIN, errlog.umeng.com
-DOMAIN, msg.umeng.com
-DOMAIN, msg.umengcloud.com
-DOMAIN, ok.zuidapic.com
-DOMAIN, sdk.alibaba.com.ailbaba.me
-DOMAIN, origin-a.akamaihd.net
-DOMAIN, rewards.hypixel.net
-DOMAIN, cdn.jsdelivr.net
-DOMAIN, img.kuaikanzy.net
-DOMAIN, m3u8.255tv.tk
-DOMAIN, ain.bgm.tv
-DOMAIN, lain.bgm.tv
-DOMAIN, static.jssp.tv
-DOMAIN-SUFFIX, moecat.best
-DOMAIN-SUFFIX, dscloud.biz
-DOMAIN-SUFFIX, koodomobile.ca
-DOMAIN-SUFFIX, alpharatio.cc
-DOMAIN-SUFFIX, avgv.cc
-DOMAIN-SUFFIX, m-team.cc
-DOMAIN-SUFFIX, ncore.cc
-DOMAIN-SUFFIX, open.cd
-DOMAIN-SUFFIX, redacted.ch
-DOMAIN-SUFFIX, hdcity.city
-DOMAIN-SUFFIX, btschool.club
-DOMAIN-SUFFIX, dicmusic.club
-DOMAIN-SUFFIX, hdatmos.club
-DOMAIN-SUFFIX, ourbits.club
-DOMAIN-SUFFIX, ptsbao.club
-DOMAIN-SUFFIX, soulvoice.club
-DOMAIN-SUFFIX, bt.byr.cn
-DOMAIN-SUFFIX, hudbt.hust.edu.cn
-DOMAIN-SUFFIX, bt.neu6.edu.cn
-DOMAIN-SUFFIX, fus.cdn.krcom.cn
-DOMAIN-SUFFIX, hdarea.co
-DOMAIN-SUFFIX, weather-analytics-events.apple.com
-DOMAIN-SUFFIX, weather-data.apple.com
-DOMAIN-SUFFIX, weather-map.apple.com
-DOMAIN-SUFFIX, baomitu.com
-DOMAIN-SUFFIX, blackwell-synergy.com
-DOMAIN-SUFFIX, bootcss.com
-DOMAIN-SUFFIX, cgpeers.com
-DOMAIN-SUFFIX, dsmynas.com
-DOMAIN-SUFFIX, dxdhd.com
-DOMAIN-SUFFIX, ol.epicgames.com
-DOMAIN-SUFFIX, familyds.com
-DOMAIN-SUFFIX, dizhensubao.getui.com
-DOMAIN-SUFFIX, googletraveladservices.com
-DOMAIN-SUFFIX, hddolby.com
-DOMAIN-SUFFIX, hdupt.com
-DOMAIN-SUFFIX, hitpt.com
-DOMAIN-SUFFIX, jiasule.com
-DOMAIN-SUFFIX, keepfrds.com
-DOMAIN-SUFFIX, koodomobile.com
-DOMAIN-SUFFIX, leaguehd.com
-DOMAIN-SUFFIX, nanyangpt.com
-DOMAIN-SUFFIX, nature.com
-DOMAIN-SUFFIX, npupt.com
-DOMAIN-SUFFIX, oup.com
-DOMAIN-SUFFIX, pterclub.com
-DOMAIN-SUFFIX, scopus.com
-DOMAIN-SUFFIX, skyey2.com
-DOMAIN-SUFFIX, springer.com
-DOMAIN-SUFFIX, springernature.com
-DOMAIN-SUFFIX, trontv.com
-DOMAIN-SUFFIX, upaiyun.com
-DOMAIN-SUFFIX, f.video.weibocdn.com
-DOMAIN-SUFFIX, wiley.com
-DOMAIN-SUFFIX, xunlei.com
-DOMAIN-SUFFIX, jpopsuki.eu
-DOMAIN-SUFFIX, blog.google
-DOMAIN-SUFFIX, totheglory.im
-DOMAIN-SUFFIX, karagarga.in
-DOMAIN-SUFFIX, j99.info
-DOMAIN-SUFFIX, filelist.io
-DOMAIN-SUFFIX, nebulance.io
-DOMAIN-SUFFIX, concertos.live
-DOMAIN-SUFFIX, aidoru-online.me
-DOMAIN-SUFFIX, anthelion.me
-DOMAIN-SUFFIX, asiancinema.me
-DOMAIN-SUFFIX, awesome-hd.me
-DOMAIN-SUFFIX, beyond-hd.me
-DOMAIN-SUFFIX, bibliotik.me
-DOMAIN-SUFFIX, diskstation.me
-DOMAIN-SUFFIX, dscloud.me
-DOMAIN-SUFFIX, empornium.me
-DOMAIN-SUFFIX, hdsky.me
-DOMAIN-SUFFIX, hdzone.me
-DOMAIN-SUFFIX, i234.me
-DOMAIN-SUFFIX, lztr.me
-DOMAIN-SUFFIX, myds.me
-DOMAIN-SUFFIX, oppaiti.me
-DOMAIN-SUFFIX, passthepopcorn.me
-DOMAIN-SUFFIX, synology.me
-DOMAIN-SUFFIX, dscloud.mobi
-DOMAIN-SUFFIX, broadcasthe.net
-DOMAIN-SUFFIX, cinemageddon.net
-DOMAIN-SUFFIX, cinematik.net
-DOMAIN-SUFFIX, discfan.net
-DOMAIN-SUFFIX, dsmynas.net
-DOMAIN-SUFFIX, familyds.net
-DOMAIN-SUFFIX, gazellegames.net
-DOMAIN-SUFFIX, gfxpeers.net
-DOMAIN-SUFFIX, joyhd.net
-DOMAIN-SUFFIX, madsrevolution.net
-DOMAIN-SUFFIX, tracking-protection.cdn.mozilla.net
-DOMAIN-SUFFIX, myanonamouse.net
-DOMAIN-SUFFIX, nicept.net
-DOMAIN-SUFFIX, pornbits.net
-DOMAIN-SUFFIX, pthome.net
-DOMAIN-SUFFIX, researchgate.net
-DOMAIN-SUFFIX, springsunday.net
-DOMAIN-SUFFIX, orpheus.network
-DOMAIN-SUFFIX, acm.org
-DOMAIN-SUFFIX, cabdirect.org
-DOMAIN-SUFFIX, ccfbits.org
-DOMAIN-SUFFIX, comicat.org
-DOMAIN-SUFFIX, doi.org
-DOMAIN-SUFFIX, dsmynas.org
-DOMAIN-SUFFIX, eastgame.org
-DOMAIN-SUFFIX, et8.org
-DOMAIN-SUFFIX, familyds.org
-DOMAIN-SUFFIX, hd-space.org
-DOMAIN-SUFFIX, hd4fans.org
-DOMAIN-SUFFIX, hdbits.org
-DOMAIN-SUFFIX, hdchina.org
-DOMAIN-SUFFIX, hdfans.org
-DOMAIN-SUFFIX, hdhome.org
-DOMAIN-SUFFIX, hdroute.org
-DOMAIN-SUFFIX, hdtime.org
-DOMAIN-SUFFIX, icetorrent.org
-DOMAIN-SUFFIX, ieee.org
-DOMAIN-SUFFIX, jstor.org
-DOMAIN-SUFFIX, osapublishing.org
-DOMAIN-SUFFIX, sciencemag.org
-DOMAIN-SUFFIX, sdbits.org
-DOMAIN-SUFFIX, staticfile.org
-DOMAIN-SUFFIX, tjupt.org
-DOMAIN-SUFFIX, uhdbits.org
-DOMAIN-SUFFIX, beitai.pt
-DOMAIN-SUFFIX, acg.rip
-DOMAIN-SUFFIX, 52pt.site
-DOMAIN-SUFFIX, avistaz.to
-DOMAIN-SUFFIX, cinemaz.to
-DOMAIN-SUFFIX, exoticaz.to
-DOMAIN-SUFFIX, privatehd.to
-DOMAIN-SUFFIX, hdpost.top
-DOMAIN-SUFFIX, animebytes.tv
-DOMAIN-SUFFIX, classix-unlimited.co.uk
-DOMAIN-SUFFIX, hdbd.us
-DOMAIN-SUFFIX, msg.vg
-DOMAIN-SUFFIX, blutopia.xyz
-DOMAIN-SUFFIX, hd4.xyz
-DOMAIN-KEYWORD, wb_ad
-DOMAIN-KEYWORD, pkulaw
-DOMAIN-KEYWORD, els-cdn
-DOMAIN-KEYWORD, ax1x.com
-DOMAIN-KEYWORD, cnki.net
-DOMAIN-KEYWORD, deepdyve
-DOMAIN-KEYWORD, elsevier
-DOMAIN-KEYWORD, readcube
-DOMAIN-KEYWORD, trip.com
-DOMAIN-KEYWORD, icloud.com
-DOMAIN-KEYWORD, vip.lz-cdn
-DOMAIN-KEYWORD, anti-ad.net
-DOMAIN-KEYWORD, bfzycdn.com
-DOMAIN-KEYWORD, o.lencr.org
-DOMAIN-KEYWORD, wanfangdata
-DOMAIN-KEYWORD, ls.apple.com
-DOMAIN-KEYWORD, westlawchina
-DOMAIN-KEYWORD, ess.apple.com
-DOMAIN-KEYWORD, gsa.apple.com
-DOMAIN-KEYWORD, sciencedirect
-DOMAIN-KEYWORD, ssl.apple.com
-DOMAIN-KEYWORD, vip.ffzy-play
-DOMAIN-KEYWORD, humb.apple.com
-DOMAIN-KEYWORD, push.apple.com
-DOMAIN-KEYWORD, vip.ffzy-online
-DOMAIN-KEYWORD, vip.kuaikan-cdn
-DOMAIN-KEYWORD, aw-s.tripcdn.com
-DOMAIN-KEYWORD, api.smoot.apple.cn
-DOMAIN-KEYWORD, ttcdn-tos.kkimg.cc
-DOMAIN-KEYWORD, api.smoot.apple.com
-DOMAIN-KEYWORD, buy.itunes.apple.com
-DOMAIN-KEYWORD, ctc.qzs.qzone.qq.com
-DOMAIN-KEYWORD, weather-adge.apple.com
-DOMAIN-KEYWORD, weather-edge.apple.com
-DOMAIN-KEYWORD, api-adservices.apple.com
-DOMAIN-KEYWORD, amp-api.podcasts.apple.com
-USER-AGENT, %E8%BF%85%E9%9B%B7
+DOMAIN-KEYWORD,api.huacloud.xyz
+DOMAIN-KEYWORD,flowercloud
+DOMAIN-SUFFIX,jiashule.com
+DOMAIN,www.4039.love
+DOMAIN,dler.cloud
+DOMAIN-SUFFIX,sub.perlnk.com
+DOMAIN-SUFFIX,masshiro.de
+DOMAIN-SUFFIX,emby.yun
+DOMAIN-SUFFIX,kelee.one
+DOMAIN-SUFFIX,longemby.com
+DOMAIN-SUFFIX,longemby.top
+DOMAIN-SUFFIX,lowendaff.com
+
+
+#Wechat
+DOMAIN-SUFFIX,wechat.com
+DOMAIN, btrace.qq.com
+DOMAIN, dldir1.qq.com
+DOMAIN, wup.imtt.qq.com
+DOMAIN, vweixinf.tc.qq.com
+DOMAIN, wxapp.tc.qq.com
+DOMAIN, soup.v.qq.com
+DOMAIN, weixin110.qq.com
+DOMAIN, wx.tenpay.com
+DOMAIN, dl.wechat.com
+DOMAIN, sgfindershort.wechat.com
+DOMAIN, sgilinkshort.wechat.com
+DOMAIN, sglong.wechat.com
+DOMAIN, sgminorshort.wechat.com
+DOMAIN, sgquic.wechat.com
+DOMAIN, sgshort.wechat.com
+DOMAIN, tencentmap.wechat.com
+DOMAIN, slife.xy-asia.com
+DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net
+DOMAIN-SUFFIX, qlogo.cn
+DOMAIN-SUFFIX, qpic.cn
+DOMAIN-SUFFIX, lbs.gtimg.com
+DOMAIN-SUFFIX, wx.gtimg.com
+DOMAIN-SUFFIX, iot-tencent.com
+DOMAIN-SUFFIX, up-hl.3g.qq.com
+DOMAIN-SUFFIX, yun-hl.3g.qq.com
+DOMAIN-SUFFIX, map.qq.com
+DOMAIN-SUFFIX, vweixinthumb.tc.qq.com
+DOMAIN-SUFFIX, wxapp.tc.qq.com
+DOMAIN-SUFFIX, weixin.qq.com
+DOMAIN-SUFFIX, wx.qq.com
+DOMAIN-SUFFIX, wxs.qq.com
+DOMAIN-SUFFIX, servicewechat.com
+DOMAIN-SUFFIX, tenpay.com
+DOMAIN-SUFFIX, wechat.com
+DOMAIN-SUFFIX, wechatpay.com
+DOMAIN-SUFFIX, weixin.com
+DOMAIN-SUFFIX, weixinbridge.com
+DOMAIN-SUFFIX, weixinsxy.com
+DOMAIN-SUFFIX, wechatlegal.net
+DOMAIN-SUFFIX, wechatos.net
+USER-AGENT, WeChat*
+USER-AGENT, MicroMessenger*
+IP-ASN, 132203
+#Api
+DOMAIN,cip.cc
+DOMAIN,appc.qixin.com
+DOMAIN,forge.speedtest.cn
+DOMAIN,rmb.pingan.com.cn
+DOMAIN,api-v3.speedtest.cn
+DOMAIN,ipservice.ws.126.net
+DOMAIN,api.bilibili.com
+DOMAIN,api.live.bilibili.com
+DOMAIN,myip.ipip.net
+DOMAIN,ip.ip233.cn
+DOMAIN,uapi.woobx.cn
+DOMAIN,ip.im
+DOMAIN,ips.market.alicloudapi.com
+DOMAIN,api.ip.plus
+DOMAIN,dashi.163.com
+DOMAIN,webapi.designkit.com
+
+DOMAIN-SUFFIX,novaxns.one
+
+DOMAIN-KEYWORD,kanwo8
+DOMAIN-KEYWORD,911tg3rs
+DOMAIN-SUFFIX,makima.online
+DOMAIN,emby.060618.me
+
+DOMAIN,tv.micu.hk
+DOMAIN,tv1.micu.hk
+#liustar
+DOMAIN,emby1.liustar.click
+
+#Netease Music
+DOMAIN,netease.ugcvideoss.ourdvs.com
+DOMAIN-SUFFIX,163yun.com
+DOMAIN-SUFFIX,api.iplay.163.com
+DOMAIN-SUFFIX,hz.netease.com
+DOMAIN-SUFFIX,mam.netease.com
+DOMAIN-SUFFIX,music.126.com
+DOMAIN-SUFFIX,music.126.net
+DOMAIN-SUFFIX,music.163.com
+DOMAIN-SUFFIX,music.163.com.163jiasu.com
+DOMAIN-SUFFIX,yun-app.net
+IP-CIDR,101.71.154.241/32,no-resolve
+IP-CIDR,103.126.92.132/31,no-resolve
+IP-CIDR,112.13.119.17/32,no-resolve
+IP-CIDR,112.13.119.18/32,no-resolve
+IP-CIDR,112.13.122.1/32,no-resolve
+IP-CIDR,112.13.122.4/32,no-resolve
+IP-CIDR,115.236.112.0/20,no-resolve
+IP-CIDR,118.24.63.156/32,no-resolve
+IP-CIDR,182.92.170.253/32,no-resolve
+IP-CIDR,193.112.159.225/32,no-resolve
+IP-CIDR,223.252.192.0/19,no-resolve
+IP-CIDR,39.105.175.128/32,no-resolve
+IP-CIDR,39.105.63.80/32,no-resolve
+IP-CIDR,45.254.48.1/32,no-resolve
+IP-CIDR,47.100.127.239/32,no-resolve
+IP-CIDR,59.111.128.0/17,no-resolve
+IP-CIDR,59.111.19.33/32,no-resolve
+IP-CIDR,59.111.21.14/31,no-resolve
+USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*
+USER-AGENT,NeteaseMusic*
+
+
+#Huya
+DOMAIN-SUFFIX,huya.com
+DOMAIN-SUFFIX,huyagame.cn
+DOMAIN-SUFFIX,peiwanlu.com
+DOMAIN-SUFFIX,snapplay.com
+
+#Xhs
+DOMAIN-SUFFIX,fengkongcloud.com
+DOMAIN-SUFFIX,xhscdn.com
+DOMAIN-SUFFIX,xhscdn.net
+DOMAIN-SUFFIX,xiaohongshu.com
+
+#Douyu
+DOMAIN-SUFFIX,bytefcdnrd.com
+DOMAIN-SUFFIX,douyu.com
+DOMAIN-SUFFIX,douyu.tv
+DOMAIN-SUFFIX,douyuba.cn
+DOMAIN-SUFFIX,douyucdn.cn
+DOMAIN-SUFFIX,douyucdn2.cn
+DOMAIN-SUFFIX,douyupcdn.cn
+DOMAIN-SUFFIX,douyuscdn.com
+DOMAIN-SUFFIX,douyutv.com
+DOMAIN-SUFFIX,doyonoc.com
+DOMAIN-SUFFIX,edgesrv.com
+DOMAIN-SUFFIX,guguyuyin.com
+DOMAIN-SUFFIX,oywtv.com
+
