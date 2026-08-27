@@ -1,0 +1,29 @@
+#!name=LURL / MyPPT / Imgus 短網址去廣告
+#!desc=移除 lurl.cc、myppt.cc 与 imgus.cc 短网址页面的广告、底部横幅及 imgus 推荐文章
+#!author=Destello
+#!category=For Own Use
+
+[Script]
+LURL / MyPPT / Imgus 页面去广告 = type=http-response, pattern=^https?:\/\/(?:lurl|myppt)\.cc\/[A-Za-z0-9_-]+(?:[?#][^/]*)?$|^https?:\/\/imgus\.cc\/[A-Za-z0-9_-]+(?:[?#][^/]*)?$, requires-body=true, max-size=1048576, timeout=10, script-path=https://raw.githubusercontent.com/Destellovo/Surge/main/dcard_link.js
+
+[Rule]
+# 只拦截广告网络资源；不拦截 lurl.cc / myppt.cc 自身的图片、视频和解锁接口。
+DOMAIN-SUFFIX,googletagmanager.com,REJECT
+DOMAIN-SUFFIX,googlesyndication.com,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+DOMAIN-SUFFIX,taboola.com,REJECT
+DOMAIN-SUFFIX,tblcontent.com,REJECT
+DOMAIN-SUFFIX,qovani.com,REJECT
+DOMAIN-SUFFIX,anymind360.com,REJECT
+DOMAIN-SUFFIX,4dex.io,REJECT
+DOMAIN-SUFFIX,pbstck.com,REJECT
+DOMAIN-SUFFIX,criteo.com,REJECT
+DOMAIN-SUFFIX,onetag-sys.com,REJECT
+DOMAIN-SUFFIX,openx.net,REJECT
+DOMAIN-SUFFIX,fundingchoicesmessages.google.com,REJECT
+DOMAIN-SUFFIX,connect.facebook.net,REJECT
+DOMAIN-SUFFIX,facebook.com,REJECT
+DOMAIN-SUFFIX,re-news.tw,REJECT
+
+[MITM]
+hostname = %APPEND% lurl.cc, myppt.cc, imgus.cc
