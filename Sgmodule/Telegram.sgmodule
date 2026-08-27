@@ -2,7 +2,7 @@
 #!desc=适用于安装了多个不同Telegram客户端的用户，用于在指定客户端中打开公开或私有群组及频道的Telegram短链。
 #!author=Destello
 #!category=For Own Use
-#!arguments=app:tg,客户端:tg
+#!arguments=app:tg
 #!arguments-desc=指定跳转的客户端，可选 tg、sg、turrit、ime、ng、lingo
 #!openUrl=https://apps.apple.com/app/id1127750481
 #!homepage=https://hub.kelee.one
