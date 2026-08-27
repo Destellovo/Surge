@@ -21,9 +21,6 @@ DOMAIN-SUFFIX,criteo.com,REJECT
 DOMAIN-SUFFIX,onetag-sys.com,REJECT
 DOMAIN-SUFFIX,openx.net,REJECT
 DOMAIN-SUFFIX,fundingchoicesmessages.google.com,REJECT
-DOMAIN-SUFFIX,connect.facebook.net,REJECT
-DOMAIN-SUFFIX,facebook.com,REJECT
-DOMAIN-SUFFIX,re-news.tw,REJECT
 
 [MITM]
 hostname = %APPEND% lurl.cc, myppt.cc, imgus.cc
