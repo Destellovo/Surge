@@ -1,9 +1,0 @@
-#!name=Telecom Check
-#!desc=电信余量
-#!category=For Own Use
-
-
-[Script]
-Telecom_Panel= type=generic,timeout=10,script-path= https://github.com/ChinaTelecomOperators/ChinaTelecom/releases/download/Prerelease-Alpha/Tele_Cellular_Panel.js,argument=icon=list.bullet.rectangle&color=#cd4639
-[Panel]
-Telecom_Panel= script-name=Telecom_Panel, title="电信流量面板", content="请刷新",,update-interval=3600
