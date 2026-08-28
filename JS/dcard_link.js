@@ -178,11 +178,11 @@ var datePasswordTimer = 0;
 function getDatePassword(){
   // 优先使用公开密码提示；否则从页面显示的上传日期提取 MMDD，绝不使用本机日期。
   var text = (document.body && (document.body.innerText || document.body.textContent)) || '';
-  var hint = text.match(/(?:密碼提示|密码提示|上傳者留的提示)\s*[：:]?\s*(\d{4})/i);
+  var hint = text.match(/(?:密碼提示|密码提示|上傳者留的提示)\\s*[：:]?\\s*(\\d{4})/i);
   if(hint) return hint[1];
 
   // 支持 LURL / MyPPT 的「上傳日期：2026-08-27 16:26:00」及常见的中文/斜线日期写法。
-  var upload = text.match(/(?:上傳日期|上传日期|上傳時間|上传时间|建立日期|创建日期|發佈日期|发布日期)\s*[：:]?\s*(\d{4})\s*[-/.年]\s*(\d{1,2})\s*[-/.月]\s*(\d{1,2})/i);
+  var upload = text.match(/(?:上傳日期|上传日期|上傳時間|上传时间|建立日期|创建日期|發佈日期|发布日期)\\s*[：:]?\\s*(\\d{4})\\s*[-/.年]\\s*(\\d{1,2})\\s*[-/.月]\\s*(\\d{1,2})/i);
   if(upload){
     var month = parseInt(upload[2],10);
     var day = parseInt(upload[3],10);
