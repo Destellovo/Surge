@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id554499054
 #!category=For Own Use
 #!homepage=https://hub.kelee.one
-#!date=2026-09-03 16:19:24
+#!date=2026-09-11 00:35:13
 
 [Rule]
 DOMAIN,gwp.xiaojukeji.com,REJECT,extended-matching,pre-matching
@@ -47,7 +47,7 @@ AND,((IP-ASN,63646,no-resolve),(DEST-PORT,25641),(PROTOCOL,TCP)),REJECT
 ^https:\/\/poi\.map\.xiaojukeji\.com\/mapapi\/recommend\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Body Rewrite]
-http-response-jq ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? '. as $original | try (if (.data? | type) == "array" then .data |= (map(select(.name? != "isUseNetConnectivity")) | map(if ((.name? // "") | IN("daijia_journey_new_tcp_switch","daijia_tcp_init","daijia_tcp_msg_encrypt","daijia_tcp_site_info","daijia_tcp_site_report")) then .allow = false else . end)) else . end) catch $original'
+http-response-jq ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? '. as $original | try (if (.data? | type) == "array" then .data |= (map(select(.name? != "isUseNetConnectivity") | .assign.args.rootca_pin = 0 | .assign.args.sni_list = {}) | map(if ((.name? // "") | IN("daijia_journey_new_tcp_switch","daijia_tcp_init","daijia_tcp_msg_encrypt","daijia_tcp_site_info","daijia_tcp_site_report")) then .allow = false else . end)) else . end) catch $original'
 http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/slow\? '. as $original | try (if ((type) == "object" and (.data? | type) == "object" and (.data.order_cards? | type) == "object") then delpaths([["data","order_cards","new_loss_banner_card"],["data","order_cards","call_car_card_80"]]) else . end) catch $original'
 http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core\? '. as $original | try (if (.data.order_cards.nav_list_card.data? | type) == "array" then .data.order_cards.nav_list_card.data |= map(select((.nav_id? // "") | IN("dache_anycar","carmate","driverservice","zhandianbashi","yuancheng","pincheche","bike","special_ride","nav_more_v3"))) else . end | if (.data.disorder_cards.top_nav_list.data.top_nav_info? | type) == "array" then .data.disorder_cards.top_nav_list.data.top_nav_info |= map(select((.nav_id? // "") | IN("chu_xing","freight_cargo"))) else . end | if (.data.disorder_cards.bottom_nav_list.data? | type) == "array" then .data.disorder_cards.bottom_nav_list.data |= map(select((.id? // "") | IN("home_page","user_center"))) else . end) catch $original'
 http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast\? '. as $original | try (delpaths([["data","disorder_cards","communicate_card"],["data","disorder_cards","not_login_bottom_bar"],["data","disorder_cards","riding_code_card"],["data","disorder_cards","car_icon","data","icon_info_new_agreement"],["data","disorder_cards","guess_card"],["data","disorder_cards","scene_list_card"],["data","order_cards","car_owner_widget_card"],["data","order_cards","marketing_card"],["data","order_cards","super_banner_card"]])) catch $original'
