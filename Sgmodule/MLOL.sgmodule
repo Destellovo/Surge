@@ -21,6 +21,8 @@ DOMAIN-SUFFIX,gdtimg.com,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,ugdtimg.com,REJECT,extended-matching,pre-matching
 
 [Map Local]
+^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platflashbox\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
 ^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platstrongshell\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 ^https:\/\/mlol\.qt\.qq\.com\/go\/club\/match\/get_ai_search_words$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
