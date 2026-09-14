@@ -1,11 +1,6 @@
 #!name=滴滴去广告
 #!desc=移除开屏广告、弹窗广告、横幅推广，精简我的页面。
-#!author=Destello
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DiDi.png
-#!openUrl=https://apps.apple.com/app/id554499054
 #!category=For Own Use
-#!homepage=https://hub.kelee.one
-#!date=2026-09-11 00:35:13
 
 [Rule]
 DOMAIN,gwp.xiaojukeji.com,REJECT,extended-matching,pre-matching

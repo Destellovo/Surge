@@ -1,6 +1,5 @@
 #!name=漫画网页横幅广告清理
 #!desc=清理 manwa.wang 与 mxs11.cc 阅读页、详情页的横幅、透明点击层、隐藏 iframe 及动态广告
-#!author=Destello
 #!category=For Own Use
 
 [Script]

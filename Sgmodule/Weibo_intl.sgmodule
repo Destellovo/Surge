@@ -1,13 +1,6 @@
 #!name=Weibo intl
 #!desc=AD
 #!category=For Own Use
-#!author=Destello
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weibo_intl.png
-#!openUrl=https://apps.apple.com/app/id1215210046
-#!tag=去广告
-#!loon_version=3.4.0(962)
-#!homepage=https://hub.kelee.one
-#!date=2026-06-01 17:11:35
 
 [Rule]
 # 阻止微博国际版通过 HTTPDNS 直连 IPv6 绕过开屏广告规则
