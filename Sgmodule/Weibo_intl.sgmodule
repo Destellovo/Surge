@@ -7,6 +7,15 @@
 DOMAIN,dns.weibo.cn,REJECT,extended-matching,pre-matching
 URL-REGEX,"^http:\/\/\[[0-9A-Fa-f:]+\]\/(?:p\/s|v2\/c)\?appkey=02928be092ee98ad571b5d3c1302bcdd",REJECT,extended-matching
 IP-CIDR6,2400:89c0:1053:3::68/128,REJECT,no-resolve,pre-matching
+# 彩云通聚合开屏 SDK（tqt.weibo.cn 下发竞价配置与上报）
+DOMAIN,tqt.weibo.cn,REJECT,extended-matching,pre-matching
+# 开屏竞价实际填充方：腾讯优量汇、快手联盟
+DOMAIN-SUFFIX,gdt.qq.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,gdtimg.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,ugdtimg.com,REJECT,extended-matching,pre-matching
+DOMAIN,sdk.e.qq.com,REJECT,extended-matching,pre-matching
+DOMAIN,open.e.kuaishou.com,REJECT,extended-matching,pre-matching
+DOMAIN,open.e.kuaishou.cn,REJECT,extended-matching,pre-matching
 
 [Body Rewrite]
 http-response-jq ^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends 'delpaths([["data","banner"]])'
