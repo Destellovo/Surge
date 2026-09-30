@@ -18,11 +18,13 @@ DOMAIN-SUFFIX,l.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN,tangram.e.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN,sdkreport.e.qq.com,REJECT,extended-matching,pre-matching
 DOMAIN,sdk.e.qq.com,REJECT,extended-matching,pre-matching
+# App 内置 DNSPod HTTPDNS（加密解析会绕过域名规则，拦截后回落系统 DNS）
+IP-CIDR,119.29.29.98/32,REJECT,no-resolve,pre-matching
 
 [Map Local]
-^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platflashbox\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platflashbox\? data-type=text data="{\"code\":0,\"data\":{}}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platstrongshell\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platstrongshell\? data-type=text data="{\"code\":0,\"data\":{}}" status-code=200 header="Content-Type:application/json"
 
 ^https:\/\/mlol\.qt\.qq\.com\/go\/club\/match\/get_ai_search_words$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
