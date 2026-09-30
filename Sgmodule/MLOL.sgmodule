@@ -22,9 +22,9 @@ DOMAIN,sdk.e.qq.com,REJECT,extended-matching,pre-matching
 IP-CIDR,119.29.29.98/32,REJECT,no-resolve,pre-matching
 
 [Map Local]
-^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platflashbox\? data-type=text data="{\"code\":0,\"data\":{}}" status-code=200 header="Content-Type:application/json"
+^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platflashbox\? data-type=base64 data="eyJjb2RlIjowLCJkYXRhIjp7fX0=" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platstrongshell\? data-type=text data="{\"code\":0,\"data\":{}}" status-code=200 header="Content-Type:application/json"
+^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platstrongshell\? data-type=base64 data="eyJjb2RlIjowLCJkYXRhIjp7fX0=" status-code=200 header="Content-Type:application/json"
 
 ^https:\/\/mlol\.qt\.qq\.com\/go\/club\/match\/get_ai_search_words$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
