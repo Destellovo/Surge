@@ -2,10 +2,6 @@
 #!desc=Ad
 #!category=For Own Use
 
-# 原插件：可莉 https://hub.kelee.one；高德源日期 2026-10-19。
-# 转换：Script-Hub Beta 8657e28，原生 jq；修正 JSONPath 根标记。
-# 新增域名来源：anti-AD 88736e6，精确主机名；非实机效果保证。
-
 [Rule]
 DOMAIN,amap-aos-info-nogw.amap.com,REJECT,extended-matching,pre-matching
 DOMAIN,free-aos-cdn-image.amap.com,REJECT,extended-matching,pre-matching
