@@ -1,5 +1,6 @@
 #!name=滴滴去广告
 #!desc=移除开屏广告、弹窗广告、横幅推广，精简我的页面。
+#!author=Destello
 #!category=For Own Use
 
 [Rule]
@@ -39,8 +40,6 @@ http-response-jq ^https:\/\/common\.diditaxi\.com\.cn\/user_common\/itineraryLis
 ^https:\/\/daijia\.kuaidadi\.com(:443)?\/gateway\?api=lj\.c\.p\.queryLevelAndRightsStatus data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 ^https:\/\/daijia\.kuaidadi\.com(:443)?\/gateway\?api=lj\.cos\.p\.popup data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
-^https:\/\/api\.udache\.com\/gulfstream\/porsche\/v\d\/pSFCHomePage\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 ^https:\/\/htwkop-st\.xiaojukeji\.com\/gateway\?api=cms\.htw\.delivery\.batch data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
