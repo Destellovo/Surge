@@ -1,3 +1,9 @@
+#Claude
+DOMAIN, cdn.usefathom.com
+DOMAIN-SUFFIX, claude.ai
+DOMAIN-SUFFIX, anthropic.com
+DOMAIN, servd-anthropic-website.b-cdn.net
+
 #OPENAI
 DOMAIN, openai-api.arkoselabs.com
 DOMAIN, browser-intake-datadoghq.com
